@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Our love story</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <link href="css/img_style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <embed src="files/caibutou.mp3" hidden="true" autostart="true" loop="true">
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="images">
+            <img src="files/1.jpg" class="pic1"/>
+            <img src="files/2.jpg" class="pic2"/>
+            <img src="files/3.jpg" class="pic3"/>
+            <img src="files/4.jpg" class="pic4"/>
+            <img src="files/5.jpg" class="pic5"/>
+        </div>
+    <div id="content">
+        <div id="code">
+            <span class="comments">/**</span><br/>
+            <span class="space"/><span class="comments">* 没有你，思念让我无法入眠</span><br/>
+            <span class="space"/><span class="comments">* 离开你，牵挂弥漫我的心间</span><br/>
+            <span class="space"/><span class="comments">* 关心你，是每时每刻的想念</span><br/>
+            <span class="space"/><span class="comments">* 爱上你，成为我生活的完全</span><br/>
+            <span class="space"/><span class="comments">* 嫁给我，ou照顾你一生一世</span><br/>
+            <span class="space"/><span class="comments">*/</span><br/>
+            Boy i = <span class="keyword">new</span> Boy(<span class="string">"高明亮"</span>);<br/>
+            Girl u = <span class="keyword">new</span> Girl(<span class="string">"武雅楠"</span>);<br/>
+            <span class="comments">// 2010 你我相遇 </span><br/>
+            i.<span class="string">meet</span>(u);<br/>
+            <span class="comments">// 2011 相爱一起</span><br/>
+            i.<span class="string">love</span>(u);<br/>
+            <span class="comments">// 2014 分隔两地</span><br/>
+            i.<span class="string">separate</span>(u);<br/>
+            <span class="comments">// 2019 永不分离</span><br/>
+            i.<span class="string">takeCareOf</span>(u);<br/>
+            <br/>
+            <span class="comments">// 在一起的时光总是那么的短暂</span><br/>
+            <span class="comments">// 有过欢笑，有过泪水</span><br/>
+            <span class="comments">// 现在我只想做一件事</span><br/>
+            <span style="color: red;font-size: 24px;">i.<span class="string">marry</span>(u);<br/></span>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    在一起的时光
+                    <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                    Love u forever and ever.<br/>
+                    <div class="signature">- 高明亮</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        Devote to my lover：Wuyanan
+    </div>
+</div>
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2012, 4, 20);
+    together.setHours(0);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 10000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        // adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
+</body>
+</html>
