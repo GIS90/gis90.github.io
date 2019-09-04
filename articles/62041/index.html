@@ -617,6 +617,7 @@
 <p>3、输入密码，默认回车即可。</p>
 <p>4、输入确认密码，，默认回车即可。</p>
 <p>5、出现下列图案代表成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+--[ RSA 2048]----+</span><br><span class="line">|    .+=*..       |</span><br><span class="line">|  .  += +        |</span><br><span class="line">|   o oo+         |</span><br><span class="line">|  E . . o        |</span><br><span class="line">|      ..S.       |</span><br><span class="line">|      .o .       |</span><br><span class="line">|       .o +      |</span><br><span class="line">|       ...oo     |</span><br><span class="line">|         +.      |</span><br><span class="line">+-----------------+</span><br></pre></td></tr></table></figure></p>
+<p>具体的ssh-keygen参数可以通过<strong><em>ssh-keygen –help</em></strong>进行查看，这里不作详解。</p>
 <h3 id="原理讲解"><a href="#原理讲解" class="headerlink" title="原理讲解"></a>原理讲解</h3><ol>
 <li><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p> 这里主要针对于公钥私钥的验证方式进行讲解，通过执行ssh-kengen命令可以得到<strong>公钥、私钥</strong>，都是经过加密后的文件。<br> 公钥：能被其他人知道的加密文件，id_rsa.pub。<br> 私钥：只能自己知道的加密文件，id_rsa。</p>
 <p> 只要私钥不被泄漏，就不会出现任何指定用户登录的问题。</p>
