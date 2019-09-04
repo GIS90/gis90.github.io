@@ -123,32 +123,27 @@
 </div>
 
 
-  <meta name="description" content="问题简述Next主题优化-增强篇">
-<meta name="keywords" content="Hexo, Next, tags页样式修改, Fork me on github, 文章内链接文本样式">
+  <meta name="description" content="背景上篇文章介绍了有关SSH协议的基础知识，正常工作中都是通过下列命令进行ssh连接：1ssh 用户名@服务器IP工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。">
+<meta name="keywords" content="SSH, 快捷, 配置, config">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Next主题优化-增强篇（Gemini）">
-<meta property="og:url" content="https://gis90.github.io/articles/41065/index.html">
+<meta property="og:title" content="SSH之快捷配置">
+<meta property="og:url" content="https://gis90.github.io/articles/24280/index.html">
 <meta property="og:site_name" content="PyGo²">
-<meta property="og:description" content="问题简述Next主题优化-增强篇">
+<meta property="og:description" content="背景上篇文章介绍了有关SSH协议的基础知识，正常工作中都是通过下列命令进行ssh连接：1ssh 用户名@服务器IP工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gis90.github.io/images/article_youhua_zengqiang.png">
-<meta property="og:image" content="https://gis90.github.io/articles/41065/next_youhua_catalog.png">
-<meta property="og:image" content="https://gis90.github.io/articles/41065/next_youhua_github.png">
-<meta property="og:image" content="https://gis90.github.io/articles/41065/next_youhua_a.gif">
-<meta property="og:image" content="https://gis90.github.io/articles/41065/next_youhua_load.gif">
-<meta property="og:image" content="https://gis90.github.io/articles/41065/next_youhua_tags.png">
-<meta property="og:updated_time" content="2018-12-07T02:12:46.000Z">
+<meta property="og:image" content="https://gis90.github.io/articles/24280/ssh_config.png">
+<meta property="og:updated_time" content="2019-08-24T11:04:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Next主题优化-增强篇（Gemini）">
-<meta name="twitter:description" content="问题简述Next主题优化-增强篇">
-<meta name="twitter:image" content="https://gis90.github.io/images/article_youhua_zengqiang.png">
+<meta name="twitter:title" content="SSH之快捷配置">
+<meta name="twitter:description" content="背景上篇文章介绍了有关SSH协议的基础知识，正常工作中都是通过下列命令进行ssh连接：1ssh 用户名@服务器IP工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。">
+<meta name="twitter:image" content="https://gis90.github.io/articles/24280/ssh_config.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://gis90.github.io/articles/41065/">
+  <link rel="canonical" href="https://gis90.github.io/articles/24280/">
 
 
 
@@ -158,7 +153,7 @@
   };
 </script>
 
-  <title>Next主题优化-增强篇（Gemini） | PyGo²</title>
+  <title>SSH之快捷配置 | PyGo²</title>
   
 
 
@@ -483,7 +478,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gis90.github.io/articles/41065/">
+    <link itemprop="mainEntityOfPage" href="https://gis90.github.io/articles/24280/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -500,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Next主题优化-增强篇（Gemini）
+          <h2 class="post-title" itemprop="name headline">SSH之快捷配置
 
               
             
@@ -529,7 +524,7 @@
                 
               
 
-              <time title="创建时间：2018-12-07 10:12:46" itemprop="dateCreated datePublished" datetime="2018-12-07T10:12:46+08:00">2018-12-07</time>
+              <time title="创建时间：2019-08-24 19:04:09" itemprop="dateCreated datePublished" datetime="2019-08-24T19:04:09+08:00">2019-08-24</time>
             
 
             
@@ -547,7 +542,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/服务器/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/协议类/" itemprop="url" rel="index"><span itemprop="name">协议类</span></a></span>
 
                 
                 
@@ -586,69 +588,37 @@
       
 
       
-        <div class="note success">
-            <h3 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h3><p>Next主题优化-增强篇</p>
+        <div class="note warning">
+            <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>上篇文章介绍了有关<font color="red" size="4.5">SSH协议</font>的基础知识，正常工作中都是通过下列命令进行ssh连接：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@服务器IP</span><br></pre></td></tr></table></figure><p>工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。</p>
           </div>
-<p><img src="/images/article_youhua_zengqiang.png" alt></p>
 <a id="more"></a>
 <hr>
 
-<p>前几天写了一篇通过配置相关的优化，继续介绍一下代码相关更改的优化。</p>
-<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><img src="next_youhua_catalog.png" alt="初始化目录"></p>
+<h3 id="结果对比"><a href="#结果对比" class="headerlink" title="结果对比"></a>结果对比</h3><blockquote>
+<p>配置前</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@服务器IP</span><br></pre></td></tr></table></figure>
+<p>每次都需要输入密码</p>
+<blockquote>
+<p>配置后</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 别名</span><br></pre></td></tr></table></figure>
+<p>每日只需输入一次密码</p>
+<h3 id="配置详解"><a href="#配置详解" class="headerlink" title="配置详解"></a>配置详解</h3><p>1 进入到<strong><em>~/.ssh</em></strong>目录，查看是否有<strong><em>config</em></strong>文件，如果没有这个文件，需要通过<strong><em>touch config</em></strong>手动进行建立。</p>
+<p><img src="ssh_config.png" alt></p>
+<p>2 配置文件内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host XXXX</span><br><span class="line">HostName IP</span><br><span class="line">User mingliang.gao</span><br><span class="line">ControlMaster auto</span><br><span class="line">ControlPath ~/.ssh/master-%r@%h:@%p</span><br><span class="line">ControlPersist yes</span><br><span class="line">PasswordAuthentication no</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>_config.yml：blog全局配置文件</li>
-<li>node_modules：npm安装的第三方包</li>
-<li>public：执行<strong><em>hexo generate</em></strong>命令，输出的静态网页内容目录</li>
-<li>package.json：hexo-site安装的第三方插件</li>
-<li>scaffolds：layout模板文件目录</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理</li>
-<li>themes：主题文件目录</li>
+<li>Host：ssh进行连接的别名</li>
+<li>HostName：服务器的IP或者机器名</li>
+<li>User：用户名</li>
+<li>ControlMaster：是否多个会话连接用一个session文件</li>
+<li>ControlPath：session会话文件</li>
+<li>ControlPersist：连接是否保持长连接</li>
+<li>PasswordAuthentication：是否需要密码认证</li>
+<li>IdentityFile：私钥文件</li>
 </ul>
-<h3 id="优化Catalog"><a href="#优化Catalog" class="headerlink" title="优化Catalog"></a>优化Catalog</h3><ul>
-<li><strong><em><font color="#dd0000" size="5">修改后重启服务：hexo g &amp;&amp; hexo server -p 8888 –debug</font></em></strong></li>
-</ul>
-<ol>
-<li><h4 id="Fork-me-on-github"><a href="#Fork-me-on-github" class="headerlink" title="Fork me on github"></a>Fork me on github</h4><p> 位置：blog/themes/next/layout/_layout.swig<br> 打开上述文件，搜索关键字<font size="4" color="red"><strong><em>headband</em></strong></font>，在这个div标签下添加文字/图标链接的代码，并把href改为自己的github地址。</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p> 文字：<a href="https://github.blog/2008-12-19-github-ribbons/" target="_blank" rel="noopener">https://github.blog/2008-12-19-github-ribbons/</a><br> 图标：<a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">http://tholman.com/github-corners/</a><br> <img src="next_youhua_github.png" alt="Fork_me_on_github"></p>
- <div class="note info">
-            <p>新版实现方式</p>
-          </div>
-<p> 在新版只需要配置一下就OK，打开next的配置文件，搜索<font size="4" color="red"><strong><em>github_banner</em></strong></font>，配置一下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  enable: true</span><br><span class="line">  permalink: https://github.com/GIS90</span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="文章内链接文本样式"><a href="#文章内链接文本样式" class="headerlink" title="文章内链接文本样式"></a>文章内链接文本样式</h4><p> 位置：blog\themes\next\source\css_custom\custom.styl<br> 打开上述文件，样式根据自己的喜爱定义就好，添加如下代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> <img src="next_youhua_a.gif" alt="超链接"></p>
-</li>
-<li><h4 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h4><p> 添加顶部加载条，步骤如下：</p>
-<ul>
-<li><p>下载js文件，不清楚的也可以直接看github官方介绍：<a href="https://github.com/theme-next/theme-next-pace" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-pace</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/next</span><br><span class="line">git clone https://github.com/theme-next/theme-next-pace source/lib/pace</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开配置文件，搜索<font size="4" color="red"><strong><em>pace</em></strong></font>，更改如下<br>位置：blog/theme/next/_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Dependencies: https://github.com/theme-next/theme-next-pace</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line"># pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom</span><br><span class="line"># pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator</span><br><span class="line"># pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal</span><br><span class="line">pace_theme: pace-theme-mac-osx</span><br></pre></td></tr></table></figure>
-<p>大家可以根据自己喜欢的样式配置。<br><img src="next_youhua_load.gif" alt="顶部加载条"></p>
-</li>
-</ul>
-</li>
-<li><h4 id="tags页样式修改"><a href="#tags页样式修改" class="headerlink" title="tags页样式修改"></a>tags页样式修改</h4><p> 位置：blog/theme/next/_config.yml<br> 打开配置文件，搜索<font size="4" color="red"><strong><em>tagcloud</em></strong></font>，更改配置如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tagcloud:</span><br><span class="line">  # If true, font size, font color and amount of tags can be customized</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # All values below are same as default, change them by yourself</span><br><span class="line">  min: 12 # min font size in px</span><br><span class="line">  max: 36 # max font size in px</span><br><span class="line">  start: &quot;#FF9900&quot; # start color (hex, rgba, hsla or color keywords)</span><br><span class="line">  end: &quot;#FF00FF&quot; # end color (hex, rgba, hsla or color keywords)</span><br><span class="line">  amount: 80 # amount of tags, chage it if you have more than 200 tags</span><br></pre></td></tr></table></figure>
-<p> <img src="next_youhua_tags.png" alt="tags"></p>
-</li>
-<li><h4 id="鼠标样式修改"><a href="#鼠标样式修改" class="headerlink" title="鼠标样式修改"></a>鼠标样式修改</h4><ul>
-<li>鼠标样式文件<br>把下载好的鼠标样式文件（.cur）放到<strong>blog\public</strong>目录下。</li>
-<li><p>自定义样式<br>位置：blog\themes\next\source\css_custom\custom.styl。<br>打开上述文件，添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 光明西-背景</span><br><span class="line">body &#123;</span><br><span class="line">    background:url(/images/background.jpg);</span><br><span class="line">    cursor: url(&apos;/images/shubiao_guangmingxi.cur&apos;), auto !important;</span><br><span class="line">&#125;</span><br><span class="line">// 自制主题切换功能样式-暗黑系</span><br><span class="line">body.dark-theme &#123;</span><br><span class="line">    background: #282c34;</span><br><span class="line">    cursor: url(&apos;/images/shubiao_anheixi.cur&apos;), auto !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>鼠标样式根据自己的喜好做相关调整。</p>
-</li>
-<li>刷新。</li>
-</ul>
-</li>
-</ol>
-<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>hexo官方配置手册：<a href="https://hexo-guide.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">https://hexo-guide.readthedocs.io/zh_CN/latest/index.html</a><br>hexo图标选取地址：<a href="https://fontawesome.com/icons" target="_blank" rel="noopener">https://fontawesome.com/icons</a></p>
-<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>本篇内容主要解决Hexo、Next更改代码相关的优化，如果想通过配置优化，请查看<strong><em>Next主题优化-基础篇</em></strong>。内容持续更新中，如有bugs，欢迎大家评论指出。<br>待续。。。。。。（未完结）</p>
-<p><strong><em><font color="#dd0000" size="5">学会分享，一起进步</font></em></strong></p>
+<p>如果需要了解更多的参数，请<font color="red" size="5"><strong><em>man ssh_config</em></strong></font>进行查看。</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>配置完之后，每次只需要<strong><em>ssh 别名</em></strong>就可以连接到指定配置的服务器，而且在会话session结束之前只需要第一次密码即可。</p>
 
       
     </div>
@@ -662,7 +632,7 @@
           </li>
           <li class="post-copyright-link">
             <strong>本文链接：</strong>
-            <a href="https://gis90.github.io/articles/41065/" title="Next主题优化-增强篇（Gemini）">https://gis90.github.io/articles/41065/</a>
+            <a href="https://gis90.github.io/articles/24280/" title="SSH之快捷配置">https://gis90.github.io/articles/24280/</a>
           </li>
           <li class="post-copyright-license">
             <strong>版权声明：</strong>
@@ -724,9 +694,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-bomb"></i> Hexo</a>
+            <a href="/tags/SSH/" rel="tag"><i class="fa fa-bomb"></i> SSH</a>
           
-            <a href="/tags/Hexo美化/" rel="tag"><i class="fa fa-bomb"></i> Hexo美化</a>
+            <a href="/tags/协议类/" rel="tag"><i class="fa fa-bomb"></i> 协议类</a>
           
         </div>
       
@@ -739,8 +709,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/articles/58065/" rel="next" title="Next主题优化-基础篇（Gemini）">
-                <i class="fa fa-chevron-left"></i> Next主题优化-基础篇（Gemini）
+              <a href="/articles/62041/" rel="next" title="SSH协议的基础知识">
+                <i class="fa fa-chevron-left"></i> SSH协议的基础知识
               </a>
             
           </div>
@@ -748,10 +718,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/articles/7953/" rel="prev" title="hexo菜单栏添加留言板-Valine">
-                hexo菜单栏添加留言板-Valine <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1072,7 +1038,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题简述"><span class="nav-number">1.</span> <span class="nav-text">问题简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化Catalog"><span class="nav-number">3.</span> <span class="nav-text">优化Catalog</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Fork-me-on-github"><span class="nav-number">3.1.</span> <span class="nav-text">Fork me on github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章内链接文本样式"><span class="nav-number">3.2.</span> <span class="nav-text">文章内链接文本样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">3.3.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tags页样式修改"><span class="nav-number">3.4.</span> <span class="nav-text">tags页样式修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标样式修改"><span class="nav-number">3.5.</span> <span class="nav-text">鼠标样式修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习"><span class="nav-number">4.</span> <span class="nav-text">学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">5.</span> <span class="nav-text">结束</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果对比"><span class="nav-number">2.</span> <span class="nav-text">结果对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置详解"><span class="nav-number">3.</span> <span class="nav-text">配置详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">4.</span> <span class="nav-text">结果</span></a></li></ol></div>
             
 
           </div>
