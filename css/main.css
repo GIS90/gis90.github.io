@@ -2010,7 +2010,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #abff99;
+  background: #603878;
 }
 .links-of-blogroll {
   margin-top: 10px;
@@ -3618,4 +3618,20 @@ body.dark-theme {
   font-size: 32px !important;
   margin-bottom: 40px !important;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.vcard {
+  padding-bottom: 15px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+  background-color: #fff8dc;
+  margin-bottom: 20px;
+  border-radius: 15px !important;
+}
+.vcard .vh {
+  padding-top: 10px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  border-radius: 10px !important;
+  background-color: #ddd;
 }
