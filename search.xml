@@ -318,7 +318,7 @@
   <entry>
     <title><![CDATA[Python爬虫利器之requests(上篇)]]></title>
     <url>%2Farticles%2F34296%2F</url>
-    <content type="text"><![CDATA[背景身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于爬虫，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过天气报警、糗百笑话、美女图片。。。。。。，后续会在博客中挑选个例子写出来。用Python去写爬虫程序，主要涉及2个主要的Package：Requests &amp;&amp; BeautifulSoup。关于这2个爬虫利器分为上下篇进行讲解，本篇先介绍Requests，主要功能是进行数据的获取。 简介官方原话123The requests library is the de facto standard for making HTTP requests in Python.It abstracts the complexities of making requests behind a beautiful,simple API so that you can focus on interacting with services and consuming data in your application. 简要内容：Requests是一个很实用的Python HTTP客户端库，主要用于API请求。 安装1pip install requests 如果不指定版本，会自动安装最新的版本，有不熟悉pip的请自行进行恶补。 使用学习参考Requests官方：https://realpython.com/python-requests/快速上手（中文版）：https://2.python-requests.org//zh_CN/latest/user/quickstart.html]]></content>
+    <content type="text"><![CDATA[背景身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于爬虫，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过天气报警、糗百笑话、美女图片。。。。。。，后续会在博客中挑选个例子写出来。关于数据采集，用Python去写爬虫程序，主要涉及2个主要的Package：Requests &amp;&amp; BeautifulSoup。关于这2个爬虫利器分为上下篇进行讲解，本篇先介绍Requests，主要功能是进行数据的获取。 简介官方原话123The requests library is the de facto standard for making HTTP requests in Python.It abstracts the complexities of making requests behind a beautiful,simple API so that you can focus on interacting with services and consuming data in your application. 简要内容：Requests是一个很实用的Python HTTP客户端库，主要用于API请求。 安装1pip install requests 如果不指定版本，会自动安装最新的版本，有不熟悉pip的请自行进行恶补。 使用学习参考Requests官方：https://realpython.com/python-requests/快速上手（中文版）：https://2.python-requests.org//zh_CN/latest/user/quickstart.html]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -681,6 +681,7 @@
       <tags>
         <tag>Python</tag>
         <tag>Python程序篇</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
