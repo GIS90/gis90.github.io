@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gis90.github.io/about/index.html</loc>
+    
+    <lastmod>2019-10-24T03:51:39.342Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gis90.github.io/articles/9420/</loc>
     
     <lastmod>2019-10-24T03:39:04.842Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://gis90.github.io/articles/9742/</loc>
     
     <lastmod>2019-09-05T13:00:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gis90.github.io/about/index.html</loc>
-    
-    <lastmod>2019-09-03T03:22:46.083Z</lastmod>
     
   </url>
   
