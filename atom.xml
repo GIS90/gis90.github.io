@@ -64,34 +64,11 @@
   </entry>
   
   <entry>
-    <title>三大作风三大法宝三大灵魂&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;【历史】&lt;/font&gt;</title>
-    <link href="https://gis90.github.io/articles/17252/"/>
-    <id>https://gis90.github.io/articles/17252/</id>
-    <published>2019-09-04T13:09:54.000Z</published>
-    <updated>2019-09-04T13:09:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>三大作风<br>三大法宝<br>三大灵魂</p></blockquote><a id="more"></a><hr><h3 id="三大作风"><a href="#三大作风" class="headerlink" title="三大作风"></a>三大作风</h3><p>中国共产党的三大作风</p><ul><li>理论和实际相结合</li><li>密切联系群众</li><li>批评与自我批评</li></ul><p>出自《论联合政府》</p><h3 id="三大法宝"><a href="#三大法宝" class="headerlink" title="三大法宝"></a>三大法宝</h3><p>中国革命的三大法宝</p><ul><li>武装斗争</li><li>统一战线</li><li>党的建设</li></ul><p>出自《&lt;共产党人&gt;发刊词》</p><h3 id="三大灵魂"><a href="#三大灵魂" class="headerlink" title="三大灵魂"></a>三大灵魂</h3><p>毛泽东思想的三大灵魂</p><ul><li>实事求是</li><li>群众路线</li><li>独立自主</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;三大作风&lt;br&gt;三大法宝&lt;br&gt;三大灵魂&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="公务员" scheme="https://gis90.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
-    
-    
-      <category term="历史" scheme="https://gis90.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SSH之快捷配置</title>
     <link href="https://gis90.github.io/articles/24280/"/>
     <id>https://gis90.github.io/articles/24280/</id>
-    <published>2019-08-24T11:04:09.000Z</published>
-    <updated>2019-08-24T11:04:09.000Z</updated>
+    <published>2019-08-29T11:04:09.000Z</published>
+    <updated>2019-08-29T11:04:09.000Z</updated>
     
     <content type="html"><![CDATA[<div class="note warning">            <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>上篇文章介绍了有关<font color="red" size="4.5">SSH协议</font>的基础知识，正常工作中都是通过下列命令进行ssh连接：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@服务器IP</span><br></pre></td></tr></table></figure><p>工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。</p>          </div><a id="more"></a><hr><h3 id="结果对比"><a href="#结果对比" class="headerlink" title="结果对比"></a>结果对比</h3><blockquote><p>配置前</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@服务器IP</span><br></pre></td></tr></table></figure><p>每次都需要输入密码</p><blockquote><p>配置后</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 别名</span><br></pre></td></tr></table></figure><p>每日只需输入一次密码</p><h3 id="配置详解"><a href="#配置详解" class="headerlink" title="配置详解"></a>配置详解</h3><p>1 进入到<strong><em>~/.ssh</em></strong>目录，查看是否有<strong><em>config</em></strong>文件，如果没有这个文件，需要通过<strong><em>touch config</em></strong>手动进行建立。</p><p><img src="ssh_config.png" alt></p><p>2 配置文件内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host XXXX</span><br><span class="line">HostName IP</span><br><span class="line">User mingliang.gao</span><br><span class="line">ControlMaster auto</span><br><span class="line">ControlPath ~/.ssh/master-%r@%h:@%p</span><br><span class="line">ControlPersist yes</span><br><span class="line">PasswordAuthentication no</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p><ul><li>Host：ssh进行连接的别名</li><li>HostName：服务器的IP或者机器名</li><li>User：用户名</li><li>ControlMaster：是否多个会话连接用一个session文件</li><li>ControlPath：session会话文件</li><li>ControlPersist：连接是否保持长连接</li><li>PasswordAuthentication：是否需要密码认证</li><li>IdentityFile：私钥文件</li></ul><p>如果需要了解更多的参数，请<font color="red" size="5"><strong><em>man ssh_config</em></strong></font>进行查看。</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>配置完之后，每次只需要<strong><em>ssh 别名</em></strong>就可以连接到指定配置的服务器，而且在会话session结束之前只需要第一次密码即可。</p>]]></content>
     
@@ -111,6 +88,29 @@
       <category term="SSH" scheme="https://gis90.github.io/tags/SSH/"/>
     
       <category term="协议类" scheme="https://gis90.github.io/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三大作风三大法宝三大灵魂&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;【历史】&lt;/font&gt;</title>
+    <link href="https://gis90.github.io/articles/17252/"/>
+    <id>https://gis90.github.io/articles/17252/</id>
+    <published>2019-08-24T13:09:54.000Z</published>
+    <updated>2019-08-24T13:09:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>三大作风<br>三大法宝<br>三大灵魂</p></blockquote><a id="more"></a><hr><h3 id="三大作风"><a href="#三大作风" class="headerlink" title="三大作风"></a>三大作风</h3><p>中国共产党的三大作风</p><ul><li>理论和实际相结合</li><li>密切联系群众</li><li>批评与自我批评</li></ul><p>出自《论联合政府》</p><h3 id="三大法宝"><a href="#三大法宝" class="headerlink" title="三大法宝"></a>三大法宝</h3><p>中国革命的三大法宝</p><ul><li>武装斗争</li><li>统一战线</li><li>党的建设</li></ul><p>出自《&lt;共产党人&gt;发刊词》</p><h3 id="三大灵魂"><a href="#三大灵魂" class="headerlink" title="三大灵魂"></a>三大灵魂</h3><p>毛泽东思想的三大灵魂</p><ul><li>实事求是</li><li>群众路线</li><li>独立自主</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;三大作风&lt;br&gt;三大法宝&lt;br&gt;三大灵魂&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="公务员" scheme="https://gis90.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
+    
+    
+      <category term="历史" scheme="https://gis90.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   

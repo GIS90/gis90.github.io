@@ -24,17 +24,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[三大作风三大法宝三大灵魂【历史】]]></title>
-    <url>%2Farticles%2F17252%2F</url>
-    <content type="text"><![CDATA[三大作风三大法宝三大灵魂 三大作风中国共产党的三大作风 理论和实际相结合 密切联系群众 批评与自我批评 出自《论联合政府》 三大法宝中国革命的三大法宝 武装斗争 统一战线 党的建设 出自《&lt;共产党人&gt;发刊词》 三大灵魂毛泽东思想的三大灵魂 实事求是 群众路线 独立自主]]></content>
-      <categories>
-        <category>公务员</category>
-      </categories>
-      <tags>
-        <tag>历史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SSH之快捷配置]]></title>
     <url>%2Farticles%2F24280%2F</url>
     <content type="text"><![CDATA[背景上篇文章介绍了有关SSH协议的基础知识，正常工作中都是通过下列命令进行ssh连接：1ssh 用户名@服务器IP工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。 结果对比 配置前 1ssh 用户名@服务器IP 每次都需要输入密码 配置后 1ssh 别名 每日只需输入一次密码 配置详解1 进入到~/.ssh目录，查看是否有config文件，如果没有这个文件，需要通过touch config手动进行建立。 2 配置文件内容12345678Host XXXXHostName IPUser mingliang.gaoControlMaster autoControlPath ~/.ssh/master-%r@%h:@%pControlPersist yesPasswordAuthentication noIdentityFile ~/.ssh/id_rsa Host：ssh进行连接的别名 HostName：服务器的IP或者机器名 User：用户名 ControlMaster：是否多个会话连接用一个session文件 ControlPath：session会话文件 ControlPersist：连接是否保持长连接 PasswordAuthentication：是否需要密码认证 IdentityFile：私钥文件 如果需要了解更多的参数，请man ssh_config进行查看。 结果配置完之后，每次只需要ssh 别名就可以连接到指定配置的服务器，而且在会话session结束之前只需要第一次密码即可。]]></content>
@@ -45,6 +34,17 @@
       <tags>
         <tag>SSH</tag>
         <tag>协议类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[三大作风三大法宝三大灵魂【历史】]]></title>
+    <url>%2Farticles%2F17252%2F</url>
+    <content type="text"><![CDATA[三大作风三大法宝三大灵魂 三大作风中国共产党的三大作风 理论和实际相结合 密切联系群众 批评与自我批评 出自《论联合政府》 三大法宝中国革命的三大法宝 武装斗争 统一战线 党的建设 出自《&lt;共产党人&gt;发刊词》 三大灵魂毛泽东思想的三大灵魂 实事求是 群众路线 独立自主]]></content>
+      <categories>
+        <category>公务员</category>
+      </categories>
+      <tags>
+        <tag>历史</tag>
       </tags>
   </entry>
   <entry>
