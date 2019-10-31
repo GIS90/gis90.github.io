@@ -123,27 +123,24 @@
 </div>
 
 
-  <meta name="description" content="背景身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于爬虫，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过天气报警、糗百笑话、美女图片。。。。。。，后续会在博客中挑选个例子写出来。关于数据采集，用Python去写爬虫程序，主要涉及2个主要的Package：Requests &amp;amp;&amp;amp; BeautifulSoup。">
-<meta name="keywords" content="Python, Packages, 爬虫, requests">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python爬虫利器之requests(上篇)">
-<meta property="og:url" content="https://gis90.github.io/articles/34296/index.html">
+  <meta name="description" content="直男双鱼座去哪儿网python开发工程师">
+<meta name="keywords" content="Python, Linux, Hexo, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyGo²">
+<meta property="og:url" content="https://gis90.github.io/categories/seo优化/index.html">
 <meta property="og:site_name" content="PyGo²">
-<meta property="og:description" content="背景身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于爬虫，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过天气报警、糗百笑话、美女图片。。。。。。，后续会在博客中挑选个例子写出来。关于数据采集，用Python去写爬虫程序，主要涉及2个主要的Package：Requests &amp;amp;&amp;amp; BeautifulSoup。">
+<meta property="og:description" content="直男双鱼座去哪儿网python开发工程师">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gis90.github.io/articles/34296/postman.png">
-<meta property="og:updated_time" content="2019-04-04T11:01:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python爬虫利器之requests(上篇)">
-<meta name="twitter:description" content="背景身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于爬虫，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过天气报警、糗百笑话、美女图片。。。。。。，后续会在博客中挑选个例子写出来。关于数据采集，用Python去写爬虫程序，主要涉及2个主要的Package：Requests &amp;amp;&amp;amp; BeautifulSoup。">
-<meta name="twitter:image" content="https://gis90.github.io/articles/34296/postman.png">
+<meta name="twitter:title" content="PyGo²">
+<meta name="twitter:description" content="直男双鱼座去哪儿网python开发工程师">
 
 
 
 
 
 
-  <link rel="canonical" href="https://gis90.github.io/articles/34296/">
+  <link rel="canonical" href="https://gis90.github.io/categories/seo优化/">
 
 
 
@@ -153,7 +150,7 @@
   };
 </script>
 
-  <title>Python爬虫利器之requests(上篇) | PyGo²</title>
+  <title>分类: seo优化 | PyGo²</title>
   
 
 
@@ -201,7 +198,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
     <!-- 头部github设置-->
     <a target="_blank" href="https://github.com/GIS90" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -300,7 +297,7 @@
         
         
           
-          <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories menu-item-active">
 
     
     
@@ -458,339 +455,117 @@
           
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block category">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h2>seo优化<small>分类</small>
+        </h2>
+      </div>
 
-  
-  
-  
-
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gis90.github.io/articles/34296/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mingliang.gao">
-      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">去哪儿网python开发工程师</font>"/>
-      <meta itemprop="image" content="/images/timg.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PyGo²">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h3 class="post-title">
         
+          <a class="post-title-link" href="/articles/62177/" itemprop="url">
+            
+              <span itemprop="name">Hexo+Next搜索优化（二）博客优化</span>
+            
+          </a>
         
-          <h2 class="post-title" itemprop="name headline">Python爬虫利器之requests(上篇)
+      </h3>
 
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-04 19:01:28" itemprop="dateCreated datePublished" datetime="2019-04-04T19:01:28+08:00">2019-04-04</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-            <i class="fa fa-eye"></i>
-             阅读量： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <div class="note primary">
-            <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于<font color="red" size="6.5">爬虫</font>，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过<strong><em>天气报警、糗百笑话、美女图片。。。。。。</em></strong>，后续会在博客中挑选个例子写出来。</p><p>关于数据采集，用Python去写爬虫程序，主要涉及2个主要的Package：<strong><em>Requests &amp;&amp; BeautifulSoup</em></strong>。</p><table><thead><tr><th style="text-align:center">包名</th><th style="text-align:center">功能说明</th></tr></thead><tbody><tr><td style="text-align:center">Requests</td><td style="text-align:center">HTTP获取源数据</td></tr><tr><td style="text-align:center">BeautifulSoup</td><td style="text-align:center">解析 &amp;&amp; 获取目标数据</td></tr></tbody></table><p>关于这2个爬虫利器分为上下篇进行讲解，本篇先介绍<strong><em>Requests</em></strong>，主要功能是进行数据的获取。</p>
-          </div>
-<a id="more"></a>
-<hr>
-
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>官方原话<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The requests library is the de facto standard for making HTTP requests in Python.</span><br><span class="line">It abstracts the complexities of making requests behind a beautiful,</span><br><span class="line">simple API so that you can focus on interacting with services and consuming data in your application.</span><br></pre></td></tr></table></figure></p>
-<p>简要内容：<strong>Requests</strong>是一个很实用的<strong><em>Python HTTP</em></strong>客户端库，主要用于<strong>API</strong>请求。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-<p>如果不指定版本，会自动安装最新的版本，有不熟悉<strong><em>pip</em></strong>的请自行进行恶补。</p>
-<h3 id="源码说明"><a href="#源码说明" class="headerlink" title="源码说明"></a>源码说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">def request(method, url, **kwargs):</span><br><span class="line">    &quot;&quot;&quot;Constructs and sends a :class:`Request &lt;Request&gt;`.</span><br><span class="line"></span><br><span class="line">    :param method: method for the new :class:`Request` object.</span><br><span class="line">    :param url: URL for the new :class:`Request` object.</span><br><span class="line">    :param params: (optional) Dictionary or bytes to be sent in the query string for the :class:`Request`.</span><br><span class="line">    :param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.</span><br><span class="line">    :param json: (optional) json data to send in the body of the :class:`Request`.</span><br><span class="line">    :param headers: (optional) Dictionary of HTTP Headers to send with the :class:`Request`.</span><br><span class="line">    :param cookies: (optional) Dict or CookieJar object to send with the :class:`Request`.</span><br><span class="line">    :param files: (optional) Dictionary of ``&apos;name&apos;: file-like-objects`` (or ``&#123;&apos;name&apos;: (&apos;filename&apos;, fileobj)&#125;``) for multipart encoding upload.</span><br><span class="line">    :param auth: (optional) Auth tuple to enable Basic/Digest/Custom HTTP Auth.</span><br><span class="line">    :param timeout: (optional) How long to wait for the server to send data</span><br><span class="line">        before giving up, as a float, or a (`connect timeout, read timeout</span><br><span class="line">        &lt;user/advanced.html#timeouts&gt;`_) tuple.</span><br><span class="line">    :type timeout: float or tuple</span><br><span class="line">    :param allow_redirects: (optional) Boolean. Set to True if POST/PUT/DELETE redirect following is allowed.</span><br><span class="line">    :type allow_redirects: bool</span><br><span class="line">    :param proxies: (optional) Dictionary mapping protocol to the URL of the proxy.</span><br><span class="line">    :param verify: (optional) if ``True``, the SSL cert will be verified. A CA_BUNDLE path can also be provided.</span><br><span class="line">    :param stream: (optional) if ``False``, the response content will be immediately downloaded.</span><br><span class="line">    :param cert: (optional) if String, path to ssl client cert file (.pem). If Tuple, (&apos;cert&apos;, &apos;key&apos;) pair.</span><br><span class="line">    :return: :class:`Response &lt;Response&gt;` object</span><br><span class="line">    :rtype: requests.Response</span><br><span class="line"></span><br><span class="line">    Usage::</span><br><span class="line"></span><br><span class="line">      &gt;&gt;&gt; import requests</span><br><span class="line">      &gt;&gt;&gt; req = requests.request(&apos;GET&apos;, &apos;http://httpbin.org/get&apos;)</span><br><span class="line">      &lt;Response [200]&gt;</span><br><span class="line">    &quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
-<p>以上代码是Requests包中运用方法的核心，写代码多看看<font color="red" size="6.5">源码</font>，提高代码的质量，很重要。<br>上面的方法是关于HTTP请求的核心方法，挑重点说，方法的参数很多。其中<strong><em>method</em></strong>代表HTTP请求的方式，GET、POST等等；<strong><em>url</em></strong>代表请求的地址；<strong><em>kwargs</em></strong>代表不限参数，但是在注释中罗列了一些重要的参数，查看以你发现，其中这些参数都是关于<strong><em>HTTP协议</em></strong>用到的数据。参数的具体请自动查看源码，下面也会针对于常用的参数进行demo举例。</p>
-<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><p>HTTP协议请求方式主要有：GET、POST、HEAD、OPTIONS、PUT、PATCH、DELETE、TRACE和CONNECT方法。虽然方法很多，但是工作中常用的只有<font size="5" color="red">GET</font>与<font size="5" color="blue">POST</font>。<br>本人主要对<strong><em>Requests</em></strong>进行介绍，关于HTTP协议的相关知识这个不做过多讲解。</p>
-<ol>
-<li><h4 id="无参"><a href="#无参" class="headerlink" title="无参"></a>无参</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line"></span><br><span class="line"># GET</span><br><span class="line">response = requests.get(url)</span><br><span class="line"></span><br><span class="line"># POST</span><br><span class="line">response = requests.post(url)</span><br></pre></td></tr></table></figure>
-<p> 最简单的HTTP请求。</p>
-</li>
-<li><h4 id="有参"><a href="#有参" class="headerlink" title="有参"></a>有参</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line">payload = &#123;&quot;key&quot;: &quot;value&quot;&#125;</span><br><span class="line"></span><br><span class="line"># GET</span><br><span class="line">response = requests.get(url=url, params=payload)</span><br><span class="line"></span><br><span class="line"># POST</span><br><span class="line">response = requests.post(url=url, data=payload)</span><br></pre></td></tr></table></figure>
-<p> GET方法的params参数实际就是url中的参数，使用GET方法可以把参数直接封装在url中，也可以把参数封装起来传递到request方法中。<br> POST方式的参数就是form表单提交的参数。</p>
-</li>
-<li><h4 id="json数据"><a href="#json数据" class="headerlink" title="json数据"></a>json数据</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line"># headers中添加上content-type这个参数，指定为json格式</span><br><span class="line">headers = &#123;&apos;Content-Type&apos;: &apos;application/json&apos;&#125;</span><br><span class="line"># post的时候，将data字典形式的参数用json包转换成json格式。</span><br><span class="line">payload = &#123;&quot;key&quot;: &quot;value&quot;&#125;</span><br><span class="line">payload = json.dumps(payload)</span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line"></span><br><span class="line"># POST</span><br><span class="line">response = requests.post(url=url, headers=headers, data=payload)</span><br></pre></td></tr></table></figure>
-<p> POST可传递json数据，需要在headers里指定数据的类型。</p>
-</li>
-<li><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">files = &#123;&apos;file&apos;: open(&apos;report.xls&apos;, &apos;rb&apos;)&#125;</span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line"></span><br><span class="line">r = requests.post(url, files=files)</span><br></pre></td></tr></table></figure>
-<p> 把文件读取到内存中，在以流的形式传递出去。</p>
-</li>
-<li><h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line">payload = &#123;&quot;key&quot;: &quot;value&quot;&#125;</span><br><span class="line">headers = &#123;&quot;user-agent&quot;: &quot;my-app/0.0.1&quot;&#125;</span><br><span class="line"></span><br><span class="line"># GET</span><br><span class="line">response = requests.get(url=url,</span><br><span class="line">                        params=payload,</span><br><span class="line">                        headers=headers)</span><br><span class="line"></span><br><span class="line"># POST</span><br><span class="line">response = requests.post(url=url,</span><br><span class="line">                         data=json.dumps(payload)</span><br><span class="line">                         headers=headers)</span><br></pre></td></tr></table></figure>
-<p> 所有的header值必须是string、bytestring或者unicode。</p>
-</li>
-<li><h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line"># 第一种</span><br><span class="line">cookies_1 = dict(key_1=&apos;value_1&apos;)</span><br><span class="line">response = requests.get(url, cookies=cookies_1)</span><br><span class="line"># 第二种</span><br><span class="line">cookies_2 = requests.cookies.RequestsCookieJar()</span><br><span class="line">cookies_2 = jar.set(&apos;key_2&apos;, &apos;value_2&apos;, domain=url, path=&apos;/cookies&apos;)</span><br><span class="line">r = requests.get(url, cookies=cookies_2)</span><br><span class="line"></span><br><span class="line"># 查看cookies信息以及类型</span><br><span class="line">print response.cookies, type(response.cookies)</span><br></pre></td></tr></table></figure>
-<p> demo中给出了2种set cookies的方式，用第一种的较多，其中输出的cookies是一个<strong><em>requests.cookies.RequestsCookieJar对象</em></strong>。</p>
-</li>
-<li><h4 id="timeout"><a href="#timeout" class="headerlink" title="timeout"></a>timeout</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line">response = requests.get(url, timeout=5)</span><br></pre></td></tr></table></figure>
-<p> 请求时间，可选参数。以设定参数timeout秒数时间之后停止等待响应，超过这个实际会停止对服务端的请求，如果是一般的restful api接口也就是几百毫秒的响应时间，如果是大数据量可以设置长一点，默认是无限制。<br> 建议最好，设定一个值，这样请求timeout之后，也会报异常，对异常进行捕捉可以对方法进行监控报警，知道程序是否出现异常状况，时间根据对方的接口而定，建议60 ～ 120，单位：秒。</p>
-</li>
-<li><h4 id="allow-redirects"><a href="#allow-redirects" class="headerlink" title="allow_redirects"></a>allow_redirects</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = &quot;https://gis90.github.io/&quot;</span><br><span class="line">response = requests.get(url, allow_redirects=False)</span><br></pre></td></tr></table></figure>
-<p> 参数之一，允许请求重定向，默认值是True，所以这个参数只有有不允许重定向需求的时候采用得到。<br> <strong>HTTP重定向</strong>：服务器无法处理本次发送过来的request请求，服务器会返回一个新的url让客户端可以进行跳转，客户端会自动访问该url地址，但是在客户端是无法分辨是否重定向了， 重定向的状态码是<strong>3XX</strong>，关于状态码下面有粗略的介绍。</p>
-</li>
-<li><h4 id="RESPONSE"><a href="#RESPONSE" class="headerlink" title="RESPONSE"></a>RESPONSE</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = &#123;&apos;key&apos;: &apos;value&apos;&#125;</span><br><span class="line">response = requests.get(url=&apos;https://gis90.github.io/&apos;, data=data)</span><br><span class="line"></span><br><span class="line"># 请求地址</span><br><span class="line">print response.url</span><br><span class="line"># 响应状态码</span><br><span class="line">print response.status_code</span><br><span class="line"># 响应头</span><br><span class="line">print response.headers</span><br><span class="line"># 文本编码</span><br><span class="line">print response.encoding</span><br><span class="line"># 字符串格式响应内容</span><br><span class="line">print response.text</span><br><span class="line"># 二进制格式响应内容</span><br><span class="line">print response.content</span><br><span class="line"># json格式响应内容</span><br><span class="line">print response.json()</span><br><span class="line"># 原始套接字响应内容</span><br><span class="line">print response.raw</span><br><span class="line"># cookie信息</span><br><span class="line">print response.cookies</span><br></pre></td></tr></table></figure>
-<p> 总结一下需要说明得点。</p>
-<blockquote>
-<p>状态码</p>
-</blockquote>
- 
-    <table>
-      <tr>
-        <th style="text-align:center;">类型</th>
-        <th style="text-align:center;">描述</th>
-      </tr>
-      <tr>
-        <td style="text-align:center;">1**</td>
-        <td style="text-align:center;">信息，服务器收到请求，需要请求者继续执行操作</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">2**</td>
-        <td style="text-align:center;">成功，操作被成功接收并处理</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">3**</td>
-        <td style="text-align:center;">重定向，需要进一步的操作以完成请求</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">4**</td>
-        <td style="text-align:center;">客户端错误，请求包含语法错误或无法完成请求</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">5**</td>
-        <td style="text-align:center;">服务器错误，服务器在处理请求的过程中发生了错误</td>
-      </tr>
-    </table>
-    
-<blockquote>
-<p>响应头</p>
-</blockquote>
-<p> 返回来的headers是一个<strong><em>requests.structures.CaseInsensitiveDict对象</em></strong>，但是直接可以用dict字典的方式进行数据获取。</p>
-<blockquote>
-<p>text与content</p>
-</blockquote>
-<p> text与content都是返回网页的内容，唯一的区别：content是字节码，而text的内容编码是字符串。</p>
-<blockquote>
-<p>cookies</p>
-</blockquote>
-<p> cookies在上面有详细说明。</p>
-</li>
-</ol>
-<h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>Requests官方：<a href="https://realpython.com/python-requests/" target="_blank" rel="noopener">https://realpython.com/python-requests/</a><br>快速上手（中文版）：<a href="https://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="noopener">https://cn.python-requests.org/zh_CN/latest/user/quickstart.html</a><br>快速上手（高阶版）：<a href="https://cn.python-requests.org//zh_CN/latest/" target="_blank" rel="noopener">https://cn.python-requests.org//zh_CN/latest/</a></p>
-<h3 id="特别技巧"><a href="#特别技巧" class="headerlink" title="特别技巧"></a>特别技巧</h3><div class="note danger">
-            <p>Postman工具，相信做开发没有几个人不知道，它的最大用处就是用来实现各种HTTP请求。</p><p>今天在这里教大家一个技巧，如果使用requests包去模拟HTTP请求失败的话，就用Postman工具去请求，毕竟是可视化的工具，参数、cookies、headers等等比较好设置，只要在Postman上成功实现了请求，使用下图的功能，就可以查看关于请求的相关代码，很方便。</p><p><img src="postman.png" alt></p><p>Postman下载地址：<a href="https://www.getpostman.com/" target="_blank" rel="noopener">https://www.getpostman.com/</a></p>
-          </div>
-
-      
-    </div>
-
-    <!-- 版权声明 -->
-    <div>
-     
-        <ul class="post-copyright">
-          <li class="post-copyright-author">
-              <strong>本文作者：</strong>mingliang.gao【一个爱老婆的python程序猿。。。。。。】
-          </li>
-          <li class="post-copyright-link">
-            <strong>本文链接：</strong>
-            <a href="https://gis90.github.io/articles/34296/" title="Python爬虫利器之requests(上篇)">https://gis90.github.io/articles/34296/</a>
-          </li>
-          <li class="post-copyright-license">
-            <strong>版权声明：</strong>
-            本博客所有文章欢迎转载，转载请注明出处！
-          </li>
-        </ul>
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-      <div>
-        <div id="reward-container">
-  <div>觉得有帮助，请喝个咖啡</div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/wechatpay.png" alt="mingliang.gao 微信支付">
-        <p>微信支付</p>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-17T19:44:22+08:00" content="2019-03-17">
+          03-17
+        </time>
       </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/alipay.png" alt="mingliang.gao 支付宝">
-        <p>支付宝</p>
-      </div>
-    
 
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Python/" rel="tag"><i class="fa fa-bomb"></i> Python</a>
-          
-            <a href="/tags/爬虫/" rel="tag"><i class="fa fa-bomb"></i> 爬虫</a>
-          
-            <a href="/tags/PythonPackages/" rel="tag"><i class="fa fa-bomb"></i> PythonPackages</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/articles/13876/" rel="next" title="2019-06北京美食计划">
-                <i class="fa fa-chevron-left"></i> 2019-06北京美食计划
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/articles/21643/" rel="prev" title="Hexo搜索hexo-generator-searchdb">
-                Hexo搜索hexo-generator-searchdb <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h3 class="post-title">
+        
+          <a class="post-title-link" href="/articles/42646/" itemprop="url">
+            
+              <span itemprop="name">Hexo+Next搜索优化（一）google搜索</span>
+            
+          </a>
+        
+      </h3>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-03T21:33:59+08:00" content="2019-03-03">
+          03-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+    </div>
+
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -814,17 +589,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1135,23 +901,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码说明"><span class="nav-number">4.</span> <span class="nav-text">源码说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用教程"><span class="nav-number">5.</span> <span class="nav-text">使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无参"><span class="nav-number">5.1.</span> <span class="nav-text">无参</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有参"><span class="nav-number">5.2.</span> <span class="nav-text">有参</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#json数据"><span class="nav-number">5.3.</span> <span class="nav-text">json数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件"><span class="nav-number">5.4.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求头"><span class="nav-number">5.5.</span> <span class="nav-text">请求头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie"><span class="nav-number">5.6.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#timeout"><span class="nav-number">5.7.</span> <span class="nav-text">timeout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#allow-redirects"><span class="nav-number">5.8.</span> <span class="nav-text">allow_redirects</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RESPONSE"><span class="nav-number">5.9.</span> <span class="nav-text">RESPONSE</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习参考"><span class="nav-number">6.</span> <span class="nav-text">学习参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特别技巧"><span class="nav-number">7.</span> <span class="nav-text">特别技巧</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -1357,10 +1106,6 @@
 
 
   
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
-
-
 
   
 
