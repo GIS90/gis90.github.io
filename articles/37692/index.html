@@ -123,19 +123,21 @@
 </div>
 
 
-  <meta name="description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
-<meta name="keywords" content="ffmpeg, 视频, 音频, 图片, 工具">
+  <meta name="description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
+<meta name="keywords" content="ffmpeg, 视频, 音频, 工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ffmpeg的基础学习">
 <meta property="og:url" content="https://gis90.github.io/articles/37692/index.html">
 <meta property="og:site_name" content="PyGo²">
-<meta property="og:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
+<meta property="og:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gis90.github.io/images/article_ffmpeg.png">
+<meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg.png">
+<meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg_run.png">
 <meta property="og:updated_time" content="2019-12-15T07:19:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ffmpeg的基础学习">
-<meta name="twitter:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
+<meta name="twitter:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
 <meta name="twitter:image" content="https://gis90.github.io/images/article_ffmpeg.png">
 
 
@@ -582,7 +584,7 @@
 
       
         <div class="note primary">
-            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="/images/article_ffmpeg.png" alt></p><p>大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。</p><p>FFmpeg：<font size="6" color="red">我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！</font><br>我：<font size="6" color="blue">好的，👌！</font></p>
+            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="/images/article_ffmpeg.png" alt></p><p>大致的意思：FFmpeg是一款多媒体框架，能处理音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。</p><p>FFmpeg：<font size="6" color="red">我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！</font><br>我：<font size="6" color="blue">好的，👌！</font></p>
           </div>
 <a id="more"></a>
 <hr>
@@ -613,7 +615,42 @@
 </tr>
 </tbody>
 </table>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="上传-amp-amp-解压"><a href="#上传-amp-amp-解压" class="headerlink" title="上传 &amp;&amp; 解压"></a>上传 &amp;&amp; 解压</h4><p>把yasm &amp;&amp; ffmpeg文件下载到本地，需要上传到Linux服务器，在这里我采用的<strong><em>scp</em></strong>命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ~/Downloads/ffmpeg/* root@192.168.151.64:~</span><br></pre></td></tr></table></figure>
+<p>上传完之后，ssh连接服务器，找到上传的文件进行解压：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># ffmpeg</span><br><span class="line">tar -jxvf ffmpeg-4.2.1.tar.bz2</span><br><span class="line"></span><br><span class="line"># yasm</span><br><span class="line">tar -zxvf yasm-1.3.0.tar.gz</span><br></pre></td></tr></table></figure>
+<p>看好了，在这里yasm用的参数是<strong>z</strong>，ffmpeg用的是<strong>j</strong>，因为压缩的格式不一样，所以参数是不一样的，不知道的请看下tar的用法。</p>
+<p><img src="ffmpeg.png" alt></p>
+<h4 id="yasm安装"><a href="#yasm安装" class="headerlink" title="yasm安装"></a>yasm安装</h4><p>进入到yasm-1.3.0进行编译安装，因为是源码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd yasm-1.3.0/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<p>这个安装过程是没有任何问题的，等待安装完成即可。</p>
+<h4 id="ffmpeg安装"><a href="#ffmpeg安装" class="headerlink" title="ffmpeg安装"></a>ffmpeg安装</h4><p>进入ffmpeg-4.2.1文件夹进行编译安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared --prefix=/usr/loacl/ffmpeg</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<p>编译过程有点长，请耐心等待，也可以做些别的事情。<br>安装成功后，<strong><em>cd /usr/loacl/ffmpeg</em></strong>进入安装目录，查看一下发现有bin、include,、ib、share这4个目录，</p>
+<ul>
+<li>bin：是ffmpeg主程序二进制目录</li>
+<li>include是C/C++头文件目录</li>
+<li>lib是编译好的库文件目录</li>
+<li>share是文档目录</li>
+</ul>
+<h4 id="lib配置"><a href="#lib配置" class="headerlink" title="lib配置"></a>lib配置</h4><blockquote>
+<p>ld.so.conf</p>
+</blockquote>
+<p>编辑lib包的配置文件，加入<strong><em>/usr/local/ffmpeg/lib</em></strong>内容（/usr/local/ffmpeg是ffmpeg的安装目录，根据个人不同安装目录修改）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
+<p>更新环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>/etc/profile</p>
+</blockquote>
+<p>打开/etc/profile文件，在文件末尾加入以下内容:<br>export PATH=”/usr/local/ffmpeg/bin:$PATH”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure></p>
+<p>然后保存并运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p>
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><p>如果上步配置正确了，那么运行ffmpeg命令就会出现下图所示，因为ffmpeg不是系统命令，也不再系统PATH里面，所以执行要写全路径+ffmpeg。</p>
+<p><img src="ffmpeg_run.png" alt></p>
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libavdevice.so.57: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>如果出现了以上问题，那么就检查一下在lib配置配置那步，是否做对了；如果解决不了，欢迎留言咨询。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><blockquote>
+<p>获得媒体文件的信息：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i file_name</span><br></pre></td></tr></table></figure>
+<p>音频、视频都可以。</p>
+
       
     </div>
 
@@ -952,6 +989,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -1060,7 +1099,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">5.</span> <span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传-amp-amp-解压"><span class="nav-number">4.1.</span> <span class="nav-text">上传 &amp;&amp; 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#yasm安装"><span class="nav-number">4.2.</span> <span class="nav-text">yasm安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ffmpeg安装"><span class="nav-number">4.3.</span> <span class="nav-text">ffmpeg安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lib配置"><span class="nav-number">4.4.</span> <span class="nav-text">lib配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行"><span class="nav-number">4.5.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">4.6.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">5.</span> <span class="nav-text">使用</span></a></li></ol></div>
             
 
           </div>
