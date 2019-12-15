@@ -23,12 +23,12 @@
     <published>2019-12-15T07:19:18.000Z</published>
     <updated>2019-12-15T07:19:18.000Z</updated>
     
-    <content type="html"><![CDATA[<div class="note primary">                      </div><a id="more"></a><hr>]]></content>
+    <content type="html"><![CDATA[<div class="note primary">            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="/images/article_ffmpeg.png" alt></p><p>大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。</p><p>FFmpeg：<font size="6" color="red">我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！</font><br>我：<font size="6" color="blue">好的，👌！</font></p>          </div><a id="more"></a><hr><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>因为公司做了一个宣传片，把宣传片视频上传到第三方网站上，发现非会员会有广告。这还得了，如果客户没有会员，岂不是要等，为了解决这个问题，从一个程序员的角度来想办法，直接做个页面，把视频放进去，通过域名访问就可以解决无广告的问题。</p><p>周末花了一上午的时候搞完了，通过域名直接访问看，可以播放视频，但是发现视频有点卡，查看了一下视频大小：6分钟的视频500M，有点大啊，于是想压缩一下，上网搜索<strong><em>在线 视频压缩</em></strong>，TMD，要不就收费、要不就限制100M，身为程序员的我咋可能花钱去处理。于是，继续搜索<strong><em>python 视频压缩</em></strong>，看到了自己没有见过的<strong><em>ffmpeg</em></strong>命令，查了下资料，评价还不错，花了1小时搞定了<strong><em>ffmpeg</em></strong>环境，压缩 + 转格式的方式处理，最后视频110M，压缩了将近4/5，为了方便日后使用以及推荐给大家使用，写下本篇。</p><p>背景介绍完毕了，开始搞。</p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>安装需要下载2个文件：ffmpeg音视频处理工具，yasm是一款汇编器。yasm是安不安装都可以，既然ffmpeg里面都要求了就装上，省得日后麻烦。<br>文件下载地址：<br>yasm：<a href="http://yasm.tortall.net/Download.html" target="_blank" rel="noopener">http://yasm.tortall.net/Download.html</a><br>ffmpeg：<a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p><p>都是国外下载地址，如果翻不过去，本篇提供下载地址，百度云盘：</p><table><thead><tr><th style="text-align:center">name</th><th style="text-align:center">url</th><th style="text-align:center">password</th></tr></thead><tbody><tr><td style="text-align:center">yasm</td><td style="text-align:center"><a href="https://pan.baidu.com/s/14CEpqZvDhgyIcwjsINw4Gg" target="_blank" rel="noopener">https://pan.baidu.com/s/14CEpqZvDhgyIcwjsINw4Gg</a></td><td style="text-align:center">ymw5</td></tr><tr><td style="text-align:center">ffmpeg</td><td style="text-align:center"><a href="https://pan.baidu.com/s/1n65Ss2S7rtp5bYIFxKHeHQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1n65Ss2S7rtp5bYIFxKHeHQ</a></td><td style="text-align:center">j3oj</td></tr></tbody></table><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3>]]></content>
     
     <summary type="html">
     
       &lt;div class=&quot;note primary&quot;&gt;
-            
+            &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/images/article_ffmpeg.png&quot; alt&gt;&lt;/p&gt;&lt;p&gt;大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。&lt;/p&gt;&lt;p&gt;FFmpeg：&lt;font size=&quot;6&quot; color=&quot;red&quot;&gt;我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！&lt;/font&gt;&lt;br&gt;我：&lt;font size=&quot;6&quot; color=&quot;blue&quot;&gt;好的，👌！&lt;/font&gt;&lt;/p&gt;
           &lt;/div&gt;
     
     </summary>
@@ -37,10 +37,6 @@
     
     
       <category term="ffmpeg" scheme="https://gis90.github.io/tags/ffmpeg/"/>
-    
-      <category term="视频" scheme="https://gis90.github.io/tags/%E8%A7%86%E9%A2%91/"/>
-    
-      <category term="图片" scheme="https://gis90.github.io/tags/%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   

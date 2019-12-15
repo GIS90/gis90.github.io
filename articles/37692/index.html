@@ -123,15 +123,20 @@
 </div>
 
 
-  <meta name="keywords" content="ffmpeg, 视频, 图片, 工具">
+  <meta name="description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
+<meta name="keywords" content="ffmpeg, 视频, 音频, 图片, 工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ffmpeg的基础学习">
 <meta property="og:url" content="https://gis90.github.io/articles/37692/index.html">
 <meta property="og:site_name" content="PyGo²">
+<meta property="og:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gis90.github.io/images/article_ffmpeg.png">
 <meta property="og:updated_time" content="2019-12-15T07:19:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ffmpeg的基础学习">
+<meta name="twitter:description" content="简介大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。FFmpeg：我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！我：好的，👌！">
+<meta name="twitter:image" content="https://gis90.github.io/images/article_ffmpeg.png">
 
 
 
@@ -577,11 +582,38 @@
 
       
         <div class="note primary">
-            
+            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="/images/article_ffmpeg.png" alt></p><p>大致的意思：FFmpeg是一款多媒体框架，能处理图片、音频、视频等，不管什么格式的数据都可以进行处理，支持MacOS、Windows、Linux等各种系统。</p><p>FFmpeg：<font size="6" color="red">我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！</font><br>我：<font size="6" color="blue">好的，👌！</font></p>
           </div>
 <a id="more"></a>
 <hr>
 
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>因为公司做了一个宣传片，把宣传片视频上传到第三方网站上，发现非会员会有广告。这还得了，如果客户没有会员，岂不是要等，为了解决这个问题，从一个程序员的角度来想办法，直接做个页面，把视频放进去，通过域名访问就可以解决无广告的问题。</p>
+<p>周末花了一上午的时候搞完了，通过域名直接访问看，可以播放视频，但是发现视频有点卡，查看了一下视频大小：6分钟的视频500M，有点大啊，于是想压缩一下，上网搜索<strong><em>在线 视频压缩</em></strong>，TMD，要不就收费、要不就限制100M，身为程序员的我咋可能花钱去处理。于是，继续搜索<strong><em>python 视频压缩</em></strong>，看到了自己没有见过的<strong><em>ffmpeg</em></strong>命令，查了下资料，评价还不错，花了1小时搞定了<strong><em>ffmpeg</em></strong>环境，压缩 + 转格式的方式处理，最后视频110M，压缩了将近4/5，为了方便日后使用以及推荐给大家使用，写下本篇。</p>
+<p>背景介绍完毕了，开始搞。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>安装需要下载2个文件：ffmpeg音视频处理工具，yasm是一款汇编器。yasm是安不安装都可以，既然ffmpeg里面都要求了就装上，省得日后麻烦。<br>文件下载地址：<br>yasm：<a href="http://yasm.tortall.net/Download.html" target="_blank" rel="noopener">http://yasm.tortall.net/Download.html</a><br>ffmpeg：<a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a></p>
+<p>都是国外下载地址，如果翻不过去，本篇提供下载地址，百度云盘：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">name</th>
+<th style="text-align:center">url</th>
+<th style="text-align:center">password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">yasm</td>
+<td style="text-align:center"><a href="https://pan.baidu.com/s/14CEpqZvDhgyIcwjsINw4Gg" target="_blank" rel="noopener">https://pan.baidu.com/s/14CEpqZvDhgyIcwjsINw4Gg</a></td>
+<td style="text-align:center">ymw5</td>
+</tr>
+<tr>
+<td style="text-align:center">ffmpeg</td>
+<td style="text-align:center"><a href="https://pan.baidu.com/s/1n65Ss2S7rtp5bYIFxKHeHQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1n65Ss2S7rtp5bYIFxKHeHQ</a></td>
+<td style="text-align:center">j3oj</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3>
       
     </div>
 
@@ -658,10 +690,6 @@
           
             <a href="/tags/ffmpeg/" rel="tag"><i class="fa fa-bomb"></i> ffmpeg</a>
           
-            <a href="/tags/视频/" rel="tag"><i class="fa fa-bomb"></i> 视频</a>
-          
-            <a href="/tags/图片/" rel="tag"><i class="fa fa-bomb"></i> 图片</a>
-          
         </div>
       
 
@@ -721,8 +749,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -915,7 +952,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1003,7 +1040,7 @@
     <h4 class="widget-title" style="font-size:20px;text-align:center;color:#0080FF;margin:20px 0 0px;">Tag Cloud</h4>
     <div id="myCanvasContainer" class="widget tagcloud" style="font-size:20px;">
         <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PythonPackages/">PythonPackages</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片/">图片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/视频/">视频</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PythonPackages/">PythonPackages</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -1012,6 +1049,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">5.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
