@@ -134,6 +134,9 @@
 <meta property="og:image" content="https://gis90.github.io/images/article_ffmpeg.png">
 <meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg.png">
 <meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg_run.png">
+<meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg_i.png">
+<meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg_format.png">
+<meta property="og:image" content="https://gis90.github.io/articles/37692/ffmpeg_i_tf.png">
 <meta property="og:updated_time" content="2019-12-15T07:19:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ffmpeg的基础学习">
@@ -645,11 +648,37 @@
 <p><img src="ffmpeg_run.png" alt></p>
 <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libavdevice.so.57: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
 <p>如果出现了以上问题，那么就检查一下在lib配置配置那步，是否做对了；如果解决不了，欢迎留言咨询。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><blockquote>
-<p>获得媒体文件的信息：</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>总结一下本人暂时学到的一些基础使用方法，这个命令很强大，喜欢的可以去官网进行查看详细的使用方法。</p>
+<h4 id="信息获取"><a href="#信息获取" class="headerlink" title="信息获取"></a>信息获取</h4><blockquote>
+<p>获取媒体信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i file_name</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i file_name</span><br></pre></td></tr></table></figure>
-<p>音频、视频都可以。</p>
+<p><img src="ffmpeg_i.png" alt></p>
+<p>音频、视频都可以，读取文件的相关信息。</p>
+<blockquote>
+<p>查看支持格式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -formats</span><br></pre></td></tr></table></figure>
+<p><img src="ffmpeg_format.png" alt></p>
+<p>查看支持的音频、视频格式。</p>
+<h4 id="格式转换"><a href="#格式转换" class="headerlink" title="格式转换"></a>格式转换</h4><blockquote>
+<p>基础使用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i elt.mp4 elt_output.avi</span><br><span class="line"></span><br><span class="line"># 多格式输出</span><br><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i elt.mp4 elt_output.avi elt_output.wmv</span><br></pre></td></tr></table></figure>
+<p><img src="ffmpeg_i_tf.png" alt></p>
+<p>命令行中指定文件的输入和输出文件名就行了，这个方法同样适用于视频和音频文件，这个是常用的命令之一。</p>
+<blockquote>
+<p>保留视频质量</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/ffmpeg/bin/ffmpeg -i elt.mp4 -qscale 0 elt_output.avi</span><br></pre></td></tr></table></figure>
+<p>通过-qscale 0参数来保留视频格式转换的视频质量。</p>
+<h4 id="视频压缩"><a href="#视频压缩" class="headerlink" title="视频压缩"></a>视频压缩</h4><blockquote>
+<p>降低比特率</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i elt.mp4 -b:v 1000k -bufsize 1000k elt.mp4</span><br></pre></td></tr></table></figure>
+<p>通过降低比特率(使用 -b:a 或 -ab)来进行视频压缩，一些常用的比特率有: 96k, 112k, 128k, 160k, 192k, 256k, 320k.值越大，文件所需要的体积就越大。</p>
+<h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>ffmpeg官网：<a href="http://ffmpeg.org/ffmpeg.html#Audio-Options" target="_blank" rel="noopener">http://ffmpeg.org/ffmpeg.html#Audio-Options</a><br>Linux上的ffmpeg完全使用指南：<a href="https://eyehere.net/2019/the-complete-guide-for-using-ffmpeg-in-linux/#basic-usage" target="_blank" rel="noopener">https://eyehere.net/2019/the-complete-guide-for-using-ffmpeg-in-linux/#basic-usage</a></p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>ffmpeg的安装与基础使用先记录到这里吧，但是关于ffmpeg的探索不会停止，学习永无止境，日后有使用到其他命令会更新此博客。</p>
+<font size="6" color="red">不会的东西，干它就完了！！！</font>
 
       
     </div>
@@ -1099,7 +1128,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传-amp-amp-解压"><span class="nav-number">4.1.</span> <span class="nav-text">上传 &amp;&amp; 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#yasm安装"><span class="nav-number">4.2.</span> <span class="nav-text">yasm安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ffmpeg安装"><span class="nav-number">4.3.</span> <span class="nav-text">ffmpeg安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lib配置"><span class="nav-number">4.4.</span> <span class="nav-text">lib配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行"><span class="nav-number">4.5.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">4.6.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">5.</span> <span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传-amp-amp-解压"><span class="nav-number">4.1.</span> <span class="nav-text">上传 &amp;&amp; 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#yasm安装"><span class="nav-number">4.2.</span> <span class="nav-text">yasm安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ffmpeg安装"><span class="nav-number">4.3.</span> <span class="nav-text">ffmpeg安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lib配置"><span class="nav-number">4.4.</span> <span class="nav-text">lib配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行"><span class="nav-number">4.5.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">4.6.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">5.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息获取"><span class="nav-number">5.1.</span> <span class="nav-text">信息获取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式转换"><span class="nav-number">5.2.</span> <span class="nav-text">格式转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频压缩"><span class="nav-number">5.3.</span> <span class="nav-text">视频压缩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习参考"><span class="nav-number">6.</span> <span class="nav-text">学习参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">7.</span> <span class="nav-text">结束语</span></a></li></ol></div>
             
 
           </div>
