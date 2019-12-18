@@ -1,0 +1,1 @@
+function theme_change(){var e=document.getElementById("theme_change");new RegExp("暗黑系","i").test(e.innerHTML)?e.innerHTML="光明系":e.innerHTML="暗黑系",document.body.classList.toggle("dark-theme")}
