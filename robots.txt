@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /archives/
+Allow: /articles/
 Allow: /categories/
 Allow: /tags/
 Allow: /messagepad/
@@ -13,5 +14,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://gis90.github.io/sitemap.xml
-Sitemap: https://gis90.github.io/baidusitemap.xml
+Sitemap: http://pygp2.cn/sitemap.xml
+Sitemap: http://pygp2.cn/baidusitemap.xml
