@@ -1,7 +1,7 @@
 float_box = document.getElementById("float_box");
 
-var xPos = 20;
-var yPos = document.body.clientHeight;
+var xPos = 0;
+var yPos = 0;
 var step = 1;
 var delay = 30;
 var height = 0;
