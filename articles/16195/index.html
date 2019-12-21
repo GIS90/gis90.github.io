@@ -153,7 +153,7 @@
 <meta property="og:description" content="问题简述next主题的blog添加文章统计功能【hexo-symbols-count-time】">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gis90.github.io/articles/16195/hexo-symbols-count-time.png">
-<meta property="og:updated_time" content="2018-11-24T13:52:30.000Z">
+<meta property="og:updated_time" content="2019-12-21T13:52:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo展示文章统计-hexo-symbols-count-time">
 <meta name="twitter:description" content="问题简述next主题的blog添加文章统计功能【hexo-symbols-count-time】">
@@ -538,19 +538,31 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">创建时间：</span>
               
 
               
                 
               
 
-              <time title="创建时间：2018-11-24 16:52:30 / 修改时间：21:52:30" itemprop="dateCreated datePublished" datetime="2018-11-24T16:52:30+08:00">2018-11-24</time>
+              <time title="创建时间：2018-11-24 16:52:30" itemprop="dateCreated datePublished" datetime="2018-11-24T16:52:30+08:00">2018-11-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新时间：</span>
+                
+                <time title="修改时间：2019-12-21 21:52:30" itemprop="dateModified" datetime="2019-12-21T21:52:30+08:00">2019-12-21</time>
               
             
           </span>
@@ -589,6 +601,34 @@
             </span>
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -635,23 +675,11 @@
 </tbody>
 </table>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>去查next主题的_config.yml文件，一点点看。终于在347行发现了<strong><em># Post wordcount display settings</em></strong>这一行说明，继续阅读发现hexo-symbols-count-time这个插件，立马google，官方解释：<br><img src="hexo-symbols-count-time.png" alt="hexo-symbols-count-time"><br>大致的意思是统计文章的符号数量以及阅读时间，比hexo-reading-time更美观，比hexo-worcount统计的更快，而且还没有依赖。这是非常爽的啊，只需要按配置一下，OK了啊。</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install hexo-symbols-count-time --save
-</code></pre><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><pre><code>⁍ next找到_config.yml的配置，搜索关键字：hexo-symbols-count-time
-symbols_count_time:
-  separated_meta: true
-  item_text_post: true
-  item_text_total: false
-  awl: 4
-  wpm: 275
-</code></pre><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><pre><code>AWL — Average Word Length (chars count in word). Default: 4. You can check this here.
-    CN ≈ 2
-    EN ≈ 5
-    RU ≈ 6
-WPM — Words Per Minute. Default: 275. You can check this here.
-    Slow ≈ 200
-    Normal ≈ 275
-    Fast ≈ 350
-</code></pre><h3 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h3><p><strong><em>hexo-wordcount：</em></strong><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">https://www.jianshu.com/p/baea8c95e39b</a><br><strong><em>hexo-symbols-count-time：</em></strong><a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">https://github.com/theme-next/hexo-symbols-count-time</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+<h4 id="blog配置文件"><a href="#blog配置文件" class="headerlink" title="blog配置文件"></a>blog配置文件</h4><p>⁍ next找到_config.yml的配置，添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 文章统计</span><br><span class="line">symbols_count_time:</span><br><span class="line"> #文章内是否显示</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line"> # 网页底部是否显示</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br></pre></td></tr></table></figure></p>
+<h4 id="theme配置文件"><a href="#theme配置文件" class="headerlink" title="theme配置文件"></a>theme配置文件</h4><p>⁍ next找到_config.yml的配置，搜索关键字：hexo-symbols-count-time<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure></p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>AWL — Average Word Length (chars count in word). Default: 4. You can check this here.<br>    CN ≈ 2<br>    EN ≈ 5<br>    RU ≈ 6<br>WPM — Words Per Minute. Default: 275. You can check this here.<br>    Slow ≈ 200<br>    Normal ≈ 275<br>    Fast ≈ 350</p>
+<h3 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h3><p><strong><em>hexo-wordcount：</em></strong><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">https://www.jianshu.com/p/baea8c95e39b</a><br><strong><em>hexo-symbols-count-time：</em></strong><a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">https://github.com/theme-next/hexo-symbols-count-time</a></p>
 <h3 id="个人观点"><a href="#个人观点" class="headerlink" title="个人观点"></a>个人观点</h3><ul>
 <li>搞开发的英语看的能力起码得有基础，不然解决bug，看官方api的时候很费劲</li>
 <li>搞一个东西的时候，先从本身查找能否解决问题，如果不能在考虑从外部引用解决问题</li>
@@ -1105,7 +1133,7 @@ WPM — Words Per Minute. Default: 275. You can check this here.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题简述"><span class="nav-number">1.</span> <span class="nav-text">问题简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本信息"><span class="nav-number">2.</span> <span class="nav-text">版本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">3.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说明"><span class="nav-number">3.3.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关文章"><span class="nav-number">4.</span> <span class="nav-text">相关文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人观点"><span class="nav-number">5.</span> <span class="nav-text">个人观点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题简述"><span class="nav-number">1.</span> <span class="nav-text">问题简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本信息"><span class="nav-number">2.</span> <span class="nav-text">版本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#blog配置文件"><span class="nav-number">3.2.</span> <span class="nav-text">blog配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#theme配置文件"><span class="nav-number">3.3.</span> <span class="nav-text">theme配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说明"><span class="nav-number">3.4.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关文章"><span class="nav-number">4.</span> <span class="nav-text">相关文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人观点"><span class="nav-number">5.</span> <span class="nav-text">个人观点</span></a></li></ol></div>
             
 
           </div>
@@ -1133,9 +1161,24 @@ WPM — Words Per Minute. Default: 275. You can check this here.
   <span class="author" itemprop="copyrightHolder">mingliang.gao</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">221k</span>
+  
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">3:21</span>
+  
 </div>
+
 
 
 
@@ -1177,7 +1220,7 @@ WPM — Words Per Minute. Default: 275. You can check this here.
 		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
 		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
 		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+		document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
 	}
 	siteTime();
 </script>
@@ -1189,6 +1232,7 @@ WPM — Words Per Minute. Default: 275. You can check this here.
   
     <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
+      本站访客总量：
     </span>
     <span class="site-uv" title="总访客量">
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
@@ -1202,6 +1246,7 @@ WPM — Words Per Minute. Default: 275. You can check this here.
   
     <span class="post-meta-item-icon">
       <i class="fa fa-eye"></i>
+      本站总访问量：
     </span>
     <span class="site-pv" title="总访问量">
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
