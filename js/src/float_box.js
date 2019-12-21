@@ -1,6 +1,6 @@
 float_box = document.getElementById("float_box");
 
-var xPos = 0;
+var xPos = document.body.clientWidth;
 var yPos = 0;
 var step = 1;
 var delay = 30;

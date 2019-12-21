@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>PyGo²</title>
   
-  <subtitle>一个爱老婆的python程序猿。。。。。。</subtitle>
+  <subtitle>一个爱&lt;font size=&quot;5&quot; color=&quot;#BF0060&quot;&gt;老婆&lt;/font&gt;的&lt;font size=&quot;5&quot; color=&quot;#FF4500&quot;&gt;Python&lt;/font&gt;程序猿。。。。。。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gis90.github.io/"/>
