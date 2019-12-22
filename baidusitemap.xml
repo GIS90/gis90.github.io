@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gis90.github.io/articles/53966/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/61166/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/14093/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/18454/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/9420/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/36621/</loc>
+    <lastmod>2019-12-22</lastmod>
+  </url>  <url>
     <loc>https://gis90.github.io/articles/16195/</loc>
     <lastmod>2019-12-21</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/36621/</loc>
-    <lastmod>2019-12-19</lastmod>
+    <loc>https://gis90.github.io/articles/37692/</loc>
+    <lastmod>2019-12-17</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/10512/</loc>
     <lastmod>2019-12-17</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/37692/</loc>
-    <lastmod>2019-12-15</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/13168/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/35042/</loc>
+    <lastmod>2019-12-09</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/41065/</loc>
+    <lastmod>2019-12-07</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/58065/</loc>
     <lastmod>2019-12-06</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/43681/</loc>
-    <lastmod>2019-11-04</lastmod>
+    <lastmod>2019-11-05</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/42646/</loc>
+    <lastmod>2019-11-03</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/3412/</loc>
+    <lastmod>2019-11-03</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/17077/</loc>
     <lastmod>2019-10-28</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/53966/</loc>
-    <lastmod>2019-10-24</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/9420/</loc>
-    <lastmod>2019-10-24</lastmod>
+    <loc>https://gis90.github.io/articles/57737/</loc>
+    <lastmod>2019-10-23</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/32384/</loc>
     <lastmod>2019-10-03</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/43171/</loc>
     <lastmod>2019-09-16</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/61166/</loc>
-    <lastmod>2019-09-13</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/18454/</loc>
-    <lastmod>2019-09-13</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/14093/</loc>
-    <lastmod>2019-09-13</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/65231/</loc>
     <lastmod>2019-09-13</lastmod>
@@ -58,11 +73,14 @@
     <loc>https://gis90.github.io/articles/17252/</loc>
     <lastmod>2019-08-24</lastmod>
   </url>  <url>
+    <loc>https://gis90.github.io/articles/30296/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
     <loc>https://gis90.github.io/articles/62041/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/30296/</loc>
-    <lastmod>2019-08-12</lastmod>
+    <loc>https://gis90.github.io/articles/62177/</loc>
+    <lastmod>2019-08-17</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/8059/</loc>
     <lastmod>2019-08-05</lastmod>
@@ -70,8 +88,17 @@
     <loc>https://gis90.github.io/articles/28340/</loc>
     <lastmod>2019-07-29</lastmod>
   </url>  <url>
+    <loc>https://gis90.github.io/articles/36954/</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
     <loc>https://gis90.github.io/articles/15891/</loc>
     <lastmod>2019-07-20</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/21353/</loc>
+    <lastmod>2019-07-18</lastmod>
+  </url>  <url>
+    <loc>https://gis90.github.io/articles/37795/</loc>
+    <lastmod>2019-07-08</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/64874/</loc>
     <lastmod>2019-06-26</lastmod>
@@ -94,17 +121,14 @@
     <loc>https://gis90.github.io/articles/41680/</loc>
     <lastmod>2019-06-03</lastmod>
   </url>  <url>
+    <loc>https://gis90.github.io/articles/5369/</loc>
+    <lastmod>2019-06-02</lastmod>
+  </url>  <url>
     <loc>https://gis90.github.io/articles/24640/</loc>
     <lastmod>2019-06-01</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/5369/</loc>
-    <lastmod>2019-05-25</lastmod>
-  </url>  <url>
     <loc>https://gis90.github.io/articles/58192/</loc>
     <lastmod>2019-05-24</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/21353/</loc>
-    <lastmod>2019-05-18</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/34936/</loc>
     <lastmod>2019-05-13</lastmod>
@@ -139,17 +163,11 @@
     <loc>https://gis90.github.io/articles/13876/</loc>
     <lastmod>2019-04-04</lastmod>
   </url>  <url>
+    <loc>https://gis90.github.io/articles/43239/</loc>
+    <lastmod>2019-04-03</lastmod>
+  </url>  <url>
     <loc>https://gis90.github.io/articles/16168/</loc>
     <lastmod>2019-04-01</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/43239/</loc>
-    <lastmod>2019-03-28</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/62177/</loc>
-    <lastmod>2019-03-17</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/36954/</loc>
-    <lastmod>2019-01-26</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/18391/</loc>
     <lastmod>2019-01-18</lastmod>
@@ -157,11 +175,8 @@
     <loc>https://gis90.github.io/articles/28748/</loc>
     <lastmod>2019-01-18</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/37795/</loc>
+    <loc>https://gis90.github.io/articles/7953/</loc>
     <lastmod>2019-01-08</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/42646/</loc>
-    <lastmod>2019-01-03</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/25933/</loc>
     <lastmod>2018-12-26</lastmod>
@@ -175,31 +190,16 @@
     <loc>https://gis90.github.io/articles/8728/</loc>
     <lastmod>2018-12-12</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/7953/</loc>
-    <lastmod>2018-12-08</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/41065/</loc>
-    <lastmod>2018-12-07</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/58065/</loc>
-    <lastmod>2018-12-06</lastmod>
-  </url>  <url>
     <loc>https://gis90.github.io/articles/31753/</loc>
     <lastmod>2018-11-21</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/46750/</loc>
     <lastmod>2018-11-09</lastmod>
   </url>  <url>
-    <loc>https://gis90.github.io/articles/3412/</loc>
-    <lastmod>2018-11-03</lastmod>
-  </url>  <url>
     <loc>https://gis90.github.io/articles/33202/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/39009/</loc>
-    <lastmod>2018-10-23</lastmod>
-  </url>  <url>
-    <loc>https://gis90.github.io/articles/57737/</loc>
     <lastmod>2018-10-23</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/59864/</loc>
@@ -227,7 +227,7 @@
     <lastmod>2018-03-19</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/35054/</loc>
-    <lastmod>2017-10-15</lastmod>
+    <lastmod>2017-11-21</lastmod>
   </url>  <url>
     <loc>https://gis90.github.io/articles/56827/</loc>
     <lastmod>2017-06-22</lastmod>

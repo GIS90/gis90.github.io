@@ -145,7 +145,7 @@
 
 
   <meta name="description" content="简介Linux万能命令之lsof，只有你想不到的，没有踏做不到。">
-<meta name="keywords" content="linux, lsof, 增强篇">
+<meta name="keywords" content="linux, lsof, 服务器, 命令, 端口, 文件, 进程 , shell, bash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习之增强篇-lsof">
 <meta property="og:url" content="https://gis90.github.io/articles/35042/index.html">
@@ -161,7 +161,7 @@
 <meta property="og:image" content="https://gis90.github.io/articles/35042/lsof_user.png">
 <meta property="og:image" content="https://gis90.github.io/articles/35042/lsof_dd.png">
 <meta property="og:image" content="https://gis90.github.io/articles/35042/lsof_D.png">
-<meta property="og:updated_time" content="2019-12-06T01:53:46.000Z">
+<meta property="og:updated_time" content="2019-12-09T01:53:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习之增强篇-lsof">
 <meta name="twitter:description" content="简介Linux万能命令之lsof，只有你想不到的，没有踏做不到。">
@@ -557,6 +557,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新时间：</span>
+                
+                <time title="修改时间：2019-12-09 09:53:46" itemprop="dateModified" datetime="2019-12-09T09:53:46+08:00">2019-12-09</time>
+              
+            
           </span>
 
           
@@ -639,14 +655,14 @@
 
       
         <div class="note danger">
-            <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Linux万能命令之lsof，<font size="6.5" color="red">只有你想不到的，没有踏做不到</font>。<br><img src="/images/article_lsof.jpg" alt></p>
+            <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>Linux万能命令之lsof，<font size="6.5" color="red">只有你想不到的，没有踏做不到</font>。<br><img src="/images/article_lsof.jpg" alt></p>
           </div>
 <a id="more"></a>
 <hr>
 
-<h3 id="推荐指数"><a href="#推荐指数" class="headerlink" title="推荐指数"></a>推荐指数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">🌟🌟🌟🌟🌟</span><br></pre></td></tr></table></figure>
-<h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>lsof = list opened files，大致的意思就是列举系统中被打开的文件。玩linux的人都知道：“linux万物皆文件”，目录、sockets文件、字符设备、块设备、管道符等等。所以在linux系统之内，不管干什么都会跟文件挂上边，lsof是打开这些被使用文件列表的一个工具。不过，在平常，我用的最多就是查端口以及文件被哪个进程使用，命令非常强大。</p>
-<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><p>在关于lsof能进行查看的文件类型，做了一下分类统计，结果如下：</p>
+<h4 id="推荐指数"><a href="#推荐指数" class="headerlink" title="推荐指数"></a>推荐指数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">🌟🌟🌟🌟🌟</span><br></pre></td></tr></table></figure>
+<h4 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>lsof = list opened files，大致的意思就是列举系统中被打开的文件。玩linux的人都知道：“linux万物皆文件”，目录、sockets文件、字符设备、块设备、管道符等等。所以在linux系统之内，不管干什么都会跟文件挂上边，lsof是打开这些被使用文件列表的一个工具。不过，在平常，我用的最多就是查端口以及文件被哪个进程使用，命令非常强大。</p>
+<h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4><p>在关于lsof能进行查看的文件类型，做了一下分类统计，结果如下：</p>
 <ul>
 <li>普通文件（.txt、.log等等）</li>
 <li>目录</li>
@@ -658,7 +674,7 @@
 <li>网络文件（socket相关文件，.sock）</li>
 </ul>
 <p>应该还有其他的文件，本人刚入linux系统，不足的地方请各路神山补充，欢迎留言👏👏👏。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>lsof命令是linux系统非自带的一个命令。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>lsof命令是linux系统非自带的一个命令。</p>
 <blockquote>
 <p>检查是否已安装</p>
 </blockquote>
@@ -669,7 +685,7 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install lsof</span><br><span class="line">Loaded plugins: fastestmirror</span><br><span class="line">base                                                                                | 3.6 kB  00:00:00</span><br><span class="line">extras                                                                              | 3.4 kB  00:00:00</span><br><span class="line">updates                                                                             | 3.4 kB  00:00:00</span><br><span class="line">extras/7/x86_64/primary_db                                                          | 200 kB  00:00:00</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line"> * extras: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line"> * updates: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package lsof.x86_64 0:4.87-6.el7 will be installed</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">===========================================================================================================</span><br><span class="line"> Package                Arch                     Version                      Repository              Size</span><br><span class="line">===========================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> lsof                   x86_64                   4.87-6.el7                   base                   331 k</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">===========================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total download size: 331 k</span><br><span class="line">Installed size: 927 k</span><br><span class="line">Is this ok [y/d/N]: y</span><br><span class="line">Downloading packages:</span><br><span class="line">lsof-4.87-6.el7.x86_64.rpm                                                          | 331 kB  00:00:00</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Installing : lsof-4.87-6.el7.x86_64                                                                  1/1</span><br><span class="line">  Verifying  : lsof-4.87-6.el7.x86_64                                                                  1/1</span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  lsof.x86_64 0:4.87-6.el7</span><br><span class="line"></span><br><span class="line">Complete!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>整个安装过程问题不大，大大小小的lsof安装已经也装过10几次了，重没发生过意外，有问题的话可以邮件、微信联系我，一起来进行解决。</p>
-<h3 id="输出内容"><a href="#输出内容" class="headerlink" title="输出内容"></a>输出内容</h3><p>这个先简单介绍一下lsof输出信息的内容，具体格式如图：</p>
+<h4 id="输出内容"><a href="#输出内容" class="headerlink" title="输出内容"></a>输出内容</h4><p>这个先简单介绍一下lsof输出信息的内容，具体格式如图：</p>
 <p><img src="lsof_fields.png" alt></p>
 <blockquote>
 <p>COMMAND</p>
@@ -738,7 +754,7 @@
 <p>NAME</p>
 </blockquote>
 <p>name，打开文件的确切名称</p>
-<h3 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h3><p>lsof参数有太多太多，这里不一一列举，只讲解一下常用的参数，如果有想深入了解的，请<font size="5.5" color="red">man lsof</font>。</p>
+<h4 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h4><p>lsof参数有太多太多，这里不一一列举，只讲解一下常用的参数，如果有想深入了解的，请<font size="5.5" color="red">man lsof</font>。</p>
 <blockquote>
 <p>-a</p>
 </blockquote>
@@ -775,7 +791,7 @@
 <p>-i &lt;条件&gt;</p>
 </blockquote>
 <p>列出打开的套接字，过滤条件：tcp、udp、4、6、协议、:端口、 @ip</p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><blockquote>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><blockquote>
 <p>查看端口</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i :80</span><br></pre></td></tr></table></figure>
@@ -816,8 +832,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof +D /usr/local/</span><br></pre></td></tr></table></figure>
 <p><img src="lsof_D.png" alt></p>
 <p>遍历搜索的方式列出目录下被进程打开的文件列表。</p>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>本篇先写到这里吧，以上是我常用的命令以及参数说明，各种参数可以一起使用，如果不能满足大家的需求请见谅，毕竟本人是linux小白一枚，<font size="6.5" color="blue">在不断尝试中去学习、去进步、去成长、去积累吧</font>，敬自己。</p>
-<h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>lsof简书：<a href="https://www.jianshu.com/p/be0c534c6a41" target="_blank" rel="noopener">https://www.jianshu.com/p/be0c534c6a41</a><br>每日一命令lsof：<a href="https://www.cnblogs.com/peida/archive/2013/02/26/2932972.html" target="_blank" rel="noopener">https://www.cnblogs.com/peida/archive/2013/02/26/2932972.html</a></p>
+<h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><p>本篇先写到这里吧，以上是我常用的命令以及参数说明，各种参数可以一起使用，如果不能满足大家的需求请见谅，毕竟本人是linux小白一枚，<font size="6.5" color="blue">在不断尝试中去学习、去进步、去成长、去积累吧</font>，敬自己。</p>
+<h4 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h4><p>lsof简书：<a href="https://www.jianshu.com/p/be0c534c6a41" target="_blank" rel="noopener">https://www.jianshu.com/p/be0c534c6a41</a><br>每日一命令lsof：<a href="https://www.cnblogs.com/peida/archive/2013/02/26/2932972.html" target="_blank" rel="noopener">https://www.cnblogs.com/peida/archive/2013/02/26/2932972.html</a></p>
 <p>感谢上面的2篇文章。</p>
 
       
@@ -1160,7 +1176,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">45</span>
+                      
+                    
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1252,7 +1270,7 @@
     <h4 class="widget-title" style="font-size:20px;text-align:center;color:#0080FF;margin:20px 0 0px;">Tag Cloud</h4>
     <div id="myCanvasContainer" class="widget tagcloud" style="font-size:20px;">
         <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PythonPackages/">PythonPackages</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PythonPackages/">PythonPackages</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -1272,7 +1290,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐指数"><span class="nav-number">2.</span> <span class="nav-text">推荐指数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本介绍"><span class="nav-number">3.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件类型"><span class="nav-number">4.</span> <span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">5.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出内容"><span class="nav-number">6.</span> <span class="nav-text">输出内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数详解"><span class="nav-number">7.</span> <span class="nav-text">参数详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">8.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">9.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习参考"><span class="nav-number">10.</span> <span class="nav-text">学习参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐指数"><span class="nav-number">2.</span> <span class="nav-text">推荐指数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本介绍"><span class="nav-number">3.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件类型"><span class="nav-number">4.</span> <span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">5.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出内容"><span class="nav-number">6.</span> <span class="nav-text">输出内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数详解"><span class="nav-number">7.</span> <span class="nav-text">参数详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">8.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结束语"><span class="nav-number">9.</span> <span class="nav-text">结束语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习参考"><span class="nav-number">10.</span> <span class="nav-text">学习参考</span></a></li></ol></div>
             
 
           </div>
@@ -1305,7 +1323,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">221k</span>
+    <span title="站点总字数">222k</span>
   
 
   
