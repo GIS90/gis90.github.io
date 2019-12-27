@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gis90.github.io/"/>
-  <updated>2019-12-24T07:24:47.000Z</updated>
+  <updated>2019-12-27T02:27:58.000Z</updated>
   <id>https://gis90.github.io/</id>
   
   <author>
@@ -17,16 +17,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Tools-etherpad在线协作编辑</title>
+    <title>Github热门的Python项目推荐</title>
+    <link href="https://gis90.github.io/articles/12867/"/>
+    <id>https://gis90.github.io/articles/12867/</id>
+    <published>2019-12-27T02:27:58.000Z</published>
+    <updated>2019-12-27T02:27:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="post_cus_note">推荐几款Github上热门的Python项目</div><p><img src="/images/article_github.jpg" alt></p><font size="6.5" color="red">持续更新中。。。。。。</font><a id="more"></a><hr><table><thead><tr><th style="text-align:center">NAME</th><th style="text-align:center">URL</th></tr></thead><tbody><tr><td style="text-align:center">抢票神器（web版）</td><td style="text-align:center"><a href="https://github.com/pjialin/py12306/" target="_blank" rel="noopener">https://github.com/pjialin/py12306/</a></td></tr><tr><td style="text-align:center">实时GPS接数处理程序</td><td style="text-align:center"><a href="https://github.com/GIS90/realgpserver.git" target="_blank" rel="noopener">https://github.com/GIS90/realgpserver.git</a></td></tr><tr><td style="text-align:center">自由上网</td><td style="text-align:center"><a href="https://github.com/Alvin9999/new-pac.git" target="_blank" rel="noopener">https://github.com/Alvin9999/new-pac.git</a></td></tr><tr><td style="text-align:center">爬虫集合</td><td style="text-align:center"><a href="https://github.com/facert/awesome-spider.git" target="_blank" rel="noopener">https://github.com/facert/awesome-spider.git</a></td></tr></tbody></table><p>从事于Python语言开发。。。。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;post_cus_note&quot;&gt;推荐几款Github上热门的Python项目&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/article_github.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;持续更新中。。。。。。&lt;/font&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+    
+      <category term="Github" scheme="https://gis90.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>etherpad在线协作编辑</title>
     <link href="https://gis90.github.io/articles/7544/"/>
     <id>https://gis90.github.io/articles/7544/</id>
     <published>2019-12-24T07:24:47.000Z</published>
     <updated>2019-12-24T07:24:47.000Z</updated>
     
+    <content type="html"><![CDATA[<p><img src="/images/article_etherpad.jpg" alt></p><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><div class="note primary">            <p>官网：Etherpad is a highly customizable Open Source online editor providing collaborative editing in really real-time.</p><p>个人翻译：Etherpad是一款定制、开源的在线编辑器，提供实时协作编辑。</p>          </div><a id="more"></a><hr><p>本人实践的机器是阿里云服务器，系统是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[mingliang.gao@VM_0_16_centos ~]$ cat /etc/*release*</span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">Derived from Red Hat Enterprise Linux 7.5 (Source)</span><br><span class="line">NAME=&quot;CentOS Linux&quot;</span><br><span class="line">VERSION=&quot;7 (Core)&quot;</span><br><span class="line">ID=&quot;centos&quot;</span><br><span class="line">ID_LIKE=&quot;rhel fedora&quot;</span><br><span class="line">VERSION_ID=&quot;7&quot;</span><br><span class="line">PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;31&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;</span><br><span class="line">HOME_URL=&quot;https://www.centos.org/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line"></span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br><span class="line"></span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">cpe:/o:centos:centos:7</span><br></pre></td></tr></table></figure></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="node安装"><a href="#node安装" class="headerlink" title="node安装"></a>node安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure><h4 id="依赖包安装"><a href="#依赖包安装" class="headerlink" title="依赖包安装"></a>依赖包安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install curl vim gcc-c++ make</span><br></pre></td></tr></table></figure><div class="post_cus_note">常见问题</div><blockquote><p>端口设置</p></blockquote><blockquote><p>node版本</p></blockquote><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>官网：<a href="https://etherpad.org/" target="_blank" rel="noopener">https://etherpad.org/</a><br>github：<a href="https://github.com/ether/etherpad-lite" target="_blank" rel="noopener">https://github.com/ether/etherpad-lite</a></p>]]></content>
+    
     <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_etherpad.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;官网：Etherpad is a highly customizable Open Source online editor providing collaborative editing in really real-time.&lt;/p&gt;&lt;p&gt;个人翻译：Etherpad是一款定制、开源的在线编辑器，提供实时协作编辑。&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
+      <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+    
+    
+      <category term="etherpad" scheme="https://gis90.github.io/tags/etherpad/"/>
+    
+      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>圣诞节</title>
+    <link href="https://gis90.github.io/articles/30667/"/>
+    <id>https://gis90.github.io/articles/30667/</id>
+    <published>2019-12-24T06:43:18.000Z</published>
+    <updated>2019-12-25T06:43:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="post_cus_note">西方节-圣诞节</div><p><img src="/images/article_jieri_shengdanjie.jpg" alt></p><font size="6.5" color="red">持续更新中。。。。。。</font><a id="more"></a><hr><table><thead><tr><th style="text-align:center">时间</th><th style="text-align:center">地点</th></tr></thead><tbody><tr><td style="text-align:center">2019-12-25</td><td style="text-align:center">满洲里</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;post_cus_note&quot;&gt;西方节-圣诞节&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/article_jieri_shengdanjie.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;持续更新中。。。。。。&lt;/font&gt;
+    
+    </summary>
+    
+      <category term="节日" scheme="https://gis90.github.io/categories/%E8%8A%82%E6%97%A5/"/>
+    
+    
+      <category term="节日" scheme="https://gis90.github.io/tags/%E8%8A%82%E6%97%A5/"/>
+    
+      <category term="西方节" scheme="https://gis90.github.io/tags/%E8%A5%BF%E6%96%B9%E8%8A%82/"/>
     
   </entry>
   
@@ -37,10 +104,23 @@
     <published>2019-12-24T00:54:11.000Z</published>
     <updated>2019-12-24T00:54:11.000Z</updated>
     
+    <content type="html"><![CDATA[<p><img src="/images/article_w.jpg" alt></p><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note danger">            <p>简单总结一下<font color="#dd0000" size="5">w、who、whoami</font>，用于显示当前登录Linux的用户信息，在本篇结束的时候又额外赠送了2个命令，关于学习<font size="6.5" color="red">多多益善。。。。。。</font>。</p>          </div><a id="more"></a><hr><p>在Linux系统中，多账户进行ssh登录是常有的事，但是有时候会去查看一下登录的用户都有谁以及相关的登录信息。</p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">w</td><td style="text-align:center">显示当前登录的用户及信息</td></tr><tr><td style="text-align:center">who</td><td style="text-align:center">显示当前已经登录的用户名、终端名称、登录时间及登录IP</td></tr><tr><td style="text-align:center">whoami</td><td style="text-align:center">显示当前用户的用户名</td></tr><tr><td style="text-align:center">id</td><td style="text-align:center">用于check系统是有此用户</td></tr><tr><td style="text-align:center">last</td><td style="text-align:center">显示近期用户或终端的登录情况</td></tr></tbody></table><h4 id="w"><a href="#w" class="headerlink" title="w"></a>w</h4><p>显示当前登录的用户及信息，除了这些还会显示当前登录了几个用户、系统当前的load。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# w</span><br><span class="line"> 20:22:25 up 15:55,  3 users,  load average: 0.00, 0.01, 0.05</span><br><span class="line">USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT</span><br><span class="line">root     tty1                      Tue21   15:27m  0.09s  0.09s -bash</span><br><span class="line">root     pts/0    192.168.1.116    19:23    1.00s  0.12s  0.01s w</span><br><span class="line">root     tty2                      07:43   19:29   0.02s  0.02s -bash</span><br></pre></td></tr></table></figure><h4 id="who"><a href="#who" class="headerlink" title="who"></a>who</h4><p>显示当前已经登录的用户名、终端名称、登录时间及登录IP。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# who</span><br><span class="line">root     tty1         2019-12-24 21:23</span><br><span class="line">root     pts/0        2019-12-24 19:23 (192.168.1.116)</span><br><span class="line">root     tty2         2019-12-24 07:43</span><br></pre></td></tr></table></figure><h4 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h4><p>显示当前用户的用户名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# whoami</span><br><span class="line">root</span><br></pre></td></tr></table></figure></p><div class="post_cus_note">额外赠送</div><h4 id="id"><a href="#id" class="headerlink" title="id"></a>id</h4><p>用于显示用户的ID，以及所属群组的ID，主要用于check系统是有此用户。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# id root</span><br><span class="line">uid=0(root) gid=0(wheel) groups=0(wheel)</span><br></pre></td></tr></table></figure></p><h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>显示近期用户或终端的登录情况。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# last -n 5</span><br><span class="line">root     pts/0        :0.0             Wed Apr 25 10:12   still logged in</span><br><span class="line">root     pts/1        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)</span><br><span class="line">root     pts/0        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)</span><br><span class="line">root     pts/0        :0.0             Wed Apr 25 10:02 - 10:06  (00:04)</span><br><span class="line">root     pts/0        :0.0             Wed Apr 25 09:51 - 09:51  (00:00)</span><br></pre></td></tr></table></figure></p>]]></content>
+    
     <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_w.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;div class=&quot;note danger&quot;&gt;
+            &lt;p&gt;简单总结一下&lt;font color=&quot;#dd0000&quot; size=&quot;5&quot;&gt;w、who、whoami&lt;/font&gt;，用于显示当前登录Linux的用户信息，在本篇结束的时候又额外赠送了2个命令，关于学习&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;多多益善。。。。。。&lt;/font&gt;。&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
+      <category term="Linux" scheme="https://gis90.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://gis90.github.io/tags/Linux/"/>
+    
+      <category term="Linux番外篇" scheme="https://gis90.github.io/tags/Linux%E7%95%AA%E5%A4%96%E7%AF%87/"/>
     
   </entry>
   
@@ -88,6 +168,8 @@
       <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     
     
+      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="ffmpeg" scheme="https://gis90.github.io/tags/ffmpeg/"/>
     
   </entry>
@@ -111,6 +193,8 @@
     
       <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     
+    
+      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
     
       <category term="WIKI" scheme="https://gis90.github.io/tags/WIKI/"/>
     
@@ -204,7 +288,7 @@
     <published>2019-10-03T11:01:59.000Z</published>
     <updated>2019-10-03T11:01:59.000Z</updated>
     
-    <content type="html"><![CDATA[<div class="note primary">            <p>之前已经介绍过了<font color="red" size="6.5">爬虫</font>的利器：Requests、BeautifulSoup。在陆续跟上几个实战来进行演示，本篇主要是爬糗百网站的文本笑话以及笑话图片，纯属于技术宅的磨牙的事情。</p>          </div><p><img src="/images/article_qiubaipachong.gif" style="border:1.5px solid blue"></p><a id="more"></a><hr><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>实现糗百网站的文本笑话以及笑话图片数据获取，并存储到本地。</p><h3 id="技术流程"><a href="#技术流程" class="headerlink" title="技术流程"></a>技术流程</h3><h3 id="具体方案"><a href="#具体方案" class="headerlink" title="具体方案"></a>具体方案</h3><h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>本人不是专业做爬虫数据方向的，业余爱好。</p>]]></content>
+    <content type="html"><![CDATA[<div class="note primary">            <p>之前已经介绍过了<font color="red" size="6.5">爬虫</font>的利器：Requests、BeautifulSoup。在陆续跟上几个实战来进行演示，本篇主要是爬糗百网站的文本笑话以及笑话图片，纯属于技术宅的磨牙的事情。</p>          </div><p><img src="/images/article_qiubaipachong.gif" style="border:1.5px solid blue"></p><font size="6.5" color="red">糗百服务器更新中。。。。。。文章暂无</font><a id="more"></a><hr><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>实现糗百网站的文本笑话以及笑话图片数据获取，并存储到本地。</p><h3 id="技术流程"><a href="#技术流程" class="headerlink" title="技术流程"></a>技术流程</h3><p><img src="article_qiubai_liuchengtu.png" alt></p><h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>本人不是专业做爬虫数据方向的，业余爱好。</p>]]></content>
     
     <summary type="html">
     
@@ -212,6 +296,7 @@
             &lt;p&gt;之前已经介绍过了&lt;font color=&quot;red&quot; size=&quot;6.5&quot;&gt;爬虫&lt;/font&gt;的利器：Requests、BeautifulSoup。在陆续跟上几个实战来进行演示，本篇主要是爬糗百网站的文本笑话以及笑话图片，纯属于技术宅的磨牙的事情。&lt;/p&gt;
           &lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/images/article_qiubaipachong.gif&quot; style=&quot;border:1.5px solid blue&quot;&gt;&lt;/p&gt;
+&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;糗百服务器更新中。。。。。。文章暂无&lt;/font&gt;
     
     </summary>
     
@@ -254,11 +339,14 @@
     <published>2019-09-13T10:49:27.000Z</published>
     <updated>2019-09-13T10:49:27.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><font size="4" color="blue">2019-09-13</font><br><font size="5" color="red"><strong>中国节-中秋节</strong></font></blockquote><a id="more"></a><hr><p><img src="zhongqiujie.jpg" alt></p>]]></content>
+    <content type="html"><![CDATA[<div class="post_cus_note">中国节-中秋节</div><p><img src="/images/article_jieri_zhongqiujie.jpg" alt></p><font size="6.5" color="red">持续更新中。。。。。。</font><a id="more"></a><hr><table><thead><tr><th style="text-align:center">时间</th><th style="text-align:center">地点</th></tr></thead><tbody><tr><td style="text-align:center">2019-09-13</td><td style="text-align:center">保康</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;font size=&quot;4&quot; color=&quot;blue&quot;&gt;2019-09-13&lt;/font&gt;&lt;br&gt;&lt;font size=&quot;5&quot; color=&quot;red&quot;&gt;&lt;strong&gt;中国节-中秋节&lt;/strong&gt;&lt;/font&gt;&lt;/blockquote&gt;
+      &lt;div class=&quot;post_cus_note&quot;&gt;中国节-中秋节&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/article_jieri_zhongqiujie.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;持续更新中。。。。。。&lt;/font&gt;
     
     </summary>
     
@@ -449,55 +537,6 @@
       <category term="Linux" scheme="https://gis90.github.io/tags/Linux/"/>
     
       <category term="Linux番外篇" scheme="https://gis90.github.io/tags/Linux%E7%95%AA%E5%A4%96%E7%AF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大学之证书那点事</title>
-    <link href="https://gis90.github.io/articles/22143/"/>
-    <id>https://gis90.github.io/articles/22143/</id>
-    <published>2019-06-23T13:24:01.000Z</published>
-    <updated>2019-06-23T13:24:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>回顾一下<br>大学4年得到的证书</p></blockquote><a id="more"></a><hr><h4 id="CET"><a href="#CET" class="headerlink" title="CET"></a>CET</h4><blockquote><p>CET-4准考证</p></blockquote><div class="tabs" id="cet4准考证"><ul class="nav-tabs"><li class="tab active"><a href="#cet4准考证-1">时间</a></li><li class="tab"><a href="#cet4准考证-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="cet4准考证-1"><p><strong>2011-12</strong></p></div><div class="tab-pane" id="cet4准考证-2"><p><img src="cet4zhunkaozheng.jpeg" width alt></p></div></div></div><blockquote><p>CET-4准考证</p></blockquote><div class="tabs" id="cet4成绩"><ul class="nav-tabs"><li class="tab active"><a href="#cet4成绩-1">时间</a></li><li class="tab"><a href="#cet4成绩-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="cet4成绩-1"><p><strong>2011-12</strong></p></div><div class="tab-pane" id="cet4成绩-2"><p><img src="cet4.jpeg" width alt></p></div></div></div><blockquote><p>CET-6准考证</p></blockquote><div class="tabs" id="cet6准考证"><ul class="nav-tabs"><li class="tab active"><a href="#cet6准考证-1">时间</a></li><li class="tab"><a href="#cet6准考证-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="cet6准考证-1"><p><strong>2012-12</strong></p></div><div class="tab-pane" id="cet6准考证-2"><p><img src="cet6zhunkaozheng.jpeg" width alt></p></div></div></div><h4 id="NCRE"><a href="#NCRE" class="headerlink" title="NCRE"></a>NCRE</h4><blockquote><p>NCRE-3数据库</p></blockquote><div class="tabs" id="ncre-3数据库"><ul class="nav-tabs"><li class="tab active"><a href="#ncre-3数据库-1">时间</a></li><li class="tab"><a href="#ncre-3数据库-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="ncre-3数据库-1"><p><strong>2011-09</strong></p></div><div class="tab-pane" id="ncre-3数据库-2"><p><img src="jisuanjizhunkaozheng.jpeg" width alt></p></div></div></div><h4 id="研究生"><a href="#研究生" class="headerlink" title="研究生"></a>研究生</h4><blockquote><p>准考证</p></blockquote><div class="tabs" id="研究生准考证"><ul class="nav-tabs"><li class="tab active"><a href="#研究生准考证-1">时间</a></li><li class="tab"><a href="#研究生准考证-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="研究生准考证-1"><p><strong>2013-01</strong></p></div><div class="tab-pane" id="研究生准考证-2"><p><img src="yanjiushengzhunkaozheng.jpeg" width alt></p></div></div></div><blockquote><p>成绩</p></blockquote><div class="tabs" id="研究生成绩"><ul class="nav-tabs"><li class="tab active"><a href="#研究生成绩-1">时间</a></li><li class="tab"><a href="#研究生成绩-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="研究生成绩-1"><p><strong>2013-01</strong></p></div><div class="tab-pane" id="研究生成绩-2"><p><img src="kaoyan.jpeg" width alt></p></div></div></div><h4 id="GIS"><a href="#GIS" class="headerlink" title="GIS"></a>GIS</h4><blockquote><p>GIS工程师</p></blockquote><div class="tabs" id="gis工程师"><ul class="nav-tabs"><li class="tab active"><a href="#gis工程师-1">时间</a></li><li class="tab"><a href="#gis工程师-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="gis工程师-1"><p><strong>2012-11</strong></p></div><div class="tab-pane" id="gis工程师-2"><p><img src="gisgongchengshi.jpg" width alt></p></div></div></div><blockquote><p>作品</p></blockquote><div class="tabs" id="gis作品"><ul class="nav-tabs"><li class="tab active"><a href="#gis作品-1">时间</a></li><li class="tab"><a href="#gis作品-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="gis作品-1"><p><strong>2010-12</strong></p></div><div class="tab-pane" id="gis作品-2"><p><img src="giszuopin.jpeg" width alt></p></div></div></div><h4 id="表彰"><a href="#表彰" class="headerlink" title="表彰"></a>表彰</h4><blockquote><p>校优实习生</p></blockquote><div class="tabs" id="校优实习生"><ul class="nav-tabs"><li class="tab active"><a href="#校优实习生-1">时间</a></li><li class="tab"><a href="#校优实习生-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="校优实习生-1"><p><strong>2013-05</strong></p></div><div class="tab-pane" id="校优实习生-2"><p><img src="shixisheng.jpeg" width alt></p></div></div></div><blockquote><p>奖学金</p></blockquote><div class="tabs" id="奖学金"><ul class="nav-tabs"><li class="tab active"><a href="#奖学金-1">时间</a></li><li class="tab"><a href="#奖学金-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="奖学金-1"><p><strong>2013-06</strong></p></div><div class="tab-pane" id="奖学金-2"><p><img src="jiangxuejin.jpeg" width alt></p></div></div></div><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><blockquote><p>普通话</p></blockquote> <div class="tabs" id="普通话"><ul class="nav-tabs"><li class="tab active"><a href="#普通话-1">时间</a></li><li class="tab"><a href="#普通话-2">图片</a></li></ul><div class="tab-content"><div class="tab-pane active" id="普通话-1"><p> <strong>2012-06</strong></p></div><div class="tab-pane" id="普通话-2"><p><img src="putonghua.jpeg" width alt></p></div></div></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;回顾一下&lt;br&gt;大学4年得到的证书&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="大学" scheme="https://gis90.github.io/categories/%E5%A4%A7%E5%AD%A6/"/>
-    
-    
-      <category term="证书" scheme="https://gis90.github.io/tags/%E8%AF%81%E4%B9%A6/"/>
-    
-      <category term="回忆录" scheme="https://gis90.github.io/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>父亲节</title>
-    <link href="https://gis90.github.io/articles/46739/"/>
-    <id>https://gis90.github.io/articles/46739/</id>
-    <published>2019-06-16T00:45:20.000Z</published>
-    <updated>2019-06-16T00:45:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><font size="4" color="blue">2019-06-16</font><br><font size="5" color="red"><strong>国际节-父亲节</strong></font></blockquote><a id="more"></a><hr><p><img src="fuqinjie.jpeg" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;font size=&quot;4&quot; color=&quot;blue&quot;&gt;2019-06-16&lt;/font&gt;&lt;br&gt;&lt;font size=&quot;5&quot; color=&quot;red&quot;&gt;&lt;strong&gt;国际节-父亲节&lt;/strong&gt;&lt;/font&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="节日" scheme="https://gis90.github.io/categories/%E8%8A%82%E6%97%A5/"/>
-    
-    
-      <category term="节日" scheme="https://gis90.github.io/tags/%E8%8A%82%E6%97%A5/"/>
-    
-      <category term="国际节" scheme="https://gis90.github.io/tags/%E5%9B%BD%E9%99%85%E8%8A%82/"/>
     
   </entry>
   
