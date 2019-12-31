@@ -24,8 +24,8 @@
 
 <!-- title、keywords、desc关键字 -->
 
-  <title>欢迎大家留言</title>
-  <meta name="title" content="欢迎大家留言">
+  <title>博文分类</title>
+  <meta name="title" content="博文分类">
 
 
   <meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
@@ -153,6 +153,10 @@
 <meta property="og:description" content="简介             官网：Etherpad is a highly customizable Open Source online editor providing collaborative editing in really real-time.个人翻译：Etherpad是一款定制、开源的在线编辑器，提供实时协作编辑。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gis90.github.io/images/article_etherpad.jpg">
+<meta property="og:image" content="https://gis90.github.io/articles/7544/version.png">
+<meta property="og:image" content="https://gis90.github.io/articles/7544/search_plugin.png">
+<meta property="og:image" content="https://gis90.github.io/articles/7544/align.jpg">
+<meta property="og:image" content="https://gis90.github.io/articles/7544/image-upload.png">
 <meta property="og:updated_time" content="2019-12-24T07:24:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="etherpad在线协作编辑">
@@ -596,7 +600,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">8.5k</span>
               
 
               
@@ -610,7 +614,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -637,19 +641,133 @@
 <a id="more"></a>
 <hr>
 
-<p>本人实践的机器是阿里云服务器，系统是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[mingliang.gao@VM_0_16_centos ~]$ cat /etc/*release*</span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">Derived from Red Hat Enterprise Linux 7.5 (Source)</span><br><span class="line">NAME=&quot;CentOS Linux&quot;</span><br><span class="line">VERSION=&quot;7 (Core)&quot;</span><br><span class="line">ID=&quot;centos&quot;</span><br><span class="line">ID_LIKE=&quot;rhel fedora&quot;</span><br><span class="line">VERSION_ID=&quot;7&quot;</span><br><span class="line">PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;31&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;</span><br><span class="line">HOME_URL=&quot;https://www.centos.org/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line"></span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br><span class="line"></span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">cpe:/o:centos:centos:7</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="node安装"><a href="#node安装" class="headerlink" title="node安装"></a>node安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure>
-<h4 id="依赖包安装"><a href="#依赖包安装" class="headerlink" title="依赖包安装"></a>依赖包安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install curl vim gcc-c++ make</span><br></pre></td></tr></table></figure>
 
-<div class="post_cus_note">常见问题</div>
-
+<h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><p><img src="version.png" alt></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>本人实践的机器是阿里云服务器，系统是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[mingliang.gao@VM_0_16_centos ~]$ cat /etc/*release*</span><br><span class="line"></span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">Derived from Red Hat Enterprise Linux 7.5 (Source)</span><br><span class="line">NAME=&quot;CentOS Linux&quot;</span><br><span class="line">VERSION=&quot;7 (Core)&quot;</span><br><span class="line">ID=&quot;centos&quot;</span><br><span class="line">ID_LIKE=&quot;rhel fedora&quot;</span><br><span class="line">VERSION_ID=&quot;7&quot;</span><br><span class="line">PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;31&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;</span><br><span class="line">HOME_URL=&quot;https://www.centos.org/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line"></span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br><span class="line"></span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">CentOS Linux release 7.5.1804 (Core)</span><br><span class="line">cpe:/o:centos:centos:7</span><br></pre></td></tr></table></figure></p>
+<h4 id="node环境"><a href="#node环境" class="headerlink" title="node环境"></a>node环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">yum install -y nodejs</span><br><span class="line"></span><br><span class="line"># check</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h4 id="依赖包"><a href="#依赖包" class="headerlink" title="依赖包"></a>依赖包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install curl vim gcc-c++ make</span><br></pre></td></tr></table></figure>
+<h4 id="MariaDB数据库安装与配置"><a href="#MariaDB数据库安装与配置" class="headerlink" title="MariaDB数据库安装与配置"></a>MariaDB数据库安装与配置</h4><blockquote>
+<p>安装</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mariadb-server</span><br></pre></td></tr></table></figure>
+<p>执行过程略，在安装过程中会让出现root密码等设置，具体请参考文章最后的MariaDB安装与配置，进行下一步启动。</p>
 <blockquote>
+<p>启动</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 开启mariadb数据库</span><br><span class="line">systemctl start mariadb.service</span><br><span class="line"></span><br><span class="line"># 设置开机自动启动</span><br><span class="line">systemctl enable mariadb.service</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>连接</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 127.0.0.1 -P 3306 -u root -p</span><br></pre></td></tr></table></figure>
+<p>具体mysql命令怎么使用这里也不做解释，不知道的请自行查资料。</p>
+<blockquote>
+<p>配置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(none)]&gt; CREATE DATABASE etherpad;</span><br><span class="line">MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON etherpad.* TO &apos;etherpad&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;123456&apos;;</span><br><span class="line">MariaDB [(none)]&gt; FLUSH PRIVILEGES;</span><br><span class="line">MariaDB [(none)]&gt; \q</span><br></pre></td></tr></table></figure>
+<p>在这里操作是创建etherpad数据库，以及etherpad用户并分配etherpad用户有访问etherpad数据库的权限，用户名：etherpad，密码：123456。<br>关于数据库、用户、密码自己定义，在etherpad安装与配置中需要用户。</p>
+
+<div class="post_cus_note">准备工作已经完毕。。。。。。</div>
+
+<h4 id="下载etherpad"><a href="#下载etherpad" class="headerlink" title="下载etherpad"></a>下载etherpad</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">git clone https://github.com/ether/etherpad-lite</span><br></pre></td></tr></table></figure>
+<p>如果没有git命令的用户进行安装，文章最后有相关参考。<br>把etherpad放在自己想要放的目录。</p>
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><blockquote>
+<p>创建配置文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/etherpad-lite/settings.json.template ~/etherpad-lite/settings.json</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>编辑配置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/etherpad-lite/settings.json</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Ip配置<br>在配置中搜索<strong><em>0.0.0.0</em></strong>，在文件88行，<strong><em>IP</em></strong>改成服务器IP，<strong><em>PORT</em></strong>端口改成自己设置的端口，去掉注释，配置更改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;ip&quot;: &quot;192.168.151.64&quot;,</span><br><span class="line">&quot;port&quot;: 9001,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数据库配置<br>在配置中搜索<strong><em>dbType</em></strong>，在文件144行，这里用的信息都是在数据库安装配置中设置的配置，写清楚即可，去掉注释，配置更改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;dbType&quot; : &quot;mysql&quot;,</span><br><span class="line">&quot;dbSettings&quot; : &#123;</span><br><span class="line">  &quot;user&quot;:     &quot;etherpad&quot;,</span><br><span class="line">  &quot;host&quot;:     &quot;192.168.151.64&quot;,</span><br><span class="line">  &quot;port&quot;:     3306,</span><br><span class="line">  &quot;password&quot;: &quot;123456&quot;,</span><br><span class="line">  &quot;database&quot;: &quot;etherpad&quot;,</span><br><span class="line">  &quot;charset&quot;:  &quot;utf8mb4&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>管理员<br>在配置中搜索<strong><em>password</em></strong>，在文件365行，这里用的信息都是在数据库安装配置中设置的配置，去掉注释，配置更改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;users&quot;: &#123;</span><br><span class="line">  &quot;admin&quot;: &#123;</span><br><span class="line">    // 1) &quot;password&quot; can be replaced with &quot;hash&quot; if you install ep_hash_auth</span><br><span class="line">    // 2) please note that if password is null, the user will not be created</span><br><span class="line">    &quot;password&quot;: &quot;admin&quot;,</span><br><span class="line">    &quot;is_admin&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;user&quot;: &#123;</span><br><span class="line">    // 1) &quot;password&quot; can be replaced with &quot;hash&quot; if you install ep_hash_auth</span><br><span class="line">    // 2) please note that if password is null, the user will not be created</span><br><span class="line">    &quot;password&quot;: &quot;user&quot;,</span><br><span class="line">    &quot;is_admin&quot;: false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>保存配置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:wq</span><br><span class="line"></span><br><span class="line">:X</span><br></pre></td></tr></table></figure>
+<p>用哪个都可以，vim保存并退出。</p>
+<h4 id="etherpad安装依赖"><a href="#etherpad安装依赖" class="headerlink" title="etherpad安装依赖"></a>etherpad安装依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ~/etherpad-lite/bin/installDeps.sh</span><br></pre></td></tr></table></figure>
+<p>安装一下etherpad所需要的依赖包。</p>
+<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/etherpad-lite/bin/run.sh</span><br></pre></td></tr></table></figure>
+<p>用root用户直接执行上面命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#/opt/etherpad/etherpad-lite/bin/run.sh</span><br><span class="line"></span><br><span class="line">Ensure that all dependencies are up to date...  If this is the first time you have run Etherpad please be patient.</span><br><span class="line">audited 13370 packages in 5.363s</span><br><span class="line"></span><br><span class="line">8 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line"></span><br><span class="line">found 5 vulnerabilities (3 low, 2 high)</span><br><span class="line">  run `npm audit fix` to fix them, or `npm audit` for details</span><br><span class="line">Clearing minified cache...</span><br><span class="line">Started Etherpad...</span><br><span class="line">[2019-12-28 15:27:21.215] [DEBUG] console - Running on Node v12.14.0 (minimum required Node version: 8.9.0)</span><br><span class="line">[2019-12-28 15:27:21.324] [INFO] console - All relative paths will be interpreted relative to the identified Etherpad base dir: /opt/etherpad/etherpad-lite</span><br><span class="line">[2019-12-28 15:27:21.324] [DEBUG] AbsolutePaths - Relative path &quot;settings.json&quot; can be rewritten to &quot;/opt/etherpad/etherpad-lite/settings.json&quot;</span><br><span class="line">[2019-12-28 15:27:21.325] [DEBUG] AbsolutePaths - Relative path &quot;credentials.json&quot; can be rewritten to &quot;/opt/etherpad/etherpad-lite/credentials.json&quot;</span><br><span class="line">[2019-12-28 15:27:21.331] [INFO] console - settings loaded from: /opt/etherpad/etherpad-lite/settings.json</span><br><span class="line">[2019-12-28 15:27:21.331] [INFO] console - No credentials file found in /opt/etherpad/etherpad-lite/credentials.json. Ignoring.</span><br><span class="line">[2019-12-28 15:27:21.332] [INFO] console - Using skin &quot;colibris&quot; in dir: /opt/etherpad/etherpad-lite/src/static/skins/colibris</span><br><span class="line">[2019-12-28 15:27:21.332] [INFO] console - Session key loaded from: /opt/etherpad/etherpad-lite/SESSIONKEY.txt</span><br><span class="line">[2019-12-28 15:27:21.381] [ERROR] console - (node:25518) [DEP0126] DeprecationWarning: timers.active() is deprecated. Please use timeout.refresh() instead.</span><br><span class="line">[2019-12-28 15:27:21.382] [ERROR] console - (node:25518) [DEP0096] DeprecationWarning: timers.unenroll() is deprecated. Please use clearTimeout instead.</span><br><span class="line">[2019-12-28 15:27:21.831] [INFO] APIHandler - Api key file read from: &quot;/opt/etherpad/etherpad-lite/APIKEY.txt&quot;</span><br><span class="line">[2019-12-28 15:27:22.139] [INFO] console - Installed plugins: ep_align@0.0.24, ep_image_upload@1.0.12</span><br><span class="line">[2019-12-28 15:27:22.142] [INFO] console - Report bugs at https://github.com/ether/etherpad-lite/issues</span><br><span class="line">[2019-12-28 15:27:22.143] [INFO] console - Your Etherpad version is 1.8.0 (5bcc5a3)</span><br><span class="line">[2019-12-28 15:27:22.228] [INFO] console - You can access your Etherpad instance at http://192.168.151.64:9001/</span><br><span class="line">[2019-12-28 15:27:22.228] [INFO] console - The plugin admin page is at http://192.168.151.64:9001/admin/plugins</span><br><span class="line">[2019-12-28 15:27:22.228] [WARN] console - Etherpad is running in Development mode.  This mode is slower for users and less secure than production mode.  You should set the NODE_ENV environment variable to production by using: export NODE_ENV=production</span><br></pre></td></tr></table></figure></p>
+<h4 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h4><p>在浏览器上直接访问：<a href="http://IP:PORT，服务器IP" target="_blank" rel="noopener">http://IP:PORT，服务器IP</a> + 配置的PORT端口。</p>
+<div class="note primary">
+            <p><font size="5.5" color="red">注意：</font><br>在这里，我用的全是root用户。</p>
+          </div>
+
+<div class="post_cus_note">列举一下可能遇到的问题</div>
+
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><blockquote>
 <p>端口设置</p>
 </blockquote>
+<p>如果在浏览器访问，提示服务不可以用，那么检查一下服务器防火墙问题。</p>
+<ul>
+<li><p>检查端口是否开通</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#firewall-cmd --list-all</span><br><span class="line">public (active)</span><br><span class="line">  target: default</span><br><span class="line">  icmp-block-inversion: no</span><br><span class="line">  interfaces: enp3s0</span><br><span class="line">  sources:</span><br><span class="line">  services: dhcpv6-client mysql ssh</span><br><span class="line">  ports: 3306/tcp 8090/tcp 80/tcp 10000/tcp 9001/tcp</span><br><span class="line">  protocols:</span><br><span class="line">  masquerade: no</span><br><span class="line">  forward-ports:</span><br><span class="line">  source-ports:</span><br><span class="line">  icmp-blocks:</span><br><span class="line">  rich rules:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开放端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=8080/tcp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <blockquote>
-<p>node版本</p>
+<p>npm版本</p>
 </blockquote>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>官网：<a href="https://etherpad.org/" target="_blank" rel="noopener">https://etherpad.org/</a><br>github：<a href="https://github.com/ether/etherpad-lite" target="_blank" rel="noopener">https://github.com/ether/etherpad-lite</a></p>
+<p>在安装etherpad依赖包或者其他包的时候，有的也许会提示<strong><em>node版本过低</em></strong>，更新下就好，这里推荐用n去更新。</p>
+<p>文章最后有相关参考。</p>
+<blockquote>
+<p>etherpad依赖脚本不可执行</p>
+</blockquote>
+<p>如果遇到<strong><em>/opt/etherpad/etherpad-lite/bin/run.sh</em></strong>脚本不被执行，那么将脚本改变读、写、执行的权限。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /opt/etherpad/etherpad-lite/bin/run.sh</span><br></pre></td></tr></table></figure></p>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>在这里，是主要配置etherpad的插件，有几个还是蛮好用，具体配置在下面有解释，访问Ip:Port/admin，账号密码就是在etherpad配置的那个。</p>
+<p><img src="search_plugin.png" alt></p>
+<h4 id="align"><a href="#align" class="headerlink" title="align"></a>align</h4><p>作用：文字左、中、右对齐插件。</p>
+<blockquote>
+<p>查找</p>
+</blockquote>
+<p>在搜索出查找<strong><em>align</em></strong>。</p>
+<blockquote>
+<p>安装</p>
+</blockquote>
+<p>搜索到之后进行<strong><em>install</em></strong>安装。</p>
+<blockquote>
+<p>配置</p>
+</blockquote>
+<p>打开Settings找到toolbar，去掉toolbar的注视，在414行添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[“alignLeft”, “alignCenter”, “alignJustify”, “alignRight”]</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>结果</p>
+</blockquote>
+<p><img src="align.jpg" alt></p>
+<h4 id="image-upload"><a href="#image-upload" class="headerlink" title="image_upload"></a>image_upload</h4><p>作用：图片上传功能。</p>
+<blockquote>
+<p>查找</p>
+</blockquote>
+<p>在搜索出查找<strong><em>image</em></strong>。</p>
+<blockquote>
+<p>安装</p>
+</blockquote>
+<p>搜索到之后进行<strong><em>install</em></strong>安装。</p>
+<blockquote>
+<p>配置</p>
+</blockquote>
+<p>打开Settings找到toolbar，在415行添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &quot;toolbar&quot;: &#123;</span><br><span class="line">    &quot;left&quot;: [</span><br><span class="line">      [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strikethrough&quot;],</span><br><span class="line">      [&quot;orderedlist&quot;, &quot;unorderedlist&quot;, &quot;indent&quot;, &quot;outdent&quot;],</span><br><span class="line">      [&quot;undo&quot;, &quot;redo&quot;],</span><br><span class="line">      [&quot;clearauthorship&quot;],</span><br><span class="line">      [&quot;alignLeft&quot;, &quot;alignCenter&quot;, &quot;alignJustify&quot;, &quot;alignRight&quot;],</span><br><span class="line">      [&quot;addImage&quot;]</span><br><span class="line">    ],</span><br><span class="line">    &quot;right&quot;: [</span><br><span class="line">      [&quot;importexport&quot;, &quot;timeslider&quot;, &quot;savedrevision&quot;],</span><br><span class="line">      [&quot;settings&quot;, &quot;embed&quot;],</span><br><span class="line">      [&quot;showusers&quot;]</span><br><span class="line">    ],</span><br><span class="line">    &quot;timeslider&quot;: [</span><br><span class="line">      [&quot;timeslider_export&quot;, &quot;timeslider_returnToPad&quot;]</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;ep_image_upload&quot;: &#123;</span><br><span class="line">      &quot;fileTypes&quot;: [&quot;jpeg&quot;,&quot;jpg&quot;,&quot;bmp&quot;,&quot;gif&quot;,&quot;png&quot;],</span><br><span class="line">      &quot;maxFileSize&quot;: 5000000</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>结果</p>
+</blockquote>
+<p><img src="image-upload.png" alt></p>
+<font size="6.5" color="red">插件根据自己的需求制定。。。。。。</font>
+
+<h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>官网：<a href="https://etherpad.org/" target="_blank" rel="noopener">https://etherpad.org/</a><br>Github：<a href="https://github.com/ether/etherpad-lite" target="_blank" rel="noopener">https://github.com/ether/etherpad-lite</a><br>MariaDB安装：<a href="https://www.jianshu.com/p/85ad52c88399" target="_blank" rel="noopener">https://www.jianshu.com/p/85ad52c88399</a><br>Git安装：<a href="https://www.jianshu.com/p/f19d1473c3e1" target="_blank" rel="noopener">https://www.jianshu.com/p/f19d1473c3e1</a><br>node与npm更新：<a href="https://www.jianshu.com/p/2ad99f605499" target="_blank" rel="noopener">https://www.jianshu.com/p/2ad99f605499</a></p>
 
       
     </div>
@@ -819,7 +937,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-count">87</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1090,10 +1208,10 @@
 <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
 <div class="widget-wrap">
-    <h4 class="widget-title" style="font-size:20px;text-align:center;color:#0080FF;margin:20px 0 0px;">Tag Cloud</h4>
-    <div id="myCanvasContainer" class="widget tagcloud" style="font-size:20px;">
+    <h4 class="widget-title" style="font-size:21px;text-align:center;color:#0080FF;margin:20px 0px 0px;">Tag Cloud</h4>
+    <div id="myCanvasContainer" class="widget tagcloud" style="font-size:18px;">
         <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -1113,7 +1231,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#node安装"><span class="nav-number">2.1.</span> <span class="nav-text">node安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖包安装"><span class="nav-number">2.2.</span> <span class="nav-text">依赖包安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习参考"><span class="nav-number">4.</span> <span class="nav-text">学习参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本"><span class="nav-number">2.</span> <span class="nav-text">版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#node环境"><span class="nav-number">3.1.</span> <span class="nav-text">node环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖包"><span class="nav-number">3.2.</span> <span class="nav-text">依赖包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MariaDB数据库安装与配置"><span class="nav-number">3.3.</span> <span class="nav-text">MariaDB数据库安装与配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载etherpad"><span class="nav-number">3.4.</span> <span class="nav-text">下载etherpad</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置文件"><span class="nav-number">3.5.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etherpad安装依赖"><span class="nav-number">3.6.</span> <span class="nav-text">etherpad安装依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动"><span class="nav-number">3.7.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#访问"><span class="nav-number">3.8.</span> <span class="nav-text">访问</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见问题"><span class="nav-number">4.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件配置"><span class="nav-number">5.</span> <span class="nav-text">插件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#align"><span class="nav-number">5.1.</span> <span class="nav-text">align</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#image-upload"><span class="nav-number">5.2.</span> <span class="nav-text">image_upload</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习参考"><span class="nav-number">6.</span> <span class="nav-text">学习参考</span></a></li></ol></div>
             
 
           </div>
@@ -1146,7 +1264,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">233k</span>
+    <span title="站点总字数">241k</span>
   
 
   
@@ -1155,7 +1273,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:32</span>
+    <span title="站点阅读时长">3:39</span>
   
 </div>
 
