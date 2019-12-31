@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gis90.github.io/"/>
-  <updated>2019-12-27T02:27:58.000Z</updated>
+  <updated>2019-12-31T02:34:17.000Z</updated>
   <id>https://gis90.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python-判断PC是否连网</title>
+    <link href="https://gis90.github.io/articles/19515/"/>
+    <id>https://gis90.github.io/articles/19515/</id>
+    <published>2019-12-31T02:34:17.000Z</published>
+    <updated>2019-12-31T02:34:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_python_socket.jpeg" alt></p><div class="post_cus_note">life is short, me use Python.</div><p>2019年的最后一片技术博客了，写一个初始学Python的知识点，在这里先祝<font size="6.5" color="red">【大家元旦快乐】</font>。<br><a id="more"></a></p><hr><p>代码很简单，需要设置能访问的url即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line"></span><br><span class="line">def is_connected(url):</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    host = socket.gethostbyname(url)</span><br><span class="line">    s = socket.create_connection((host, 80), 2)</span><br><span class="line">    return True</span><br><span class="line">except Exception as e:</span><br><span class="line">    return False</span><br><span class="line">URL = &quot;www.baidu.com&quot;</span><br><span class="line"></span><br><span class="line">print is_connected(URL )</span><br></pre></td></tr></table></figure><font size="6.5" color="red">此代码写于2016-09-12。。。。。。【自学Python期间】</font><div class="post_cus_note">其他方式</div><blockquote><p>curl</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://www.baidu.com</span><br></pre></td></tr></table></figure><blockquote><p>wget</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.baidu.com</span><br></pre></td></tr></table></figure><font size="6.5" color="blue">生命不息，奋斗不止！</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_python_socket.jpeg&quot; alt&gt;&lt;/p&gt;
+
+&lt;div class=&quot;post_cus_note&quot;&gt;life is short, me use Python.&lt;/div&gt;
+
+&lt;p&gt;2019年的最后一片技术博客了，写一个初始学Python的知识点，在这里先祝&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;【大家元旦快乐】&lt;/font&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+    
+      <category term="Python程序篇" scheme="https://gis90.github.io/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
+    
+      <category term="Python基础篇" scheme="https://gis90.github.io/tags/Python%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Github热门的Python项目推荐</title>
@@ -71,7 +101,7 @@
   </entry>
   
   <entry>
-    <title>圣诞节</title>
+    <title>圣诞节【&lt;font color=&quot;#00BB00&quot; size=&quot;5&quot;&gt;西方节&lt;/font&gt;】</title>
     <link href="https://gis90.github.io/articles/30667/"/>
     <id>https://gis90.github.io/articles/30667/</id>
     <published>2019-12-24T06:43:18.000Z</published>
@@ -333,7 +363,7 @@
   </entry>
   
   <entry>
-    <title>中秋节</title>
+    <title>中秋节【&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;中国节&lt;/font&gt;】</title>
     <link href="https://gis90.github.io/articles/65231/"/>
     <id>https://gis90.github.io/articles/65231/</id>
     <published>2019-09-13T10:49:27.000Z</published>
@@ -511,32 +541,6 @@
       <category term="旅行记" scheme="https://gis90.github.io/tags/%E6%97%85%E8%A1%8C%E8%AE%B0/"/>
     
       <category term="美食" scheme="https://gis90.github.io/tags/%E7%BE%8E%E9%A3%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux学习之番外篇-多命令执行</title>
-    <link href="https://gis90.github.io/articles/64874/"/>
-    <id>https://gis90.github.io/articles/64874/</id>
-    <published>2019-06-26T12:26:09.000Z</published>
-    <updated>2019-06-26T12:26:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note danger">            <p>解决多命令command1，command1，command1…。</p>          </div><a id="more"></a><hr><p>学习以下多命令一起执行：&amp;、&amp;&amp;、；、||。</p><h4 id="推荐指数"><a href="#推荐指数" class="headerlink" title="推荐指数"></a>推荐指数</h4><p>🌟🌟🌟🌟🌟</p><h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><blockquote><p>;</p></blockquote><p>语法：command1 ; command2 [; command3] …<br>不管前面命令执行成功没有，后面的命令按顺序继续执行。</p><blockquote><p>&amp;</p></blockquote><p>语法：command1 &amp; command2 [&amp; command3] …<br>多命令同时执行，互不影响。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls &amp; ll &amp; ls</span><br></pre></td></tr></table></figure></p><blockquote><p>&amp;&amp;</p></blockquote><p>语法：command1 &amp;&amp; command2 [&amp;&amp; command3] …<br>命令之间使用 &amp;&amp; 连接，实现逻辑<font color="red" size="5">与</font>的功能，只有左边的命令执行成功，后面命令才继续执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch 1.txt &amp;&amp; rm ~/Desktop/1.txt &amp;&amp; echo &quot;rm success&quot;</span><br></pre></td></tr></table></figure></p><p>先touch一个1.txt文件，接下来在rm删除，最后输出success。</p><blockquote><p>||</p></blockquote><p>语法：command1 || command2 [|| command3] …<br>命令之间使用 || 连接，实现逻辑<font color="red" size="5">或</font>的功能，只有左边的命令执行失败，后面命令才继续执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">las || echo &quot;无命令&quot;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;div class=&quot;note danger&quot;&gt;
-            &lt;p&gt;解决多命令command1，command1，command1…。&lt;/p&gt;
-          &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://gis90.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://gis90.github.io/tags/Linux/"/>
-    
-      <category term="Linux番外篇" scheme="https://gis90.github.io/tags/Linux%E7%95%AA%E5%A4%96%E7%AF%87/"/>
     
   </entry>
   
