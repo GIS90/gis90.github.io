@@ -5,9 +5,9 @@
   <subtitle>一个爱&lt;font size=&quot;5&quot; color=&quot;#BF0060&quot;&gt;老婆&lt;/font&gt;的&lt;font size=&quot;5&quot; color=&quot;#FF4500&quot;&gt;Python&lt;/font&gt;程序猿。。。。。。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://gis90.github.io/"/>
+  <link href="http://pygo2.cn/"/>
   <updated>2020-01-01T08:46:55.000Z</updated>
-  <id>https://gis90.github.io/</id>
+  <id>http://pygo2.cn/</id>
   
   <author>
     <name>mingliang.gao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>元旦节【&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;中国节&lt;/font&gt;】</title>
-    <link href="https://gis90.github.io/articles/33336/"/>
-    <id>https://gis90.github.io/articles/33336/</id>
+    <link href="http://pygo2.cn/articles/33336/"/>
+    <id>http://pygo2.cn/articles/33336/</id>
     <published>2020-01-01T08:46:55.000Z</published>
     <updated>2020-01-01T08:46:55.000Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="节日" scheme="https://gis90.github.io/categories/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/categories/%E8%8A%82%E6%97%A5/"/>
     
     
-      <category term="节日" scheme="https://gis90.github.io/tags/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/tags/%E8%8A%82%E6%97%A5/"/>
     
-      <category term="中国节" scheme="https://gis90.github.io/tags/%E4%B8%AD%E5%9B%BD%E8%8A%82/"/>
+      <category term="中国节" scheme="http://pygo2.cn/tags/%E4%B8%AD%E5%9B%BD%E8%8A%82/"/>
     
   </entry>
   
   <entry>
     <title>Python-判断PC是否连网</title>
-    <link href="https://gis90.github.io/articles/19515/"/>
-    <id>https://gis90.github.io/articles/19515/</id>
+    <link href="http://pygo2.cn/articles/19515/"/>
+    <id>http://pygo2.cn/articles/19515/</id>
     <published>2019-12-31T02:34:17.000Z</published>
     <updated>2019-12-31T02:34:17.000Z</updated>
     
@@ -62,21 +62,21 @@
     
     </summary>
     
-      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
     
-      <category term="Python程序篇" scheme="https://gis90.github.io/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
+      <category term="Python程序篇" scheme="http://pygo2.cn/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     
-      <category term="Python基础篇" scheme="https://gis90.github.io/tags/Python%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+      <category term="Python基础篇" scheme="http://pygo2.cn/tags/Python%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
     
   </entry>
   
   <entry>
     <title>Github热门的Python项目推荐</title>
-    <link href="https://gis90.github.io/articles/12867/"/>
-    <id>https://gis90.github.io/articles/12867/</id>
+    <link href="http://pygo2.cn/articles/12867/"/>
+    <id>http://pygo2.cn/articles/12867/</id>
     <published>2019-12-27T02:27:58.000Z</published>
     <updated>2019-12-27T02:27:58.000Z</updated>
     
@@ -91,19 +91,19 @@
     
     </summary>
     
-      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
     
-      <category term="Github" scheme="https://gis90.github.io/tags/Github/"/>
+      <category term="Github" scheme="http://pygo2.cn/tags/Github/"/>
     
   </entry>
   
   <entry>
     <title>etherpad在线协作编辑</title>
-    <link href="https://gis90.github.io/articles/7544/"/>
-    <id>https://gis90.github.io/articles/7544/</id>
+    <link href="http://pygo2.cn/articles/7544/"/>
+    <id>http://pygo2.cn/articles/7544/</id>
     <published>2019-12-24T07:24:47.000Z</published>
     <updated>2019-12-24T07:24:47.000Z</updated>
     
@@ -118,19 +118,19 @@
     
     </summary>
     
-      <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+      <category term="工具集" scheme="http://pygo2.cn/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     
     
-      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
+      <category term="运维工具" scheme="http://pygo2.cn/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="etherpad" scheme="https://gis90.github.io/tags/etherpad/"/>
+      <category term="etherpad" scheme="http://pygo2.cn/tags/etherpad/"/>
     
   </entry>
   
   <entry>
     <title>圣诞节【&lt;font color=&quot;#00BB00&quot; size=&quot;5&quot;&gt;西方节&lt;/font&gt;】</title>
-    <link href="https://gis90.github.io/articles/30667/"/>
-    <id>https://gis90.github.io/articles/30667/</id>
+    <link href="http://pygo2.cn/articles/30667/"/>
+    <id>http://pygo2.cn/articles/30667/</id>
     <published>2019-12-24T06:43:18.000Z</published>
     <updated>2019-12-25T06:43:18.000Z</updated>
     
@@ -145,19 +145,19 @@
     
     </summary>
     
-      <category term="节日" scheme="https://gis90.github.io/categories/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/categories/%E8%8A%82%E6%97%A5/"/>
     
     
-      <category term="节日" scheme="https://gis90.github.io/tags/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/tags/%E8%8A%82%E6%97%A5/"/>
     
-      <category term="西方节" scheme="https://gis90.github.io/tags/%E8%A5%BF%E6%96%B9%E8%8A%82/"/>
+      <category term="西方节" scheme="http://pygo2.cn/tags/%E8%A5%BF%E6%96%B9%E8%8A%82/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习之番外篇-w、who、whoami</title>
-    <link href="https://gis90.github.io/articles/52265/"/>
-    <id>https://gis90.github.io/articles/52265/</id>
+    <link href="http://pygo2.cn/articles/52265/"/>
+    <id>http://pygo2.cn/articles/52265/</id>
     <published>2019-12-24T00:54:11.000Z</published>
     <updated>2019-12-24T00:54:11.000Z</updated>
     
@@ -172,19 +172,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://gis90.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="http://pygo2.cn/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://gis90.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://pygo2.cn/tags/Linux/"/>
     
-      <category term="Linux番外篇" scheme="https://gis90.github.io/tags/Linux%E7%95%AA%E5%A4%96%E7%AF%87/"/>
+      <category term="Linux番外篇" scheme="http://pygo2.cn/tags/Linux%E7%95%AA%E5%A4%96%E7%AF%87/"/>
     
   </entry>
   
   <entry>
     <title>Hexo-环境搭建之node版本问题</title>
-    <link href="https://gis90.github.io/articles/10512/"/>
-    <id>https://gis90.github.io/articles/10512/</id>
+    <link href="http://pygo2.cn/articles/10512/"/>
+    <id>http://pygo2.cn/articles/10512/</id>
     <published>2019-12-17T02:55:42.000Z</published>
     <updated>2019-12-17T02:55:42.000Z</updated>
     
@@ -198,17 +198,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https://gis90.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://pygo2.cn/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://gis90.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://pygo2.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>ffmpeg的基础学习</title>
-    <link href="https://gis90.github.io/articles/37692/"/>
-    <id>https://gis90.github.io/articles/37692/</id>
+    <link href="http://pygo2.cn/articles/37692/"/>
+    <id>http://pygo2.cn/articles/37692/</id>
     <published>2019-12-15T07:19:18.000Z</published>
     <updated>2019-12-17T07:19:18.000Z</updated>
     
@@ -222,19 +222,19 @@
     
     </summary>
     
-      <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+      <category term="工具集" scheme="http://pygo2.cn/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     
     
-      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
+      <category term="运维工具" scheme="http://pygo2.cn/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="ffmpeg" scheme="https://gis90.github.io/tags/ffmpeg/"/>
+      <category term="ffmpeg" scheme="http://pygo2.cn/tags/ffmpeg/"/>
     
   </entry>
   
   <entry>
     <title>Confluence之隐藏人员菜单栏</title>
-    <link href="https://gis90.github.io/articles/13168/"/>
-    <id>https://gis90.github.io/articles/13168/</id>
+    <link href="http://pygo2.cn/articles/13168/"/>
+    <id>http://pygo2.cn/articles/13168/</id>
     <published>2019-12-10T06:15:33.000Z</published>
     <updated>2019-12-10T06:15:33.000Z</updated>
     
@@ -248,19 +248,19 @@
     
     </summary>
     
-      <category term="工具集" scheme="https://gis90.github.io/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+      <category term="工具集" scheme="http://pygo2.cn/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     
     
-      <category term="WIKI" scheme="https://gis90.github.io/tags/WIKI/"/>
+      <category term="WIKI" scheme="http://pygo2.cn/tags/WIKI/"/>
     
-      <category term="运维工具" scheme="https://gis90.github.io/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
+      <category term="运维工具" scheme="http://pygo2.cn/tags/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习之增强篇-lsof</title>
-    <link href="https://gis90.github.io/articles/35042/"/>
-    <id>https://gis90.github.io/articles/35042/</id>
+    <link href="http://pygo2.cn/articles/35042/"/>
+    <id>http://pygo2.cn/articles/35042/</id>
     <published>2019-12-06T01:53:46.000Z</published>
     <updated>2019-12-09T01:53:46.000Z</updated>
     
@@ -274,19 +274,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://gis90.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="http://pygo2.cn/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://gis90.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://pygo2.cn/tags/Linux/"/>
     
-      <category term="Linux增强篇" scheme="https://gis90.github.io/tags/Linux%E5%A2%9E%E5%BC%BA%E7%AF%87/"/>
+      <category term="Linux增强篇" scheme="http://pygo2.cn/tags/Linux%E5%A2%9E%E5%BC%BA%E7%AF%87/"/>
     
   </entry>
   
   <entry>
     <title>爬虫之公司网站首页Title、Keywords、Description</title>
-    <link href="https://gis90.github.io/articles/43681/"/>
-    <id>https://gis90.github.io/articles/43681/</id>
+    <link href="http://pygo2.cn/articles/43681/"/>
+    <id>http://pygo2.cn/articles/43681/</id>
     <published>2019-11-04T08:38:46.000Z</published>
     <updated>2019-11-05T08:38:46.000Z</updated>
     
@@ -301,21 +301,21 @@
     
     </summary>
     
-      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
     
-      <category term="Python程序篇" scheme="https://gis90.github.io/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
+      <category term="Python程序篇" scheme="http://pygo2.cn/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     
-      <category term="爬虫系列" scheme="https://gis90.github.io/tags/%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97/"/>
+      <category term="爬虫系列" scheme="http://pygo2.cn/tags/%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>新MacOS导致微信截图问题</title>
-    <link href="https://gis90.github.io/articles/17077/"/>
-    <id>https://gis90.github.io/articles/17077/</id>
+    <link href="http://pygo2.cn/articles/17077/"/>
+    <id>http://pygo2.cn/articles/17077/</id>
     <published>2019-10-28T02:05:29.000Z</published>
     <updated>2019-10-28T02:05:29.000Z</updated>
     
@@ -329,19 +329,19 @@
     
     </summary>
     
-      <category term="生活" scheme="https://gis90.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://pygo2.cn/categories/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="不明类别" scheme="https://gis90.github.io/categories/%E4%B8%8D%E6%98%8E%E7%B1%BB%E5%88%AB/"/>
+      <category term="不明类别" scheme="http://pygo2.cn/categories/%E4%B8%8D%E6%98%8E%E7%B1%BB%E5%88%AB/"/>
     
     
-      <category term="Mac" scheme="https://gis90.github.io/tags/Mac/"/>
+      <category term="Mac" scheme="http://pygo2.cn/tags/Mac/"/>
     
   </entry>
   
   <entry>
     <title>爬虫之糗百笑话</title>
-    <link href="https://gis90.github.io/articles/32384/"/>
-    <id>https://gis90.github.io/articles/32384/</id>
+    <link href="http://pygo2.cn/articles/32384/"/>
+    <id>http://pygo2.cn/articles/32384/</id>
     <published>2019-10-03T11:01:59.000Z</published>
     <updated>2019-10-03T11:01:59.000Z</updated>
     
@@ -357,19 +357,19 @@
     
     </summary>
     
-      <category term="Python" scheme="https://gis90.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
     
-      <category term="爬虫系列" scheme="https://gis90.github.io/tags/%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97/"/>
+      <category term="爬虫系列" scheme="http://pygo2.cn/tags/%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>新、旧民主主义革命的异同【&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;历史&lt;/font&gt;】</title>
-    <link href="https://gis90.github.io/articles/43171/"/>
-    <id>https://gis90.github.io/articles/43171/</id>
+    <link href="http://pygo2.cn/articles/43171/"/>
+    <id>http://pygo2.cn/articles/43171/</id>
     <published>2019-09-16T11:24:01.000Z</published>
     <updated>2019-09-16T11:24:01.000Z</updated>
     
@@ -382,17 +382,17 @@
     
     </summary>
     
-      <category term="公务员" scheme="https://gis90.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
+      <category term="公务员" scheme="http://pygo2.cn/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
     
     
-      <category term="历史" scheme="https://gis90.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
+      <category term="历史" scheme="http://pygo2.cn/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   
   <entry>
     <title>中秋节【&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;中国节&lt;/font&gt;】</title>
-    <link href="https://gis90.github.io/articles/65231/"/>
-    <id>https://gis90.github.io/articles/65231/</id>
+    <link href="http://pygo2.cn/articles/65231/"/>
+    <id>http://pygo2.cn/articles/65231/</id>
     <published>2019-09-13T10:49:27.000Z</published>
     <updated>2019-09-13T10:49:27.000Z</updated>
     
@@ -407,19 +407,19 @@
     
     </summary>
     
-      <category term="节日" scheme="https://gis90.github.io/categories/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/categories/%E8%8A%82%E6%97%A5/"/>
     
     
-      <category term="节日" scheme="https://gis90.github.io/tags/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="http://pygo2.cn/tags/%E8%8A%82%E6%97%A5/"/>
     
-      <category term="中国节" scheme="https://gis90.github.io/tags/%E4%B8%AD%E5%9B%BD%E8%8A%82/"/>
+      <category term="中国节" scheme="http://pygo2.cn/tags/%E4%B8%AD%E5%9B%BD%E8%8A%82/"/>
     
   </entry>
   
   <entry>
     <title>SSH之快捷配置</title>
-    <link href="https://gis90.github.io/articles/24280/"/>
-    <id>https://gis90.github.io/articles/24280/</id>
+    <link href="http://pygo2.cn/articles/24280/"/>
+    <id>http://pygo2.cn/articles/24280/</id>
     <published>2019-08-29T11:04:09.000Z</published>
     <updated>2019-08-29T11:04:09.000Z</updated>
     
@@ -433,21 +433,21 @@
     
     </summary>
     
-      <category term="服务器" scheme="https://gis90.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="http://pygo2.cn/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="协议类" scheme="https://gis90.github.io/categories/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
+      <category term="协议类" scheme="http://pygo2.cn/categories/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
     
     
-      <category term="SSH" scheme="https://gis90.github.io/tags/SSH/"/>
+      <category term="SSH" scheme="http://pygo2.cn/tags/SSH/"/>
     
-      <category term="协议类" scheme="https://gis90.github.io/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
+      <category term="协议类" scheme="http://pygo2.cn/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>三大作风三大法宝三大灵魂【&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;历史&lt;/font&gt;】</title>
-    <link href="https://gis90.github.io/articles/17252/"/>
-    <id>https://gis90.github.io/articles/17252/</id>
+    <link href="http://pygo2.cn/articles/17252/"/>
+    <id>http://pygo2.cn/articles/17252/</id>
     <published>2019-08-24T13:09:54.000Z</published>
     <updated>2019-08-24T13:09:54.000Z</updated>
     
@@ -460,17 +460,17 @@
     
     </summary>
     
-      <category term="公务员" scheme="https://gis90.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
+      <category term="公务员" scheme="http://pygo2.cn/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
     
     
-      <category term="历史" scheme="https://gis90.github.io/tags/%E5%8E%86%E5%8F%B2/"/>
+      <category term="历史" scheme="http://pygo2.cn/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   
   <entry>
     <title>SSH协议的基础知识</title>
-    <link href="https://gis90.github.io/articles/62041/"/>
-    <id>https://gis90.github.io/articles/62041/</id>
+    <link href="http://pygo2.cn/articles/62041/"/>
+    <id>http://pygo2.cn/articles/62041/</id>
     <published>2019-08-19T02:07:42.000Z</published>
     <updated>2019-08-19T02:07:42.000Z</updated>
     
@@ -484,21 +484,21 @@
     
     </summary>
     
-      <category term="服务器" scheme="https://gis90.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="http://pygo2.cn/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="协议类" scheme="https://gis90.github.io/categories/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
+      <category term="协议类" scheme="http://pygo2.cn/categories/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
     
     
-      <category term="SSH" scheme="https://gis90.github.io/tags/SSH/"/>
+      <category term="SSH" scheme="http://pygo2.cn/tags/SSH/"/>
     
-      <category term="协议类" scheme="https://gis90.github.io/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
+      <category term="协议类" scheme="http://pygo2.cn/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>Qunar项目之总结篇</title>
-    <link href="https://gis90.github.io/articles/30296/"/>
-    <id>https://gis90.github.io/articles/30296/</id>
+    <link href="http://pygo2.cn/articles/30296/"/>
+    <id>http://pygo2.cn/articles/30296/</id>
     <published>2019-08-10T12:10:44.000Z</published>
     <updated>2019-08-19T12:10:44.000Z</updated>
     
@@ -512,19 +512,19 @@
     
     </summary>
     
-      <category term="Qunar项目" scheme="https://gis90.github.io/categories/Qunar%E9%A1%B9%E7%9B%AE/"/>
+      <category term="Qunar项目" scheme="http://pygo2.cn/categories/Qunar%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Python" scheme="https://gis90.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
     
-      <category term="项目" scheme="https://gis90.github.io/tags/%E9%A1%B9%E7%9B%AE/"/>
+      <category term="项目" scheme="http://pygo2.cn/tags/%E9%A1%B9%E7%9B%AE/"/>
     
   </entry>
   
   <entry>
     <title>北京西单抓娃娃心得篇</title>
-    <link href="https://gis90.github.io/articles/8059/"/>
-    <id>https://gis90.github.io/articles/8059/</id>
+    <link href="http://pygo2.cn/articles/8059/"/>
+    <id>http://pygo2.cn/articles/8059/</id>
     <published>2019-08-05T02:48:37.000Z</published>
     <updated>2019-08-05T02:48:37.000Z</updated>
     
@@ -537,12 +537,12 @@
     
     </summary>
     
-      <category term="生活" scheme="https://gis90.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://pygo2.cn/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://gis90.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://pygo2.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="抓娃娃" scheme="https://gis90.github.io/tags/%E6%8A%93%E5%A8%83%E5%A8%83/"/>
+      <category term="抓娃娃" scheme="http://pygo2.cn/tags/%E6%8A%93%E5%A8%83%E5%A8%83/"/>
     
   </entry>
   
