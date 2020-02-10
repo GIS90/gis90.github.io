@@ -162,6 +162,7 @@
 <meta property="og:image" content="http://pygo2.cn/articles/21353/baidu_site_2.png">
 <meta property="og:image" content="http://pygo2.cn/articles/21353/baidu_site_3.png">
 <meta property="og:image" content="http://pygo2.cn/articles/21353/baidu_link_commit.png">
+<meta property="og:image" content="http://pygo2.cn/articles/21353/sitemap.png">
 <meta property="og:updated_time" content="2019-07-18T00:45:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Next搜索优化（三）baidu搜索">
@@ -628,7 +629,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">969</span>
+                <span title="本文字数">3.9k</span>
               
 
               
@@ -642,7 +643,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -677,10 +678,11 @@
 <p> 在blog/public目录下会自动生产一个baidusitemap.xml文件，里面的内容不用多说了，都是blog的url信息。</p>
 </li>
 <li><h4 id="添加蜘蛛协议"><a href="#添加蜘蛛协议" class="headerlink" title="添加蜘蛛协议"></a>添加蜘蛛协议</h4><p> 打开blog/source目录下的robots.txt文件，最后一行，也就是Sitemap下添加以下内容：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sitemap: https://gis90.github.io/baidusitemap.xml</span><br></pre></td></tr></table></figure>
-<p> <strong><em>Allow、Disallow</em></strong>之前已经解释过了，不过看英语也知道啥意思了：<strong><em>Allow</em></strong>字段的值即为允许搜索引擎爬区的内容；<strong><em>Disallow</em></strong>就是不允许搜索引擎爬区的内容。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sitemap: https://pygo2.cn/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<p> <strong><em>Allow、Disallow</em></strong>之前已经解释过了，不过看英语也知道啥意思了：<strong><em>Allow</em></strong>字段的值即为允许搜索引擎爬区的内容；<strong><em>Disallow</em></strong>就是不允许搜索引擎爬区的内容。<br> 示例：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /articles/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/</span><br><span class="line">Allow: /messagepad/</span><br><span class="line">Allow: /resources/</span><br><span class="line">Allow: /about/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line"></span><br><span class="line">Sitemap: http://pygp2.cn/sitemap.xml</span><br><span class="line">Sitemap: http://pygp2.cn/baidusitemap.xml</span><br></pre></td></tr></table></figure>
 </li>
-<li><h4 id="自动化提交baidu站长baidusitemap"><a href="#自动化提交baidu站长baidusitemap" class="headerlink" title="自动化提交baidu站长baidusitemap"></a>自动化提交baidu站长baidusitemap</h4><p> 前提：需要一个baidu账号，没有的请自行注册。</p>
+<li><h4 id="baidu站长设置"><a href="#baidu站长设置" class="headerlink" title="baidu站长设置"></a>baidu站长设置</h4><p> 前提：需要一个baidu账号，没有的请自行注册。</p>
 <blockquote>
 <p>打开baidu站长（<a href="https://ziyuan.baidu.com/linksubmit/index）" target="_blank" rel="noopener">https://ziyuan.baidu.com/linksubmit/index）</a></p>
 </blockquote>
@@ -699,7 +701,9 @@
 <ul>
 <li>文件验证</li>
 <li>html验证</li>
-<li><p>CNAME验证<br>在这里采用文件验证的方式，将下载后的文件放到blog/themes/next/source目录下，然后再执行<strong><em>hexo clean &amp;&amp; hexo g -d</em></strong>命令，重新生成blog。</p>
+<li><p>CNAME验证<br>在这里采用html验证的方式，将以下代码放到blog/source/root.html文件的head标签内，然后再执行<strong><em>hexo clean &amp;&amp; hexo g -d</em></strong>命令，重新生成blog。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;baidu-site-verification&quot; content=&quot;3T5rDqaWUL&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>因为本人网站是自定义的一个root.html域名首页，如果不是把以上代码添加到blog/themes/layout/_partials/head.swig内即可。</p>
 <blockquote>
 <p>链接提交</p>
 </blockquote>
@@ -711,11 +715,24 @@
 <p>链接方式两种：</p>
 </li>
 <li>手动提送</li>
-<li>自动提交</li>
-<li>主动推送<br>  – 自动推送<br>  – sitemap</li>
+<li>自动提交<br>  – 主动推送<br>  – 自动推送<br>  – sitemap</li>
 </ul>
 </li>
+<li><h4 id="自动化提交"><a href="#自动化提交" class="headerlink" title="自动化提交"></a>自动化提交</h4><blockquote>
+<p>sitemap设置提交</p>
+</blockquote>
+<p> 在<strong>链接提交</strong>功能页。</p>
+<p> <img src="sitemap.png" alt></p>
+<blockquote>
+<p>主动推送</p>
+</blockquote>
+<p> 在说明上有curl、post、php等几种方式，本人使用curl + python + crontab(linux)的方式在服务器上做个定时自动推送。<br> python脚本：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">------------------------------------------------</span><br><span class="line">describe:</span><br><span class="line">    自动化推送blog的url到百度</span><br><span class="line"></span><br><span class="line">usage:</span><br><span class="line">    python auto_baidu_push.py</span><br><span class="line"></span><br><span class="line">base_info:</span><br><span class="line">    __version__ = &quot;v.10&quot;</span><br><span class="line">    __author__ = &quot;mingliang.gao&quot;</span><br><span class="line">    __time__ = &quot;2019/07/18&quot;</span><br><span class="line">    __mail__ = &quot;mingliang.gao@163.com&quot;</span><br><span class="line"></span><br><span class="line">思路：</span><br><span class="line">    获取blog全部的url，生成url.txt文本，使用baidu站点的curl命令进行数据自动化推送，删除url.txt文件。</span><br><span class="line">------------------------------------------------</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import os</span><br><span class="line">import shutil</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 本机</span><br><span class="line">HTML_REL_DIR = &apos;/Users/gaomingliang/github/myblog/pygo/public/articles&apos;</span><br><span class="line"># 服务器</span><br><span class="line"># HTML_REL_DIR = &apos;/opt/www/blog/articles&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PUSH_baidu_COMMAND = &apos;curl -H &quot;Content-Type:text/plain&quot; --data-binary @urls.txt &quot;http://data.zz.baidu.com/urls?site=www.pygo2.cn&amp;token=VqQF08BReWjBB018&quot;&apos;</span><br><span class="line">DOMAIN_TEPM = &apos;http://pygo2.cn/articles&apos;</span><br><span class="line">URL_NAME = &apos;urls.txt&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def get_cur_dir():</span><br><span class="line">    return os.path.abspath(os.path.dirname(__file__))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class BlogRequests(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.article_source = HTML_REL_DIR</span><br><span class="line">        self.cur_dir = get_cur_dir()</span><br><span class="line"></span><br><span class="line">    def collect_codes(self):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        get all article codes</span><br><span class="line">        :return: list type</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        return os.listdir(self.article_source)</span><br><span class="line"></span><br><span class="line">    def generator_url_text(self):</span><br><span class="line">        all_codes = self.collect_codes()</span><br><span class="line">        if not all_codes:</span><br><span class="line">            print &apos;============== not codes&apos;</span><br><span class="line">            return False</span><br><span class="line"></span><br><span class="line">        url_file = os.path.join(self.cur_dir, URL_NAME)</span><br><span class="line">        if not os.path.exists(url_file):</span><br><span class="line">            fd = open(url_file, mode=&quot;w&quot;)</span><br><span class="line">            fd.close()</span><br><span class="line"></span><br><span class="line">        with open(url_file, &apos;w&apos;) as f:</span><br><span class="line">            for code in all_codes:</span><br><span class="line">                url = DOMAIN_TEPM + &apos;/%s/&apos; % code</span><br><span class="line">                f.write(url)</span><br><span class="line">                # 换行符</span><br><span class="line">                f.write(&apos;\n&apos;)</span><br><span class="line">        return url_file</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        url_file = self.generator_url_text()</span><br><span class="line">        if url_file:</span><br><span class="line">            os.system(PUSH_baidu_COMMAND)</span><br><span class="line">        print &apos;-------------end-------------&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    br = BlogRequests()</span><br><span class="line">    br.run()</span><br></pre></td></tr></table></figure>
+<p> linux服务器上的crontab：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><font size="6.5" color="red">不积跬步,无以至千里;不积小流,无以成江海。</font>
 
       
     </div>
@@ -1182,7 +1199,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo-generator-sitemap"><span class="nav-number">2.1.</span> <span class="nav-text">安装hexo-generator-sitemap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加蜘蛛协议"><span class="nav-number">2.2.</span> <span class="nav-text">添加蜘蛛协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动化提交baidu站长baidusitemap"><span class="nav-number">2.3.</span> <span class="nav-text">自动化提交baidu站长baidusitemap</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo-generator-sitemap"><span class="nav-number">2.1.</span> <span class="nav-text">安装hexo-generator-sitemap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加蜘蛛协议"><span class="nav-number">2.2.</span> <span class="nav-text">添加蜘蛛协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#baidu站长设置"><span class="nav-number">2.3.</span> <span class="nav-text">baidu站长设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动化提交"><span class="nav-number">2.4.</span> <span class="nav-text">自动化提交</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">3.</span> <span class="nav-text">结束</span></a></li></ol></div>
             
 
           </div>
@@ -1215,7 +1232,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">245k</span>
+    <span title="站点总字数">248k</span>
   
 
   
@@ -1224,7 +1241,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:42</span>
+    <span title="站点阅读时长">3:45</span>
   
 </div>
 
