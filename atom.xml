@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.cn/"/>
-  <updated>2020-02-21T10:45:32.000Z</updated>
+  <updated>2020-03-28T01:16:18.000Z</updated>
   <id>http://pygo2.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-学习之增强篇:firewall-cmd</title>
+    <link href="http://pygo2.cn/articles/60013/"/>
+    <id>http://pygo2.cn/articles/60013/</id>
+    <published>2020-03-28T01:16:18.000Z</published>
+    <updated>2020-03-28T01:16:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><div class="note danger">            <p>CentOS7开始，默认使用firewall来配置防火墙，没有安装iptables（旧版默认安装）。<br><img src="/images/article_firewall.jpg" alt></p><font color="#dd0000" size="5">时代在更新、CentOS也在更新，我们也必须要更新。</font>          </div><a id="more"></a><hr><p>防火墙没什么好说的，直接开始正餐。</p><h4 id="推荐指数"><a href="#推荐指数" class="headerlink" title="推荐指数"></a>推荐指数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">🌟🌟🌟🌟🌟</span><br></pre></td></tr></table></figure><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install firewalld</span><br></pre></td></tr></table></figure><h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><blockquote><p>查看运行状态</p></blockquote><table><thead><tr><th style="text-align:center">command</th></tr></thead><tbody><tr><td style="text-align:center">firewall-cmd –state</td></tr><tr><td style="text-align:center">systemctl status firewalld</td></tr></tbody></table><blockquote><p>启动</p></blockquote><table><thead><tr><th style="text-align:center">function</th><th style="text-align:center">command</th></tr></thead><tbody><tr><td style="text-align:center">开启服务</td><td style="text-align:center">systemctl start firewalld.service</td></tr><tr><td style="text-align:center">关闭服务</td><td style="text-align:center">systemctl stop firewalld.service</td></tr><tr><td style="text-align:center">开机自动启动</td><td style="text-align:center">systemctl enable firewalld.service</td></tr><tr><td style="text-align:center">关闭开机启动</td><td style="text-align:center">systemctl disable firewalld.service</td></tr></tbody></table><blockquote><p>增加端口</p></blockquote><table><thead><tr><th style="text-align:center">function</th><th style="text-align:center">command</th></tr></thead><tbody><tr><td style="text-align:center">永久</td><td style="text-align:center">firewall-cmd –permanent –zone=public –add-port=8080-8081/tcp</td></tr><tr><td style="text-align:center">临时</td><td style="text-align:center">firewall-cmd –zone=public –add-port=8080-8081/tcp</td></tr></tbody></table><ul><li>firewall-cmd：Linux中提供的操作firewall的工具。<br>– zone：指定作用域。<br>– add-port=3306/tcp：添加的端口，格式为：端口/通讯协议。<br>– permanent：表示永久生效，没有此参数重启后会失效。</li></ul><blockquote><p>删除端口</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=3306/tcp --permanent</span><br></pre></td></tr></table></figure><p>改变端口即可。</p><blockquote><p>查看端口</p></blockquote><table><thead><tr><th style="text-align:center">function</th><th style="text-align:center">command</th></tr></thead><tbody><tr><td style="text-align:center">简略</td><td style="text-align:center">firewall-cmd –list-ports</td></tr><tr><td style="text-align:center">详情</td><td style="text-align:center">firewall-cmd –list-ports</td></tr></tbody></table><h4 id="其他知识"><a href="#其他知识" class="headerlink" title="其他知识"></a>其他知识</h4><p>关于<strong><em>–zone=public</em></strong>，应该会有人不了解，对<strong>–zone</strong>的参数做个说明：</p><table><thead><tr><th style="text-align:center">type</th><th style="text-align:left">desc</th></tr></thead><tbody><tr><td style="text-align:center">drop</td><td style="text-align:left">任何接受的网络数据包都被丢弃，没有任何回复</td></tr><tr><td style="text-align:center">block</td><td style="text-align:left">任何接收的网络连接都被IPv4的icmp-host-prohibited信息和IPv6的icmp6-adm-prohibited信息所拒绝</td></tr><tr><td style="text-align:center">public</td><td style="text-align:left">在公共区域内使用，不能相信网络内的其他计算机不会对你的计算机造成危害</td></tr><tr><td style="text-align:center">external</td><td style="text-align:left">特别是为路由器启动了伪装功能的外部网</td></tr><tr><td style="text-align:center">dmz</td><td style="text-align:left">用于你的非军事区内的电脑</td></tr><tr><td style="text-align:center">work</td><td style="text-align:left">用于工作区</td></tr><tr><td style="text-align:center">home</td><td style="text-align:left">用于家庭网络</td></tr><tr><td style="text-align:center">internal</td><td style="text-align:left">用于内部网络。你可以基本相信网络内的其他计算机不会危害到你</td></tr><tr><td style="text-align:center">trusted</td><td style="text-align:left">可接受所有的网络连接</td></tr></tbody></table><p>firewalld 的默认zone是public。</p><p>详细了解firewall-cmd，请使用<strong><em>firewall-cmd –help</em></strong>查看。</p><h4 id="特殊说明"><a href="#特殊说明" class="headerlink" title="特殊说明"></a>特殊说明</h4><p>添加完端口之后，记得reload或者重启，重新加载，否则不会生效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># reload</span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"># restart</span><br><span class="line">#别忘记重启防火墙</span><br><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure></p><p>本人也是属于探索阶段，欢迎大家一起交流，有问题请在博客进行留言。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;div class=&quot;note danger&quot;&gt;
+            &lt;p&gt;CentOS7开始，默认使用firewall来配置防火墙，没有安装iptables（旧版默认安装）。&lt;br&gt;&lt;img src=&quot;/images/article_firewall.jpg&quot; alt&gt;&lt;/p&gt;&lt;font color=&quot;#dd0000&quot; size=&quot;5&quot;&gt;时代在更新、CentOS也在更新，我们也必须要更新。&lt;/font&gt;
+          &lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://pygo2.cn/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://pygo2.cn/tags/Linux/"/>
+    
+      <category term="Linux增强篇" scheme="http://pygo2.cn/tags/Linux%E5%A2%9E%E5%BC%BA%E7%AF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux学习之基础篇-ps</title>
@@ -38,6 +64,26 @@
       <category term="Linux" scheme="http://pygo2.cn/tags/Linux/"/>
     
       <category term="Linux基础篇" scheme="http://pygo2.cn/tags/Linux%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python-YouZan数据处理小程序</title>
+    <link href="http://pygo2.cn/articles/24462/"/>
+    <id>http://pygo2.cn/articles/24462/</id>
+    <published>2020-02-14T08:47:27.000Z</published>
+    <updated>2020-02-14T08:47:27.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
+    
+      <category term="Python程序篇" scheme="http://pygo2.cn/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     
   </entry>
   
@@ -480,57 +526,6 @@
     
       &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;div class=&quot;note warning&quot;&gt;
             &lt;p&gt;上篇文章介绍了有关&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;SSH协议&lt;/font&gt;的基础知识，正常工作中都是通过下列命令进行ssh连接：&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh 用户名@服务器IP&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。&lt;/p&gt;
-          &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.cn/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="协议类" scheme="http://pygo2.cn/categories/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
-    
-    
-      <category term="SSH" scheme="http://pygo2.cn/tags/SSH/"/>
-    
-      <category term="协议类" scheme="http://pygo2.cn/tags/%E5%8D%8F%E8%AE%AE%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三大作风三大法宝三大灵魂【&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;历史&lt;/font&gt;】</title>
-    <link href="http://pygo2.cn/articles/17252/"/>
-    <id>http://pygo2.cn/articles/17252/</id>
-    <published>2019-08-24T13:09:54.000Z</published>
-    <updated>2019-08-24T13:09:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>三大作风<br>三大法宝<br>三大灵魂</p></blockquote><a id="more"></a><hr><h4 id="三大作风"><a href="#三大作风" class="headerlink" title="三大作风"></a>三大作风</h4><p>中国共产党的三大作风</p><ul><li>理论和实际相结合</li><li>密切联系群众</li><li>批评与自我批评</li></ul><p>出自《论联合政府》</p><h4 id="三大法宝"><a href="#三大法宝" class="headerlink" title="三大法宝"></a>三大法宝</h4><p>中国革命的三大法宝</p><ul><li>武装斗争</li><li>统一战线</li><li>党的建设</li></ul><p>出自《&lt;共产党人&gt;发刊词》</p><h4 id="三大灵魂"><a href="#三大灵魂" class="headerlink" title="三大灵魂"></a>三大灵魂</h4><p>毛泽东思想的三大灵魂</p><ul><li>实事求是</li><li>群众路线</li><li>独立自主</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;三大作风&lt;br&gt;三大法宝&lt;br&gt;三大灵魂&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="公务员" scheme="http://pygo2.cn/categories/%E5%85%AC%E5%8A%A1%E5%91%98/"/>
-    
-    
-      <category term="历史" scheme="http://pygo2.cn/tags/%E5%8E%86%E5%8F%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSH协议的基础知识</title>
-    <link href="http://pygo2.cn/articles/62041/"/>
-    <id>http://pygo2.cn/articles/62041/</id>
-    <published>2019-08-19T02:07:42.000Z</published>
-    <updated>2019-08-19T02:07:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><div class="note warning">            <p>因为一些原因，把github.io重新在github搭建一下，但是<strong>hexo deploy</strong>去提交代码的时候，发生代码提交失败的情况。原来在GIS90.github.io Repository上没有进行<strong><em>Deploy keys</em></strong>的配置，导致push失败。</p><p>配置好<strong><em>Deploy keys</em></strong>的配置，代码成功提交，但是为何配置完key就可以成功提交呢？原理是<font color="red" size="4.5">SSH协议</font>。</p>          </div><a id="more"></a><hr><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p><strong><em>The SSH protocol uses encryption to secure the connection between a client and a server. All user authentication, commands, output, and file transfers are encrypted to protect against attacks in the network. For details of how the SSH protocol works, see the protocol page. To understand the SSH File Transfer Protocol, see the SFTP page.</em></strong></p><p><strong><em>The SSH protocol (also referred to as Secure Shell) is a method for secure remote login from one computer to another. It provides several alternative options for strong authentication, and it protects the communications security and integrity with strong encryption. It is a secure alternative to the non-protected login protocols (such as telnet, rlogin) and insecure file transfer methods (such as FTP).</em></strong></p><p>直接摘录了官网的原话，不多说了直接捞干的，大概意思就是说<font color="red" size="4.5">SSH协议是一种连接服务器的一种简单、安全、可靠的连接方法。</font></p><h3 id="验证方式"><a href="#验证方式" class="headerlink" title="验证方式"></a>验证方式</h3><p>目前，后端开发、运维等工作中经常需要登录远程服务并操作，常用的连接方式都是ssh，方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@IP</span><br><span class="line">ssh 用户名@机器名</span><br></pre></td></tr></table></figure></p><p>使用ssh登录的时候，验证方式主要有2种：</p><blockquote><p>密码验证</p></blockquote><p>使用用户名和密码进行登录，两者匹配才可以登录，但是密码认证有以下的缺点：</p><ul><li>密码泄漏。一个帐户多个人进行使用，需要让所有使用人都知道密码，很容易密码泄露。</li><li>另外，多账户使用修改密码时必须通知所有人，否则就会造成其他人登录失败。</li></ul><blockquote><p>公钥验证</p></blockquote><p>使用公钥、私钥的方式就行验证。保证了多个用户可以通过各自的密钥登录到服务器，互不干扰，而且认证也可以允许使用空密码，省去每次登录都需要输入密码的麻烦。</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>通过<font color="red" size="4.5">ssh-keygen</font>命令进行生成公钥私钥，下面详细说明。</p><p>1、执行<strong><em>ssh-keygen -t rsa</em></strong>命令。<br>通过<strong><em>ssh-keygen –help</em></strong>可知，-t是加密的参数，最常用。除了rsa，还有dsa、ecdsa、ed25519，其中rsa是安全的加密方式。</p><p>2、输入要生成的文件名，默认回车即可。</p><p>3、输入密码，默认回车即可。</p><p>4、输入确认密码，，默认回车即可。</p><p>5、出现下列图案代表成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+--[ RSA 2048]----+</span><br><span class="line">|    .+=*..       |</span><br><span class="line">|  .  += +        |</span><br><span class="line">|   o oo+         |</span><br><span class="line">|  E . . o        |</span><br><span class="line">|      ..S.       |</span><br><span class="line">|      .o .       |</span><br><span class="line">|       .o +      |</span><br><span class="line">|       ...oo     |</span><br><span class="line">|         +.      |</span><br><span class="line">+-----------------+</span><br></pre></td></tr></table></figure></p><p>具体的ssh-keygen参数可以通过<strong><em>ssh-keygen –help</em></strong>进行查看，这里不作详解。</p><h3 id="原理讲解"><a href="#原理讲解" class="headerlink" title="原理讲解"></a>原理讲解</h3><ol><li><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p> 这里主要针对于公钥私钥的验证方式进行讲解，通过执行ssh-kengen命令可以得到<strong>公钥、私钥</strong>，都是经过加密后的文件。<br> 公钥：能被其他人知道的加密文件，id_rsa.pub。<br> 私钥：只能自己知道的加密文件，id_rsa。</p><p> 只要私钥不被泄漏，就不会出现任何指定用户登录的问题。</p><p> <img src="ssh_keys.png" alt></p></li><li><h4 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h4><p> <img src="ssh_yuanli.png" alt></p></li><li><h4 id="验证流程"><a href="#验证流程" class="headerlink" title="验证流程"></a>验证流程</h4><p> 1、Client通过<strong><em>ssh-keygen</em></strong>命令生成公钥和私钥。</p><p> 2、Client将自己的公钥<strong><em>id_rsa.pub</em></strong>存放到Server服务器上的认证文件。</p><p> 3、Client通过<strong><em>ssh</em></strong>命令将用户、IP发送请求连接指定的服务器。</p><p> 4、Server收到到请求之后，先去authorized_keys中进行查找是否有指定的用户，如果有将进行下一步，无此用户拒绝验证连接。</p><p> 5、验证文件中包含指定用户，Server将生成一个随机字符串通过<strong>*公钥</strong>进行加密，发送给Client。</p><p> 6、Client接收到Server加密的字符串，利用<strong><em>私钥</em></strong>进行解密，解密后在将这个随机字符串再发送给Server。</p><p> 7、Server接收到Client发送的解密字符串与生成的原始随机字符串进行比对，如果正确就让客户端登录，否则拒绝。</p></li></ol><h3 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h3><p>SSH官网：<a href="https://www.ssh.com/ssh/" target="_blank" rel="noopener">https://www.ssh.com/ssh/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;div class=&quot;note warning&quot;&gt;
-            &lt;p&gt;因为一些原因，把github.io重新在github搭建一下，但是&lt;strong&gt;hexo deploy&lt;/strong&gt;去提交代码的时候，发生代码提交失败的情况。原来在GIS90.github.io Repository上没有进行&lt;strong&gt;&lt;em&gt;Deploy keys&lt;/em&gt;&lt;/strong&gt;的配置，导致push失败。&lt;/p&gt;&lt;p&gt;配置好&lt;strong&gt;&lt;em&gt;Deploy keys&lt;/em&gt;&lt;/strong&gt;的配置，代码成功提交，但是为何配置完key就可以成功提交呢？原理是&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;SSH协议&lt;/font&gt;。&lt;/p&gt;
           &lt;/div&gt;
     
     </summary>
