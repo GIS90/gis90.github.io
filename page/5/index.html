@@ -2905,7 +2905,7 @@
 		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
 		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
 		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒 | 备案编号：<font size=4.5 color='red'><a href="http://beian.miit.gov.cn/" target="_blank">蒙ICP备20000416号-1</a></font>";
+		document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒 | 备案编号：<a href='http://beian.miit.gov.cn/' target='_blank'><font size=4.5 color='red'>蒙ICP备20000416号-1</font></a>";
 	}
 	siteTime();
 </script>
