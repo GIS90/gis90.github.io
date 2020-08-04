@@ -148,18 +148,20 @@
 </div>
 
 
-  <meta name="description" content="直男双鱼座去哪儿网python开发工程师">
-<meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
+  <meta name="description" content="简介             用途：不挂断地运行命令。语法：nohup Command [ Arg … ] [　&amp;amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp;amp; （ 表示”and”的符号）到命令的尾部。">
+<meta name="keywords" content="Linux, nohub, &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习之番外篇-nohup">
 <meta property="og:url" content="http://pygo2.cn/articles/23692/index.html">
 <meta property="og:site_name" content="PyGo²">
-<meta property="og:description" content="直男双鱼座去哪儿网python开发工程师">
+<meta property="og:description" content="简介             用途：不挂断地运行命令。语法：nohup Command [ Arg … ] [　&amp;amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp;amp; （ 表示”and”的符号）到命令的尾部。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pygo2.cn/images/article_linux_nohup.jpeg">
 <meta property="og:updated_time" content="2020-05-13T01:46:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习之番外篇-nohup">
-<meta name="twitter:description" content="直男双鱼座去哪儿网python开发工程师">
+<meta name="twitter:description" content="简介             用途：不挂断地运行命令。语法：nohup Command [ Arg … ] [　&amp;amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp;amp; （ 表示”and”的符号）到命令的尾部。">
+<meta name="twitter:image" content="http://pygo2.cn/images/article_linux_nohup.jpeg">
 
 
 
@@ -554,6 +556,24 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
 
@@ -580,7 +600,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -614,7 +634,55 @@
       
 
       
-        
+        <p><img src="/images/article_linux_nohup.jpeg" alt></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note danger">
+            <p><font color="#red" size="5">用途</font>：不挂断地运行命令。</p><p><font color="#blue" size="5">语法</font>：nohup Command [ Arg … ] [　&amp; ]</p><p><font color="#white" size="5">描述</font>：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp; （ 表示”and”的符号）到命令的尾部。</p>
+          </div>
+<a id="more"></a>
+<hr>
+
+<p>在Linux系统中，多账户进行ssh登录是常有的事，但是有时候会去查看一下登录的用户都有谁以及相关的登录信息。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">显示当前登录的用户及信息</td>
+</tr>
+<tr>
+<td style="text-align:center">who</td>
+<td style="text-align:center">显示当前已经登录的用户名、终端名称、登录时间及登录IP</td>
+</tr>
+<tr>
+<td style="text-align:center">whoami</td>
+<td style="text-align:center">显示当前用户的用户名</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">用于check系统是有此用户</td>
+</tr>
+<tr>
+<td style="text-align:center">last</td>
+<td style="text-align:center">显示近期用户或终端的登录情况</td>
+</tr>
+</tbody>
+</table>
+<h4 id="w"><a href="#w" class="headerlink" title="w"></a>w</h4><p>显示当前登录的用户及信息，除了这些还会显示当前登录了几个用户、系统当前的load。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# w</span><br><span class="line"> 20:22:25 up 15:55,  3 users,  load average: 0.00, 0.01, 0.05</span><br><span class="line">USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT</span><br><span class="line">root     tty1                      Tue21   15:27m  0.09s  0.09s -bash</span><br><span class="line">root     pts/0    192.168.1.116    19:23    1.00s  0.12s  0.01s w</span><br><span class="line">root     tty2                      07:43   19:29   0.02s  0.02s -bash</span><br></pre></td></tr></table></figure>
+<h4 id="who"><a href="#who" class="headerlink" title="who"></a>who</h4><p>显示当前已经登录的用户名、终端名称、登录时间及登录IP。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# who</span><br><span class="line">root     tty1         2019-12-24 21:23</span><br><span class="line">root     pts/0        2019-12-24 19:23 (192.168.1.116)</span><br><span class="line">root     tty2         2019-12-24 07:43</span><br></pre></td></tr></table></figure>
+<h4 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h4><p>显示当前用户的用户名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# whoami</span><br><span class="line">root</span><br></pre></td></tr></table></figure></p>
+
+<div class="post_cus_note">额外赠送</div>
+
+<h4 id="id"><a href="#id" class="headerlink" title="id"></a>id</h4><p>用于显示用户的ID，以及所属群组的ID，主要用于check系统是有此用户。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@bash ~]# id root</span><br><span class="line">uid=0(root) gid=0(wheel) groups=0(wheel)</span><br></pre></td></tr></table></figure></p>
+<h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>显示近期用户或终端的登录情况。<br><code>`</code><br>[root@bash ~]# last -n 5<br>root     pts/0        :0.0             Wed Apr 25 10:12   still logged in<br>root     pts/1        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)<br>root     pts/0        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)<br>root     pts/0        :0.0             Wed Apr 25 10:02 - 10:06  (00:04)<br>root     pts/0        :0.0             Wed Apr 25 09:51 - 09:51  (00:00)</p>
+
       
     </div>
 
@@ -687,6 +755,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-bomb"></i> Linux</a>
+          
+            <a href="/tags/Linux番外篇/" rel="tag"><i class="fa fa-bomb"></i> Linux番外篇</a>
+          
+        </div>
+      
 
       
       
@@ -748,8 +824,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1043,7 +1128,7 @@
     <h4 class="widget-title" style="font-size:21px;text-align:center;color:#0080FF;margin:20px 0px 0px;">Tag Cloud</h4>
     <div id="myCanvasContainer" class="widget tagcloud" style="font-size:18px;">
         <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译器/">编译器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -1052,6 +1137,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#w"><span class="nav-number">3.</span> <span class="nav-text">w</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#who"><span class="nav-number">4.</span> <span class="nav-text">who</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#whoami"><span class="nav-number">5.</span> <span class="nav-text">whoami</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id"><span class="nav-number">6.</span> <span class="nav-text">id</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#last"><span class="nav-number">7.</span> <span class="nav-text">last</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1079,7 +1181,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">274k</span>
+    <span title="站点总字数">276k</span>
   
 
   
@@ -1088,7 +1190,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">4:09</span>
+    <span title="站点阅读时长">4:11</span>
   
 </div>
 

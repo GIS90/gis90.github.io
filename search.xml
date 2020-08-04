@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Mysql常用命令]]></title>
     <url>%2Farticles%2F14802%2F</url>
-    <content type="text"><![CDATA[背景 记录一下常用的命令，虽然关于查询相关的命令常用（select、order by、where、join等），但是关于建立数据库、建立用户、授权等并不常用的命令，做个整理，也方便了自己进行查询和使用 正文表复制分为表结构复制、表数据复制与整表（表结构+表数据）复制。 创建数据库 1create database 数据库名称 default character set utf8 collate utf8_general_ci; 创建用户 12345678create user &apos;用户名&apos;@&apos;%&apos; IDENTIFIED BY &apos;密码&apos;;-- % 表示通配符，任意远程主机都可以连接主机create user &apos;用户名&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;123456&apos;;-- localhost 表示本机，用户只有通过本机进行连接主机create user &apos;用户名&apos;@&apos;XXX.XXX.XX.XXX&apos; IDENTIFIED BY &apos;123456&apos;;-- XXX.XXX.XX.XXX 表示ip，用户只有通过指定的ip主机进行连接 授权 12345678910111213# 所有权限 所有表grant all on *.* to &apos;用户名称&apos;;# 所有权限 指定数据库grant * on 数据库名称.* to &apos;用户名称&apos;;# 指定权限 指定数据库grant select,insert,update,delete,create on 数据库名称.* to &apos;用户名称&apos;;flush privileges;# 查看权限show grants for &apos;用户名称&apos;; 其他 数据库列表：show database;表列表：show tables; 查询方面略]]></content>
+    <content type="text"><![CDATA[记录一下常用的命令，虽然关于查询相关的命令常用（select、order by、where、join等），但是关于建立数据库、建立用户、授权等并不常用的命令，做个整理，也方便了自己进行查询和使用 创建数据库 1create database 数据库名称 default character set utf8 collate utf8_general_ci; 创建用户 12345678create user &apos;用户名&apos;@&apos;%&apos; IDENTIFIED BY &apos;密码&apos;;-- % 表示通配符，任意远程主机都可以连接主机【常用】create user &apos;用户名&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;123456&apos;;-- localhost 表示本机，用户只有通过本机进行连接主机create user &apos;用户名&apos;@&apos;XXX.XXX.XX.XXX&apos; IDENTIFIED BY &apos;123456&apos;;-- XXX.XXX.XX.XXX 表示ip，用户只有通过指定的ip主机进行连接 授权 12345678910111213# 所有权限 所有表【常用】grant all on *.* to &apos;用户名称&apos;;# 所有权限 指定数据库【常用】grant all on 数据库名称.* to &apos;用户名称&apos;;# 指定权限 指定数据库grant select,insert,update,delete,create on 数据库名称.* to &apos;用户名称&apos;;flush privileges;# 查看权限show grants for &apos;用户名称&apos;; 其他 数据库列表：show database;表列表：show tables;切换数据库：use 数据库; 查询方面略]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[Qita-抖音BMG]]></title>
     <url>%2Farticles%2F16635%2F</url>
-    <content type="text"><![CDATA[背景 抖音记录美好生活记录自己喜欢的BGM，喜欢的请拿去，不用谢 batte fort 凤舞九天：https://music.163.com/#/song?id=1379910808&amp;userid=555314631 Dan Bălan-Lendo Calendo：https://music.163.com/#/song?id=1435770027&amp;userid=555314631 等什么君-赤伶：https://music.163.com/song?id=1447509197&amp;userid=555314631 杨千嬅-野孩子抖音：https://music.163.com/song?id=1385757429&amp;userid=555314631 猜不透 (咚鼓版)：https://music.163.com/song?id=1361558668&amp;userid=555314631 真的爱你 (咚鼓版)：https://music.163.com/song?id=1396568322&amp;userid=555314631 送给未来的你(DJ弹鼓版)：https://music.163.com/song?id=1425463866&amp;userid=555314631 Tony Igy-Astronomia：https://music.163.com/song?id=446154202&amp;userid=555314631 世间美好与你环环相扣：https://music.163.com/song?id=1399664349&amp;userid=555314631 Be Your Sun (DJ版)：https://music.163.com/song?id=1386946637&amp;userid=555314631]]></content>
+    <content type="text"><![CDATA[背景 抖音记录美好生活记录自己喜欢的BGM，喜欢的请拿去，不用谢 Pygo batte fort 凤舞九天：https://music.163.com/#/song?id=1379910808&amp;userid=555314631 Dan Bălan-Lendo Calendo：https://music.163.com/#/song?id=1435770027&amp;userid=555314631 等什么君-赤伶：https://music.163.com/song?id=1447509197&amp;userid=555314631 杨千嬅-野孩子抖音：https://music.163.com/song?id=1385757429&amp;userid=555314631 猜不透 (咚鼓版)：https://music.163.com/song?id=1361558668&amp;userid=555314631 真的爱你 (咚鼓版)：https://music.163.com/song?id=1396568322&amp;userid=555314631 送给未来的你(DJ弹鼓版)：https://music.163.com/song?id=1425463866&amp;userid=555314631 Tony Igy-Astronomia：https://music.163.com/song?id=446154202&amp;userid=555314631 世间美好与你环环相扣：https://music.163.com/song?id=1399664349&amp;userid=555314631 Be Your Sun (DJ版)：https://music.163.com/song?id=1386946637&amp;userid=555314631]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python-信息管理系统]]></title>
@@ -31,7 +31,14 @@
   <entry>
     <title><![CDATA[Linux学习之番外篇-nohup]]></title>
     <url>%2Farticles%2F23692%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[简介 用途：不挂断地运行命令。语法：nohup Command [ Arg … ] [ &amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp; （ 表示”and”的符号）到命令的尾部。 在Linux系统中，多账户进行ssh登录是常有的事，但是有时候会去查看一下登录的用户都有谁以及相关的登录信息。 总结 命令 说明 w 显示当前登录的用户及信息 who 显示当前已经登录的用户名、终端名称、登录时间及登录IP whoami 显示当前用户的用户名 id 用于check系统是有此用户 last 显示近期用户或终端的登录情况 w显示当前登录的用户及信息，除了这些还会显示当前登录了几个用户、系统当前的load。 123456[root@bash ~]# w 20:22:25 up 15:55, 3 users, load average: 0.00, 0.01, 0.05USER TTY FROM LOGIN@ IDLE JCPU PCPU WHATroot tty1 Tue21 15:27m 0.09s 0.09s -bashroot pts/0 192.168.1.116 19:23 1.00s 0.12s 0.01s wroot tty2 07:43 19:29 0.02s 0.02s -bash who显示当前已经登录的用户名、终端名称、登录时间及登录IP。 1234[root@bash ~]# whoroot tty1 2019-12-24 21:23root pts/0 2019-12-24 19:23 (192.168.1.116)root tty2 2019-12-24 07:43 whoami显示当前用户的用户名。12[root@bash ~]# whoamiroot 额外赠送 id用于显示用户的ID，以及所属群组的ID，主要用于check系统是有此用户。12[root@bash ~]# id rootuid=0(root) gid=0(wheel) groups=0(wheel) last显示近期用户或终端的登录情况。`[root@bash ~]# last -n 5root pts/0 :0.0 Wed Apr 25 10:12 still logged inroot pts/1 :0.0 Wed Apr 25 10:06 - 10:10 (00:03)root pts/0 :0.0 Wed Apr 25 10:06 - 10:10 (00:03)root pts/0 :0.0 Wed Apr 25 10:02 - 10:06 (00:04)root pts/0 :0.0 Wed Apr 25 09:51 - 09:51 (00:00)]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Linux番外篇</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[WIKI Confluence授权的延期]]></title>
