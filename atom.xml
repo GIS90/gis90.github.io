@@ -23,14 +23,15 @@
     <published>2020-08-26T13:31:58.000Z</published>
     <updated>2020-08-26T13:31:58.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/images/article_dt1.png" alt></div><div class="group-picture-column" style="width: 50%;"><img src="/images/article_dt2.png" alt></div></div></div></div><div class="note cq">            <p>感谢DataTables赠送的七夕节小熊宝宝礼物。</p>          </div><a id="more"></a><hr><div class="note success">            <p><font size="5.5" color="red">简介：</font><br>Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。</p><p><font size="5.5" color="red">特色：</font><br>简单、实用、上手快</p>          </div><font size="5.5"><br>DataTables官网：<a href="http://datatables.club/" target="_blank" rel="noopener">http://datatables.club/</a><br>DataTables QQ交流群：20779435<br></font><font size="6.5" color="red">欢迎大家一起来交流Share。。。。。。</font>]]></content>
+    <content type="html"><![CDATA[<font size="5.5" color="red">背景</font><div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/images/article_dt1.png" alt></div><div class="group-picture-column" style="width: 50%;"><img src="/images/article_dt2.png" alt></div></div></div></div><blockquote class="blockquote-center"><p>感谢DataTables赠送的七夕节小熊宝宝礼物。</p></blockquote><a id="more"></a><hr><div class="note success">            <p><font size="5.5" color="red">简介：</font><br>Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。</p><p><font size="5.5" color="red">特色：</font><br>简单、实用、上手快</p>          </div><font size="5.5"><br>DataTables官网：<a href="http://datatables.club/" target="_blank" rel="noopener">http://datatables.club/</a><br>DataTables QQ交流群：20779435<br></font><font size="6.5" color="red">欢迎大家一起来交流Share。。。。。。</font>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width: 50%;&quot;&gt;&lt;img src=&quot;/images/article_dt1.png&quot; alt&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width: 50%;&quot;&gt;&lt;img src=&quot;/images/article_dt2.png&quot; alt&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;note cq&quot;&gt;
-            &lt;p&gt;感谢DataTables赠送的七夕节小熊宝宝礼物。&lt;/p&gt;
-          &lt;/div&gt;
+      &lt;font size=&quot;5.5&quot; color=&quot;red&quot;&gt;背景&lt;/font&gt;
+
+&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width: 50%;&quot;&gt;&lt;img src=&quot;/images/article_dt1.png&quot; alt&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width: 50%;&quot;&gt;&lt;img src=&quot;/images/article_dt2.png&quot; alt&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;感谢DataTables赠送的七夕节小熊宝宝礼物。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
