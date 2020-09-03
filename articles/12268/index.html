@@ -26,8 +26,8 @@
 
 <!-- title、keywords、desc关键字 -->
 
-  <title>博文分类</title>
-  <meta name="title" content="博文分类">
+  <title>Hi</title>
+  <meta name="title" content="Hi">
 
 
   <meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
@@ -604,7 +604,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">360</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -662,11 +662,6 @@
 </tr>
 <tr>
 <td style="text-align:center">2</td>
-<td style="text-align:center">Python</td>
-<td style="text-align:center">2.7</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
 <td style="text-align:center">IDE</td>
 <td style="text-align:center">PyCharm</td>
 </tr>
@@ -678,26 +673,56 @@
 <th style="text-align:center">id</th>
 <th style="text-align:center">name</th>
 <th style="text-align:center">Version</th>
+<th style="text-align:center">Function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">1</td>
-<td style="text-align:center">Os</td>
-<td style="text-align:center">MacOS10.15.6</td>
+<td style="text-align:center">Python</td>
+<td style="text-align:center">2.7</td>
+<td style="text-align:center">开发语言，基于python2</td>
 </tr>
 <tr>
 <td style="text-align:center">2</td>
-<td style="text-align:center">Python</td>
-<td style="text-align:center">2.7</td>
+<td style="text-align:center">flask</td>
+<td style="text-align:center">PyCharm</td>
+<td style="text-align:center">使用的web框架</td>
 </tr>
 <tr>
 <td style="text-align:center">3</td>
-<td style="text-align:center">IDE</td>
-<td style="text-align:center">PyCharm</td>
+<td style="text-align:center">MariaDB</td>
+<td style="text-align:center">5.5.65</td>
+<td style="text-align:center">数据库</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">gunicorn</td>
+<td style="text-align:center">20.0.4</td>
+<td style="text-align:center">web服务与进程</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">supervisor</td>
+<td style="text-align:center">3.4.0</td>
+<td style="text-align:center">项目启动、停止、重启等操作</td>
 </tr>
 </tbody>
 </table>
+<p>项目主要运行于Linux系统上，本人开发使用的是MacOS，线上服务使用的是腾讯云服务器（Centos7.0）。</p>
+<h3 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h3><h4 id="项目地址（gitub）"><a href="#项目地址（gitub）" class="headerlink" title="项目地址（gitub）"></a>项目地址（gitub）</h4><p><a href="https://github.com/GIS90/base_webframe" target="_blank" rel="noopener">https://github.com/GIS90/base_webframe</a></p>
+<h4 id="环境搭建与项目运行"><a href="#环境搭建与项目运行" class="headerlink" title="环境搭建与项目运行"></a>环境搭建与项目运行</h4><ul>
+<li>Centos7.0系统服务器（建议Mac或者云服务器）</li>
+<li>mysql数据库安装与配置（略，建议baidu一下）</li>
+<li>安装git命令，如果有进行下一步（检测：which git）</li>
+<li>git clone <a href="https://github.com/GIS90/base_webframe.git" target="_blank" rel="noopener">https://github.com/GIS90/base_webframe.git</a></li>
+<li>更新web配置文件：etc/prod/config.py（线上）、etc/dev/config.py（测试），根据不同需求进行项目更改</li>
+<li>安装项目运行的环境：python install_env.py，建立项目独立的运行环境，安装了virtualenv、python、gunicorn、packages等操作，了解具体详情请参考代码</li>
+<li>项目根目录：source .venv/bin/activate：激活项目环境</li>
+<li>启动项目：gunicorn -c etc/prod/gunicorn.conf（线上）、gunicorn -c etc/dev/gunicorn.conf（测试）或者手动启动（下面有介绍），关于dev/prod配置请参考上面介绍</li>
+<li>选做：安装supervisor &amp;&amp; 项目加入supervisor进行管理，项目包含了supervisord配置文件&amp;&amp;项目supervisor配置文件</li>
+</ul>
+<p>as</p>
 
       
     </div>
@@ -1166,7 +1191,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境说明"><span class="nav-number">2.</span> <span class="nav-text">环境说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发环境"><span class="nav-number">2.1.</span> <span class="nav-text">开发环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础架构"><span class="nav-number">2.2.</span> <span class="nav-text">基础架构</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境说明"><span class="nav-number">2.</span> <span class="nav-text">环境说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发环境"><span class="nav-number">2.1.</span> <span class="nav-text">开发环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础架构"><span class="nav-number">2.2.</span> <span class="nav-text">基础架构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目说明"><span class="nav-number">3.</span> <span class="nav-text">项目说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目地址（gitub）"><span class="nav-number">3.1.</span> <span class="nav-text">项目地址（gitub）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建与项目运行"><span class="nav-number">3.2.</span> <span class="nav-text">环境搭建与项目运行</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1208,7 +1233,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">4:13</span>
+    <span title="站点阅读时长">4:14</span>
   
 </div>
 
