@@ -601,7 +601,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.5k</span>
+                <span title="本文字数">3.6k</span>
               
 
               
@@ -673,6 +673,7 @@
 <p>connect数据库状态<br>授权在这里说2种，都是亲身实践<br>
 <div class="post_cus_note">代码方式</div>
 <br>语法糖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2 grant 权限 on database to user XXXX</span><br></pre></td></tr></table></figure></p>
+<p>注意：sql语句中的database是固定写法，不是数据库名称。</p>
 <ul>
 <li>dbadm：DBADM 用户对一个数据库有几乎完全的控制能力。DBADM 用户不能执行某些维护或管理任务</li>
 <li>CREATETAB：用户可以在数据库中创建表。 　　</li>
@@ -699,7 +700,7 @@
 <blockquote>
 <p>缓冲池</p>
 </blockquote>
-<p>connect数据库连接状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 创建 XXXX为名称</span><br><span class="line">db2 CREATE BUFFERPOOL XXXX IMMEDIATE SIZE 250 AUTOMATIC PAGESIZE 32 K</span><br><span class="line"></span><br><span class="line"># 查看</span><br><span class="line">db2 select * from SYSCAT.BUFFERPOOLS</span><br><span class="line"></span><br><span class="line"># 删除</span><br><span class="line">db2 DROP BUFFERPOOL XXXX</span><br></pre></td></tr></table></figure></p>
+<p>connect数据库连接状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 创建 XXXX为名称</span><br><span class="line">db2 CREATE BUFFERPOOL XXXX IMMEDIATE SIZE 250 AUTOMATIC PAGESIZE 8 K</span><br><span class="line"></span><br><span class="line"># 查看</span><br><span class="line">db2 select * from SYSCAT.BUFFERPOOLS</span><br><span class="line"></span><br><span class="line"># 删除</span><br><span class="line">db2 DROP BUFFERPOOL XXXX</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>数据库参数配置</p>
 </blockquote>
