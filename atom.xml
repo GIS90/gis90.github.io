@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.cn/"/>
-  <updated>2020-11-10T14:55:24.000Z</updated>
+  <updated>2020-11-30T12:53:28.000Z</updated>
   <id>http://pygo2.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tools-git服务器仓库并上传</title>
+    <link href="http://pygo2.cn/articles/40662/"/>
+    <id>http://pygo2.cn/articles/40662/</id>
+    <published>2020-11-30T12:53:28.000Z</published>
+    <updated>2020-11-30T12:53:28.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Qita-Win常用命令</title>
+    <link href="http://pygo2.cn/articles/48352/"/>
+    <id>http://pygo2.cn/articles/48352/</id>
+    <published>2020-11-29T13:42:32.000Z</published>
+    <updated>2020-11-29T13:42:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>DB2导入与导出</title>
@@ -491,64 +519,6 @@
       <category term="电视剧" scheme="http://pygo2.cn/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
     
       <category term="美国大片" scheme="http://pygo2.cn/tags/%E7%BE%8E%E5%9B%BD%E5%A4%A7%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>元旦节【&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;中国节&lt;/font&gt;】</title>
-    <link href="http://pygo2.cn/articles/33336/"/>
-    <id>http://pygo2.cn/articles/33336/</id>
-    <published>2020-01-01T08:46:55.000Z</published>
-    <updated>2020-01-01T08:46:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="post_cus_note">中国节-元旦节</div><p><img src="/images/article_jieri_yuandan.jpeg" alt></p><font size="6.5" color="red">持续更新中。。。。。。</font><a id="more"></a><hr><table><thead><tr><th style="text-align:center">时间</th><th style="text-align:center">地点</th></tr></thead><tbody><tr><td style="text-align:center">2020-01-01</td><td style="text-align:center">保康</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;post_cus_note&quot;&gt;中国节-元旦节&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/article_jieri_yuandan.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;持续更新中。。。。。。&lt;/font&gt;
-    
-    </summary>
-    
-      <category term="节日" scheme="http://pygo2.cn/categories/%E8%8A%82%E6%97%A5/"/>
-    
-    
-      <category term="节日" scheme="http://pygo2.cn/tags/%E8%8A%82%E6%97%A5/"/>
-    
-      <category term="中国节" scheme="http://pygo2.cn/tags/%E4%B8%AD%E5%9B%BD%E8%8A%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python-判断PC是否连网</title>
-    <link href="http://pygo2.cn/articles/19515/"/>
-    <id>http://pygo2.cn/articles/19515/</id>
-    <published>2019-12-31T02:34:17.000Z</published>
-    <updated>2019-12-31T02:34:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_python_socket.jpeg" alt></p><span class="label default">Python</span> <span class="label primary">socket</span> <span class="label success">测试PC是否连网</span> <span class="label info">Python脚本</span> <span class="label warning">curl</span> <span class="label danger">wget</span><div class="post_cus_note">life is short, me use Python.</div><p>2019年的最后一片技术博客了，写一个初始学Python的知识点，在这里先祝<font size="6.5" color="red">【大家元旦快乐】</font>。<br><a id="more"></a></p><hr><p>代码很简单，需要设置能访问的url即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line"></span><br><span class="line">def is_connected(url):</span><br><span class="line"></span><br><span class="line">try:</span><br><span class="line">    host = socket.gethostbyname(url)</span><br><span class="line">    s = socket.create_connection((host, 80), 2)</span><br><span class="line">    return True</span><br><span class="line">except Exception as e:</span><br><span class="line">    return False</span><br><span class="line">URL = &quot;www.baidu.com&quot;</span><br><span class="line"></span><br><span class="line">print is_connected(URL )</span><br></pre></td></tr></table></figure><font size="6.5" color="red">此代码写于2016-09-12。。。。。。【自学Python期间】</font><div class="post_cus_note">其他方式</div><blockquote><p>curl</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://www.baidu.com</span><br></pre></td></tr></table></figure><blockquote><p>wget</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.baidu.com</span><br></pre></td></tr></table></figure><font size="6.5" color="blue">生命不息，奋斗不止！</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_python_socket.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;span class=&quot;label default&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;测试PC是否连网&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Python脚本&lt;/span&gt; &lt;span class=&quot;label warning&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;wget&lt;/span&gt;
-
-&lt;div class=&quot;post_cus_note&quot;&gt;life is short, me use Python.&lt;/div&gt;
-
-&lt;p&gt;2019年的最后一片技术博客了，写一个初始学Python的知识点，在这里先祝&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;【大家元旦快乐】&lt;/font&gt;。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://pygo2.cn/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.cn/tags/Python/"/>
-    
-      <category term="Python程序篇" scheme="http://pygo2.cn/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
-    
-      <category term="Python基础篇" scheme="http://pygo2.cn/tags/Python%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
     
   </entry>
   
