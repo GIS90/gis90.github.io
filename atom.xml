@@ -31,16 +31,27 @@
   </entry>
   
   <entry>
-    <title>Qita-Win常用命令</title>
+    <title>Windows常用命令</title>
     <link href="http://pygo2.cn/articles/48352/"/>
     <id>http://pygo2.cn/articles/48352/</id>
     <published>2020-11-29T13:42:32.000Z</published>
     <updated>2020-11-29T13:42:32.000Z</updated>
     
+    <content type="html"><![CDATA[<div class="note primary">            <p>目前换工作之后，对于Windows系统的机子或者服务器接触日益频繁，身为一个开发，无时不刻不能忘记自己的使命，<font color="red" size="6.5">用命令去装13</font>。<br>在这里总结一下常用的Windows常用的系统命令，比如：cmd、shutdown、compmgmt.msc、net等等，方便快捷的打开需要的软件或者设置。</p>          </div><span class="label success">Windows</span> <span class="label primary">常用命令</span><a id="more"></a><hr><blockquote><p>方式</p></blockquote><p>command + R打开允许，输入命令。</p><blockquote><p>常用命令</p></blockquote><table><thead><tr><th style="text-align:center">describe</th><th style="text-align:center">command</th></tr></thead><tbody><tr><td style="text-align:center">控制台</td><td style="text-align:center">cmd</td></tr><tr><td style="text-align:center">打开资源管理器（我的电脑）</td><td style="text-align:center">explorer</td></tr><tr><td style="text-align:center">注销</td><td style="text-align:center">logoff</td></tr><tr><td style="text-align:center">关机（60s后）</td><td style="text-align:center">shutdown</td></tr><tr><td style="text-align:center">计算机管理</td><td style="text-align:center">compmgmt.msc</td></tr><tr><td style="text-align:center">系统服务</td><td style="text-align:center">services.msc</td></tr><tr><td style="text-align:center">任务管理器</td><td style="text-align:center">taskmgr</td></tr><tr><td style="text-align:center">记事本</td><td style="text-align:center">notepad</td></tr><tr><td style="text-align:center">垃圾整理</td><td style="text-align:center">clearmgr</td></tr><tr><td style="text-align:center">开启/关闭XXXXX服务</td><td style="text-align:center">net start/stop XXXXX</td></tr><tr><td style="text-align:center">计算器</td><td style="text-align:center">calc</td></tr><tr><td style="text-align:center">注册表</td><td style="text-align:center">regedit.exe</td></tr><tr><td style="text-align:center">远程桌面连接</td><td style="text-align:center">mstsc</td></tr></tbody></table><blockquote><p>学习参考</p></blockquote><p>Windows命令大全：<a href="https://www.jb51.net/article/141568.htm" target="_blank" rel="noopener">https://www.jb51.net/article/141568.htm</a></p>]]></content>
+    
     <summary type="html">
+    
+      &lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;目前换工作之后，对于Windows系统的机子或者服务器接触日益频繁，身为一个开发，无时不刻不能忘记自己的使命，&lt;font color=&quot;red&quot; size=&quot;6.5&quot;&gt;用命令去装13&lt;/font&gt;。&lt;br&gt;在这里总结一下常用的Windows常用的系统命令，比如：cmd、shutdown、compmgmt.msc、net等等，方便快捷的打开需要的软件或者设置。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label success&quot;&gt;Windows&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;常用命令&lt;/span&gt;
     
     </summary>
     
+      <category term="Windows" scheme="http://pygo2.cn/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="http://pygo2.cn/tags/Windows/"/>
     
   </entry>
   
