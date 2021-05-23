@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-05-10T14:07:54.000Z</updated>
+  <updated>2021-05-21T01:05:20.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win Server服务器EventLog中的6005、6006、6008、6009、6013</title>
+    <link href="http://pygo2.top/articles/54459/"/>
+    <id>http://pygo2.top/articles/54459/</id>
+    <published>2021-05-21T01:05:20.000Z</published>
+    <updated>2021-05-21T01:05:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><div class="note primary">            <p>早上访问web项目，发现挂掉了，以为是内网网线的问题（本人电脑内外网跳板机），主要有线转换头经常出现问题，但是整了半天依然不行，于是打开服务器一看，什么东西都没了，一看就是重启了，于是需要查找到什么时候重启的，学会了查看系统的EventLog，记录一下用到的6005, 6006, 6008, 6009, 6013。</p>          </div><span class="label info">Windows</span> <span class="label primary">EventLog</span><a id="more"></a><hr><h4 id="功能查询"><a href="#功能查询" class="headerlink" title="功能查询"></a>功能查询</h4><p>查看系统的日志记录，查询服务器发生了哪些明细，所在位置：</p><font size="5.5" color="blue">我的电脑 &gt; 管理 &gt; 服务管理器  &gt;  诊断 &gt;  事件查看器 &gt; windows日期 &gt; 系统</font><p><img src="eventlog.png" alt></p><p>主要功能说明：</p><ul><li>目录：EventLog所在的功能树</li><li>事件日志：服务器的事件日志历史记录</li><li>事件明细：对于历史记录的详细说明</li><li>功能区：对EventLog的常用功能，主要用到筛选当前日志</li></ul><p>点击上面的历史事件，可以在明细区域查看具体情况。</p><h4 id="筛选功能"><a href="#筛选功能" class="headerlink" title="筛选功能"></a>筛选功能</h4><p>利用筛选功能选出需要的日志，主要有3大筛选条件：</p><ul><li>记录时间：可以选取近1h、12h、24h、7天、30天</li><li>事件来源：选取eventlog、Eventlog</li><li>事件ID：输入需要过滤的事件ID</li></ul><p><img src="query.png" alt></p><h4 id="EventLog-ID"><a href="#EventLog-ID" class="headerlink" title="EventLog ID"></a>EventLog ID</h4><table><thead><tr><th style="text-align:center">ID</th><th style="text-align:center">level ｜ describe</th><th style="text-align:left"></th></tr></thead><tbody><tr><td style="text-align:center">6005</td><td style="text-align:center">信息</td><td style="text-align:left">事件服务日期启动（开机）</td></tr><tr><td style="text-align:center">6006</td><td style="text-align:center">信息</td><td style="text-align:left">事件服务日期关闭（关机）</td></tr><tr><td style="text-align:center">6008</td><td style="text-align:center">错误</td><td style="text-align:left">上一次系统的 4:12:37 在 ?2021/?5/?21 上的关闭是意外的（记录系统意外关机事件）</td></tr><tr><td style="text-align:center">6009</td><td style="text-align:center">信息</td><td style="text-align:left">Microsoft (R) Windows (R) 6.01. 7601 Service Pack 1 Multiprocessor Free（服务器开机的一些信息）</td></tr><tr><td style="text-align:center">60013</td><td style="text-align:center">信息</td><td style="text-align:left">记录操作系统运行了多久时间，24h运行一次</td></tr></tbody></table><p>破案了，原来是断电了，服务器来电后自己又自己起来了，但是服务全没了。</p><font size="6.5" color="red">记录遇到的各种Eventlog ID，持续更新中。。。。。。</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;早上访问web项目，发现挂掉了，以为是内网网线的问题（本人电脑内外网跳板机），主要有线转换头经常出现问题，但是整了半天依然不行，于是打开服务器一看，什么东西都没了，一看就是重启了，于是需要查找到什么时候重启的，学会了查看系统的EventLog，记录一下用到的6005, 6006, 6008, 6009, 6013。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;Windows&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;EventLog&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="http://pygo2.top/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="http://pygo2.top/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>FreeFileSync探索</title>
@@ -522,33 +547,6 @@
       <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
     
       <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Crontab指定用户运行任务</title>
-    <link href="http://pygo2.top/articles/44008/"/>
-    <id>http://pygo2.top/articles/44008/</id>
-    <published>2020-12-19T07:23:09.000Z</published>
-    <updated>2020-12-19T07:23:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note warning">            <p>每一个用户都有属于自己的crontab，crontab -l的时候显示都是自己的定时任务，不便于管理。<br>把所有任务集中管理，并指定每个任务的执行用户，记录一下。</p>          </div><span class="label primary">Crontab</span> <span class="label info">定时任务</span><a id="more"></a><hr><blockquote><p>系统环境</p></blockquote><p>Contos7.5</p><blockquote><p>操作</p></blockquote><p>root用户。</p><ul><li>打开/etc/crontab文件中添加。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"># For details see man 4 crontabs</span><br><span class="line"></span><br><span class="line"># Example of job definition:</span><br><span class="line"># .---------------- minute (0 - 59)</span><br><span class="line"># |  .------------- hour (0 - 23)</span><br><span class="line"># |  |  .---------- day of month (1 - 31)</span><br><span class="line"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span><br><span class="line"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"># |  |  |  |  |</span><br><span class="line"># *  *  *  *  * user-name  command to be executed</span><br><span class="line"></span><br><span class="line"># baidu自动推送</span><br><span class="line">1 23 * * * mingliang.gao bash /home/mingliang.gao/crontab/auto_push_baidu/auto_baidu_push.sh</span><br><span class="line"></span><br><span class="line"># db backup</span><br><span class="line">30 02 * * * mingliang.gao bash /home/mingliang.gao/crontab/db_backup_task.sh &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure><p>这里面需要指定用户名，统一管理。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note warning&quot;&gt;
-            &lt;p&gt;每一个用户都有属于自己的crontab，crontab -l的时候显示都是自己的定时任务，不便于管理。&lt;br&gt;把所有任务集中管理，并指定每个任务的执行用户，记录一下。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label primary&quot;&gt;Crontab&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;定时任务&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-      <category term="Crontab" scheme="http://pygo2.top/tags/Crontab/"/>
     
   </entry>
   
