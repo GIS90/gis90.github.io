@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-05-27T14:35:12.000Z</updated>
+  <updated>2021-06-14T14:09:08.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacOS-brew安装与常用命令</title>
+    <link href="http://pygo2.top/articles/12880/"/>
+    <id>http://pygo2.top/articles/12880/</id>
+    <published>2021-06-14T14:09:08.000Z</published>
+    <updated>2021-06-14T14:09:08.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>DB2自动化全量备份</title>
@@ -520,31 +534,6 @@
       <category term="HTML" scheme="http://pygo2.top/tags/HTML/"/>
     
       <category term="CSS" scheme="http://pygo2.top/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python之NLTK包[ERRNO61] Connection Refused</title>
-    <link href="http://pygo2.top/articles/38502/"/>
-    <id>http://pygo2.top/articles/38502/</id>
-    <published>2020-12-23T15:21:42.000Z</published>
-    <updated>2020-12-23T15:21:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_python_nltk.png" alt></p><font size="6.5" color="red">解决MacOS安装nltk报[ERRNO61] Connection Refused的问题。</font><a id="more"></a><hr><p>要解析一些DB2的存储过程，查询一些指定的词语，打算搞个脚本，用到nltk这个自然语言处理的包，安装之后，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># GUI Downloader</span><br><span class="line">import nltk</span><br><span class="line">nltk.download()</span><br></pre></td></tr></table></figure></p><p>出现上述情况，下载不了包。</p><div class="post_cus_note">=============解决方案=============</div><blockquote><p>方案一</p></blockquote><p>离线下载包，地址：<a href="https://github.com/nltk/nltk_data/tree/gh-pages" target="_blank" rel="noopener">https://github.com/nltk/nltk_data/tree/gh-pages</a><br>下载之后把文件放在/Users/用户名/nltk_data目录下，改下用户即可。</p><blockquote><p>方案二</p></blockquote><p>在GUI Downloader上，更换Server Index地址：<a href="http://www.nltk.org/nltk_data/" target="_blank" rel="noopener">http://www.nltk.org/nltk_data/</a><br>可行，但是不是永久的，每次打开都得重新设置。</p><p><img src="ok_nltk.png" alt></p><blockquote><p>方案三</p></blockquote><p>找到nltk包的downloader文件，去更改默认下载地址。<br>我用的是conda建造的环境，或者用pycharm的去一级一级找就可以了。<br>位置：/opt/anaconda3/envs/python3.7/lib/python3.7/site-packages/nltk/downloader.py</p><p><img src="update_url.png" alt></p><p>本人开发环境：MacOS + Pyhton3.7</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_python_nltk.png&quot; alt&gt;&lt;/p&gt;
-&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;解决MacOS安装nltk报[ERRNO61] Connection Refused的问题。&lt;/font&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
-    
-      <category term="Python包" scheme="http://pygo2.top/tags/Python%E5%8C%85/"/>
     
   </entry>
   
