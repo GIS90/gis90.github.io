@@ -143,9 +143,9 @@
       <category term="MacOS" scheme="http://pygo2.top/categories/MacOS/"/>
     
     
-      <category term="brew" scheme="http://pygo2.top/tags/brew/"/>
-    
       <category term="MacOS" scheme="http://pygo2.top/tags/MacOS/"/>
+    
+      <category term="brew" scheme="http://pygo2.top/tags/brew/"/>
     
   </entry>
   
