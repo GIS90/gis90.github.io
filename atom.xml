@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-07-04T16:44:39.000Z</updated>
+  <updated>2021-07-17T12:53:58.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows系统服务器之间的大文件互传</title>
+    <link href="http://pygo2.top/articles/555/"/>
+    <id>http://pygo2.top/articles/555/</id>
+    <published>2021-07-17T12:53:58.000Z</published>
+    <updated>2021-07-17T12:53:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><div class="note warning">            <p>在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。</p>          </div><span class="label default">服务器</span> <span class="label info">文件传输</span> <span class="label primary">Windows</span><a id="more"></a><hr><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Windows</td><td style="text-align:center">Windows Server2008 R2</td></tr></tbody></table><font size="6.5" color="red">持续更新中。。。。。。</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h4&gt;&lt;div class=&quot;note warning&quot;&gt;
+            &lt;p&gt;在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label default&quot;&gt;服务器&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;文件传输&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Windows&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="文件传输" scheme="http://pygo2.top/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DB2报错：SQLCODE=-668, SQLSTATE=57016</title>
+    <link href="http://pygo2.top/articles/34462/"/>
+    <id>http://pygo2.top/articles/34462/</id>
+    <published>2021-07-14T12:55:15.000Z</published>
+    <updated>2021-07-14T12:55:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_db2.jpg" alt></p><div class="note primary">            <p>今日跑存储过程，很简单的一个存储过程，从来没包错过，居然报错了，提示<font color="red" size="5"><strong><em>SQLCODE：-20244</em></strong></font>，网上查资料发现没有这个<strong><em>SQLCODE</em></strong>，于是一个表一个表的<strong><em>SELECT</em></strong>，发现其中有个表报错：SQLCODE=-668, SQLSTATE=57016</p>          </div><span class="label info">DB2</span> <span class="label default">SQLCODE</span><a id="more"></a><hr><p>当存储过程出现：SQLCODE=-668, SQLSTATE=57016，说明表处于“暂挂状态”，需要load + reorg处理下就可以了。</p><blockquote><p>1.查询表的状态，DB2 CMD执行：db2 load query table pas.jxdx_dkzh_bf</p></blockquote><p><img src="668.png" alt><br>这个错误是：表处于”装入暂挂”状态。</p><blockquote><p>2.执行以下对应的命令用来解除暂挂状态。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2 load from /dev/null of del terminate into pas.jxdx_dkzh_bf</span><br></pre></td></tr></table></figure><p>win、linux都适用。</p><blockquote><p>3.然后</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2 reorg table pas.jxdx_dkzh_bf</span><br></pre></td></tr></table></figure><blockquote><p>4.测试select语句，如果可以了就可以执行存储过程了。</p></blockquote><div class="post_cus_note">注意要点</div><ul><li>table后面跟的表名格式：策略.表名</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_db2.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;今日跑存储过程，很简单的一个存储过程，从来没包错过，居然报错了，提示&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;&lt;strong&gt;&lt;em&gt;SQLCODE：-20244&lt;/em&gt;&lt;/strong&gt;&lt;/font&gt;，网上查资料发现没有这个&lt;strong&gt;&lt;em&gt;SQLCODE&lt;/em&gt;&lt;/strong&gt;，于是一个表一个表的&lt;strong&gt;&lt;em&gt;SELECT&lt;/em&gt;&lt;/strong&gt;，发现其中有个表报错：SQLCODE=-668, SQLSTATE=57016&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;DB2&lt;/span&gt; &lt;span class=&quot;label default&quot;&gt;SQLCODE&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="DB2" scheme="http://pygo2.top/tags/DB2/"/>
+    
+  </entry>
   
   <entry>
     <title>PDF转WORD</title>
@@ -488,65 +539,6 @@
       <category term="CkEditor" scheme="http://pygo2.top/tags/CkEditor/"/>
     
       <category term="富文本编辑器" scheme="http://pygo2.top/tags/%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CkEditor的安装与基础使用</title>
-    <link href="http://pygo2.top/articles/9743/"/>
-    <id>http://pygo2.top/articles/9743/</id>
-    <published>2021-01-18T13:43:12.000Z</published>
-    <updated>2021-01-18T13:43:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><font size="5.5" color="red">CKEditor系列教程（一）</font></blockquote><span class="label danger">CKEditor</span> <span class="label warning">前端应用</span><a id="more"></a><hr><p>CkEditor有4版本以及最新5系列版本，看了内容，感觉4就够了，有兴趣的人可以下载5。</p><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><p><a href="https://ckeditor.com/ckeditor-4/download/" target="_blank" rel="noopener">https://ckeditor.com/ckeditor-4/download/</a></p><p>CkEditor4有4个版本下载：base（基础版）、standard（标准版）、full（完整版）、custome（定制版）。<br><img src="version.png" alt><br>说白了就是插件多少的问题，建议选择full版本，反正项目部署到服务器，CkEditor插件每次也不会更新，不会影响任何问题。</p><p>其他方式安装：<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_installation.html" target="_blank" rel="noopener">https://ckeditor.com/docs/ckeditor4/latest/guide/dev_installation.html</a></p><h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><blockquote><p>HTML</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html lang=&quot;en-US&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;ditor demo&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;ckeditor_4.15.1_full_easyimage/ckeditor.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button onclick=&quot;show()&quot;&gt;展示&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;form&gt;</span><br><span class="line">        &lt;textarea name=&quot;articleArea&quot; id=&quot;articleArea&quot; rows=&quot;10&quot; cols=&quot;80&quot;&gt;</span><br><span class="line">        &lt;/textarea&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    // with a CKEditor 4, instance, using default configuration.</span><br><span class="line">    CKEDITOR.replace( &apos;articleArea&apos; );</span><br><span class="line"></span><br><span class="line">    function show() &#123;</span><br><span class="line">         var editor_data = CKEDITOR.instances.articleArea.getData();</span><br><span class="line">        console.log(editor_data)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>show方法是打印内容。</p><h4 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h4><p>官网：<a href="https://ckeditor.com/" target="_blank" rel="noopener">https://ckeditor.com/</a><br>CKEditor系列教程（一）：<a href="/articles/9743/" target="_blank" class="block_project_a">CkEditor的安装与基础使用</a><br>CKEditor系列教程（二）：<a href="/articles/32150/" target="_blank" class="block_project_a">CkEditor的配置说明</a><br>CKEditor系列教程（三）：<a href="/articles/32287/" target="_blank" class="block_project_a">CkEditor图片上传到服务端</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;font size=&quot;5.5&quot; color=&quot;red&quot;&gt;CKEditor系列教程（一）&lt;/font&gt;&lt;/blockquote&gt;
-&lt;span class=&quot;label danger&quot;&gt;CKEditor&lt;/span&gt; &lt;span class=&quot;label warning&quot;&gt;前端应用&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="前端应用" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
-    
-    
-      <category term="HTML" scheme="http://pygo2.top/tags/HTML/"/>
-    
-      <category term="前端组件" scheme="http://pygo2.top/tags/%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6/"/>
-    
-      <category term="CkEditor" scheme="http://pygo2.top/tags/CkEditor/"/>
-    
-      <category term="富文本编辑器" scheme="http://pygo2.top/tags/%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Contos7.5环境上的Java安装</title>
-    <link href="http://pygo2.top/articles/50773/"/>
-    <id>http://pygo2.top/articles/50773/</id>
-    <published>2021-01-16T13:30:19.000Z</published>
-    <updated>2021-01-16T13:30:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_java_install.jpeg" alt></p><h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><div class="note primary">            <p>基于云服务器Centos7.5，安装libreoffice需要java环境，安装方式有2种，建议选择第二种手动方式。首先，安装的路径你可以自动随便选择；其次yum安装的jdk只是jre环境，而手动安装包含了JDK与JRE2个环境，包含dt.jar、tools.jar包。</p>          </div><span class="label danger">Linux</span> <span class="label info">Java</span><a id="more"></a><hr><p>前几天安装libreoffice环境，不清楚这个是干什么的，可以参考<a href="/articles/10477/" target="_blank" class="block_project_a">libreoffice安装与使用</a>。</p><h4 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h4><p>Contos7.5</p><div class="post_cus_note">-------------------------- Let's go --------------------------</div><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>这个主要用到yum命令，不清楚使用的同学可以baidu一下。</p><blockquote><p>yum</p></blockquote><ul><li><p>查找JDK</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum search jdk</span><br></pre></td></tr></table></figure><p>  <img src="yum_search.png" alt></p></li><li><p>安装</p><p>  这里我选择的是1.8版本，根据服务器的位数选择对应的版本。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk.x86_64</span><br></pre></td></tr></table></figure><p>  安装完是下面这个样子：<br>  <img src="java_list.png" alt></p></li><li><p>配置</p><p>  打开/etc/profile文件，把下面配置加到最下面。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.275.b01-0.el7_9.x86_64</span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure></li><li><p>验证</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure><p>  <img src="java_version.png" alt></p></li><li><p>其他说明</p><p>  yum安装的默认路径为：/usr/lib/jvm。</p></li></ul><blockquote><p>手动</p></blockquote><ul><li><p>下载源码包</p><p>  下载地址：<a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a><br>  选择需要安装的版本，这里选择的是：Linux x64 Compressed Archive。</p></li><li><p>上传服务器</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ~/Downloads/jdk-8u281-linux-x64.tar.gz root@121.4.56.169:~</span><br></pre></td></tr></table></figure></li><li><p>解压</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u281-linux-x64.tar.gz</span><br><span class="line">mv jdk-8u281-linux-x64 /usr/local/jdk1.8.0_281</span><br></pre></td></tr></table></figure></li><li><p>配置</p><p>  同样还是/etc/profile文件。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">JAVA_HOME=/usr/local/jdk1.8.0_281</span><br><span class="line">JRE_HOME=/usr/local/jdk1.8.0_281/jre</span><br><span class="line">CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br><span class="line">export JAVA_HOME JRE_HOME CLASS_PATH PATH</span><br></pre></td></tr></table></figure></li><li><p>测试</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></li></ul><h4 id="JDK与JRE区别"><a href="#JDK与JRE区别" class="headerlink" title="JDK与JRE区别"></a>JDK与JRE区别</h4><p><img src="jre_jdk.jpeg" alt></p><blockquote><p>含义</p></blockquote><ul><li>JDK：java development kit</li><li>JRE：java runtime environment</li></ul><blockquote><p>组成</p></blockquote><ul><li>JDK：JVM + 基础类库 + 开发工具</li><li>JRE：JVM</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_java_install.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;h4 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h4&gt;&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;基于云服务器Centos7.5，安装libreoffice需要java环境，安装方式有2种，建议选择第二种手动方式。首先，安装的路径你可以自动随便选择；其次yum安装的jdk只是jre环境，而手动安装包含了JDK与JRE2个环境，包含dt.jar、tools.jar包。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label danger&quot;&gt;Linux&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Java&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
     
   </entry>
   
