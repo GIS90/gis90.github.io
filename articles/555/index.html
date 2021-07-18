@@ -156,10 +156,12 @@
 <meta property="og:site_name" content="PyGo²">
 <meta property="og:description" content="简述             在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。            服务器 文件传输 Windows">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pygo2.top/articles/555/1.png">
 <meta property="og:updated_time" content="2021-07-17T12:53:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows系统服务器之间的大文件互传">
 <meta name="twitter:description" content="简述             在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。            服务器 文件传输 Windows">
+<meta name="twitter:image" content="http://pygo2.top/articles/555/1.png">
 
 
 
@@ -598,7 +600,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">220</span>
+                <span title="本文字数">596</span>
               
 
               
@@ -643,19 +645,48 @@
 <thead>
 <tr>
 <th style="text-align:center">id</th>
+<th style="text-align:center">ip</th>
 <th style="text-align:center">name</th>
-<th style="text-align:center">Version</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">1</td>
+<td style="text-align:center">16.19.209.67</td>
 <td style="text-align:center">Windows</td>
-<td style="text-align:center">Windows Server2008 R2</td>
+<td>Windows Server2008 R2</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16.19.209.100</td>
+<td style="text-align:center">Windows</td>
+<td>Windows Server2008 R2</td>
 </tr>
 </tbody>
 </table>
-<font size="6.5" color="red">持续更新中。。。。。。</font>
+<p>两台服务器为内网连同的两台机器。</p>
+<h4 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h4><blockquote>
+<p>文件共享</p>
+</blockquote>
+<ul>
+<li>文件夹开启高级共享，右键-&gt;属性-&gt;共享-&gt;高级共享</li>
+<li>使用MSTSC进行连接，快捷键WIN+R，输入MSTSC，输入相关远程电脑的连接信息</li>
+<li>连接之后再另一台电脑的计算机顶部地址栏输入共享服务器的ip</li>
+<li>选择共享的文件夹，输入对应的账号、密码</li>
+<li>复制到本地</li>
+</ul>
+<p><img src="1.png" alt></p>
+<blockquote>
+<p>xcopy</p>
+</blockquote>
+<p>Win系统自带的命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcopy \\IP地址\ 目录\文件</span><br></pre></td></tr></table></figure></p>
+<p>前提是这个文件夹开启共享。</p>
+<blockquote>
+<p>python</p>
+</blockquote>
+<p>服务器具有python环境，利用python命令开启一个web服务，连接方进行下载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># python2</span><br><span class="line">python -m SimpleHTTPServer XXXX</span><br></pre></td></tr></table></figure></p>
+<p>其中，XXXX为端口。</p>
 
       
     </div>
@@ -1190,7 +1221,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方案"><span class="nav-number">3.</span> <span class="nav-text">方案</span></a></li></ol></div>
             
 
           </div>
