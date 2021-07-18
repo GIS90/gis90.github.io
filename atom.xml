@@ -286,11 +286,13 @@
     <published>2021-05-10T14:07:54.000Z</published>
     <updated>2021-05-10T14:07:54.000Z</updated>
     
-    <content type="html"><![CDATA[<font size="6.5" color="red">探索中。。。。。。</font><a id="more"></a><hr>]]></content>
+    <content type="html"><![CDATA[<p>一款备份软件可以运行在win、macos、linux上的文件备份软件。</p><p>官网：<a href="https://freefilesync.org/" target="_blank" rel="noopener">https://freefilesync.org/</a></p><font size="6.5" color="red">有兴趣或者需要的同学可以详细研究一下。。。。。。</font><a id="more"></a><hr><div class="note primary">            <p>Synchronize Files and Folders<br>Key featuresFreeFileSync is a folder comparison and synchronization software that creates and manages backup copies of all your important files. Instead of copying every file every time, FreeFileSync determines the differences between a source and a target folder and transfers only the minimum amount of data needed. FreeFileSync is Open Source software, available for Windows, macOS, and Linux.</p>          </div>]]></content>
     
     <summary type="html">
     
-      &lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;探索中。。。。。。&lt;/font&gt;
+      &lt;p&gt;一款备份软件可以运行在win、macos、linux上的文件备份软件。&lt;/p&gt;
+&lt;p&gt;官网：&lt;a href=&quot;https://freefilesync.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://freefilesync.org/&lt;/a&gt;&lt;/p&gt;
+&lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;有兴趣或者需要的同学可以详细研究一下。。。。。。&lt;/font&gt;
     
     </summary>
     
