@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-07-18T03:22:52.000Z</updated>
+  <updated>2021-08-05T14:31:28.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Python处理Excel65535的问题</title>
+    <link href="http://pygo2.top/articles/26307/"/>
+    <id>http://pygo2.top/articles/26307/</id>
+    <published>2021-08-05T14:31:28.000Z</published>
+    <updated>2021-08-05T14:31:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_python_excel.jpeg" alt></p><div class="note primary">            <blockquote><p>问题描述<br>使用Python去处理表格的时候，居然报错，提示为：<br>undefined</p></blockquote>          </div><span class="label info">Python实战</span><a id="more"></a><hr><p>基于xlrd、xlwt进行Excel的处理，其包中对单个Sheet限制最大行数为65535，当读写数据超出这个范围就会出现如上错误。</p><blockquote><p>解决方案</p></blockquote><p>可以使用openpyxl包，其最大行数为1048576，存储的文件类型为xlsx，但是弊端就是不能读取xls老的Excel格式文件。<br>对于这个，我在项目中想了一个解决方案，判断是xls格式就用xlrd、xlwt包的方法；xlsx就用openpyxl。<br>如果是xls并且行数超过65536，让用户上传xlsx格式的文件，网上有xls、xlsx格式的转换，有需要的可以找找。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_python_excel.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;blockquote&gt;&lt;p&gt;问题描述&lt;br&gt;使用Python去处理表格的时候，居然报错，提示为：&lt;br&gt;undefined&lt;/p&gt;&lt;/blockquote&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;Python实战&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap的动态icon</title>
+    <link href="http://pygo2.top/articles/63837/"/>
+    <id>http://pygo2.top/articles/63837/</id>
+    <published>2021-08-01T02:07:44.000Z</published>
+    <updated>2021-08-01T02:07:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_bootstrap.jpeg" alt></p><div class="note primary">            <p>Bootstrap图标使用的是Font Awesome，加上基本的class可以产生动画效果，让页面看起来更加酷炫。</p>          </div><span class="label primary">Bootstrap</span> <span class="label info">icon</span><a id="more"></a><hr><p>实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;fa-5x&quot;&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><ul><li>fa-spin：让icon图标不停的动态旋转</li><li>fa-pulse：图标以八步为周期进行旋转，比较适合表示刷新、加载等功能的图标，如.fa-spinner、.fa-refresh、.fa-cog等</li><li>fa-rotate-xx：图标以某个角度进行选择</li><li>fa-flip-horizontal：水平翻转</li><li>fa-flip-vertical：垂直翻转</li><li>fa-3x：图标大小的设置，有fa-x、fa-2x、fa-3x，想要多大有多大，使用默认大小fa-x居多</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_bootstrap.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;Bootstrap图标使用的是Font Awesome，加上基本的class可以产生动画效果，让页面看起来更加酷炫。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label primary&quot;&gt;Bootstrap&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;icon&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://pygo2.top/categories/Bootstrap/"/>
+    
+    
+      <category term="Bootstrap" scheme="http://pygo2.top/tags/Bootstrap/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA的Error:loading:xxxx\jvm.dll问题解决</title>
@@ -480,64 +532,6 @@
     
     
       <category term="svn" scheme="http://pygo2.top/tags/svn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CkEditor图片上传到服务端</title>
-    <link href="http://pygo2.top/articles/32287/"/>
-    <id>http://pygo2.top/articles/32287/</id>
-    <published>2021-01-30T03:35:27.000Z</published>
-    <updated>2021-01-30T03:35:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><font size="5.5" color="red">CKEditor系列教程（三）</font></blockquote><span class="label primary">CKEditor</span> <span class="label warning">前端应用</span><a id="more"></a><hr><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><blockquote><p>配置前</p></blockquote><p><img src="ckedit_1.png" alt></p><blockquote><p>配置后</p></blockquote><p><img src="ckedit_2.png" alt></p><h4 id="图片上传配置"><a href="#图片上传配置" class="headerlink" title="图片上传配置"></a>图片上传配置</h4><p>在config.js配置文件中进行图片上传的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//上传图片API</span><br><span class="line">config.filebrowserImageUploadUrl = &quot;/apis/uploadimg&quot;;</span><br><span class="line">// 去掉图片预览框的文字</span><br><span class="line">config.image_previewText = &apos;&apos;;</span><br><span class="line">// 隐藏“超链接”与“高级选项”只留上传和预览按钮</span><br><span class="line">config.removeDialogTabs = &apos;image:advanced;image:Link;&apos;;</span><br></pre></td></tr></table></figure></p><h4 id="后台代码"><a href="#后台代码" class="headerlink" title="后台代码"></a>后台代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@apis.route(&apos;/uploadimg/&apos;, methods=[&apos;POST&apos;, &apos;OPTIONS&apos;], strict_slashes=False)</span><br><span class="line">def uploadimg():</span><br><span class="line">    image = request.files.get(&apos;upload&apos;)</span><br><span class="line">    no_res = jsonify(&#123;</span><br><span class="line">            &quot;uploaded&quot;: 0,</span><br><span class="line">            &quot;fileName&quot;: &apos;&apos;,</span><br><span class="line">            &quot;url&quot;: &apos;&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">    if not image:</span><br><span class="line">        return no_res</span><br><span class="line">    res = ApisService().store_to_imgae(image)</span><br><span class="line">    json_res = json.loads(res)</span><br><span class="line">    if json_res.get(&apos;status_id&apos;) != 100:</span><br><span class="line">        return no_res</span><br><span class="line"></span><br><span class="line">    return jsonify(&#123;</span><br><span class="line">            &quot;uploaded&quot;: 1,</span><br><span class="line">            &quot;fileName&quot;: json_res.get(&apos;data&apos;).get(&apos;name&apos;),</span><br><span class="line">            &quot;url&quot;: json_res.get(&apos;data&apos;).get(&apos;url&apos;)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure><p>上面是python对于图片存储的代码，store_to_imgae是实际存储的，需要的可以给我留言，要让前端ckedit能获取返回值，需要json格式，内容目标如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;uploaded&quot;: 1,</span><br><span class="line">    &quot;fileName&quot;: json_res.get(&apos;data&apos;).get(&apos;name&apos;),</span><br><span class="line">    &quot;url&quot;: json_res.get(&apos;data&apos;).get(&apos;url&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>这样，前端就可以进行显示了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;font size=&quot;5.5&quot; color=&quot;red&quot;&gt;CKEditor系列教程（三）&lt;/font&gt;&lt;/blockquote&gt;
-&lt;span class=&quot;label primary&quot;&gt;CKEditor&lt;/span&gt; &lt;span class=&quot;label warning&quot;&gt;前端应用&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="前端应用" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
-    
-    
-      <category term="HTML" scheme="http://pygo2.top/tags/HTML/"/>
-    
-      <category term="前端组件" scheme="http://pygo2.top/tags/%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6/"/>
-    
-      <category term="CkEditor" scheme="http://pygo2.top/tags/CkEditor/"/>
-    
-      <category term="富文本编辑器" scheme="http://pygo2.top/tags/%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux服务上安装Win字体</title>
-    <link href="http://pygo2.top/articles/34016/"/>
-    <id>http://pygo2.top/articles/34016/</id>
-    <published>2021-01-25T02:51:39.000Z</published>
-    <updated>2021-01-25T14:51:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note warning">            <p>在开源项目上集成了CKEditor富文本编辑器，但是发现面板上字体没有宋体、微软雅黑等Win字体，web服务大部分应用都是win系统，在CKEditor上config.js添加了字体选择，但是没有效果，需要在Linux服务器添加所需要的字体。</p>          </div><span class="label primary">Linux</span> <span class="label info">CKEditor</span><a id="more"></a><hr><p>这里介绍2种配置，均可以。</p><blockquote><p>系统环境</p></blockquote><p>Contos7.5</p><blockquote><p>基础操作</p></blockquote><p>拷贝Win系统的字体传到Linux服务器上，放在/usr/share/fonts/chinese目录下，fonts目录下是没有chinese文件夹的，需要root用户新建并赋予755权限。<br>Win系统的字体库位置：C:/Windows/Fonts<br>Linux涉及命令：su、scp、mkdir、chmod</p><div class="post_cus_note">================第一种================</div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/fonts/chinese</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache –fv</span><br></pre></td></tr></table></figure><p>执行以上命令之后，在执行<strong><em>fc-list</em></strong>查看字体列表，查看中文字体：<strong><em>fc-list :lang=zh</em></strong>。</p><blockquote><p>mkfontscale &amp;&amp; mkfontdir 区别</p></blockquote><p><strong><em>man</em></strong>查看二者命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkfontscale - create an index of scalable font files for X</span><br><span class="line">mkfontdir - create an index of X font files in a directory</span><br></pre></td></tr></table></figure></p><p>都是在字体库目录建立索引文件的命令，而且内容也是相同的。<br><img src="cmd.png" alt></p><div class="post_cus_note">================第二种================</div><ul><li>用编辑器打开/etc/fonts/fonts.conf，通常会有如下内容:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dir&gt;/usr/share/fonts&lt;/dir&gt;</span><br><span class="line">&lt;dir&gt;/usr/share/fonts/chinese&lt;/dir&gt;</span><br><span class="line">&lt;dir&gt;/usr/share/X11/fonts/Type1&lt;/dir&gt; &lt;dir&gt;/usr/share/X11/fonts/TTF&lt;/dir&gt; &lt;dir&gt;/usr/local/share/fonts&lt;/dir&gt;</span><br><span class="line">&lt;dir prefix=&quot;xdg&quot;&gt;fonts&lt;/dir&gt;</span><br><span class="line">&lt;!-- the following element will be removed in the future --&gt;</span><br><span class="line"> &lt;dir&gt;~/.fonts&lt;/dir&gt;</span><br></pre></td></tr></table></figure></li></ul><p>把中文字体库文件放到其中一个目录即可或者把自定义的目录路径加到fonts.conf。</p><ul><li><p>刷新字体库<br>fc-cache -fv</p></li><li><p>查看已安装字体<br>fc-list :lang=zh</p></li></ul><font color="red" size="5"><strong><em>纵使生活再艰难，也不要放弃，微信面对，致自己！！！</em></strong></font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note warning&quot;&gt;
-            &lt;p&gt;在开源项目上集成了CKEditor富文本编辑器，但是发现面板上字体没有宋体、微软雅黑等Win字体，web服务大部分应用都是win系统，在CKEditor上config.js添加了字体选择，但是没有效果，需要在Linux服务器添加所需要的字体。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label primary&quot;&gt;Linux&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;CKEditor&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="CkEditor" scheme="http://pygo2.top/tags/CkEditor/"/>
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
     
   </entry>
   
