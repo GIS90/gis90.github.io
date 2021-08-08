@@ -148,18 +148,18 @@
 </div>
 
 
-  <meta name="description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。  Python Excel">
-<meta name="keywords" content="Python, Excel, 性能, 比较">
+  <meta name="description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。 Python Excel">
+<meta name="keywords" content="Python, openpyxl, Excel, 性能, 比较">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python-openpyxl写入性能的比较">
+<meta property="og:title" content="openpyxl写入性能的比较">
 <meta property="og:url" content="http://pygo2.top/articles/24240/index.html">
 <meta property="og:site_name" content="PyGo²">
-<meta property="og:description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。  Python Excel">
+<meta property="og:description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。 Python Excel">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2021-08-08T03:47:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python-openpyxl写入性能的比较">
-<meta name="twitter:description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。  Python Excel">
+<meta name="twitter:title" content="openpyxl写入性能的比较">
+<meta name="twitter:description" content="简单比较一下openpyxl在行写入与单元格写入性能上的对比。 Python Excel">
 
 
 
@@ -176,7 +176,7 @@
   };
 </script>
 
-  <title>Python-openpyxl写入性能的比较 | PyGo²</title>
+  <title>openpyxl写入性能的比较 | PyGo²</title>
   
 
 
@@ -518,7 +518,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python-openpyxl写入性能的比较
+          <h2 class="post-title" itemprop="name headline">openpyxl写入性能的比较
 
               
             
@@ -598,7 +598,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -632,9 +632,8 @@
       
 
       
-        <font size="6.5" color="red">简单比较一下openpyxl在行写入与单元格写入性能上的对比。</font>
-
-<span class="label info">Python</span> <span class="label primary">Excel</span>
+        <p><font size="6.5" color="red">简单比较一下openpyxl在行写入与单元格写入性能上的对比。</font></p>
+<p><hr><br><span class="label info">Python</span> <span class="label primary">Excel</span></p>
 <a id="more"></a>
 <hr>
 
@@ -653,7 +652,7 @@
 <blockquote>
 <p>源代码</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">import openpyxl</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 读取</span><br><span class="line">reader_workbook = openpyxl.load_workbook(&apos;data/LLBB_GRCKYE1.xlsx&apos;)</span><br><span class="line">sheet = reader_workbook.get_sheet_by_name(reader_workbook.sheetnames[0])</span><br><span class="line">sheet_row = sheet.max_row</span><br><span class="line">sheet_col = sheet.max_column</span><br><span class="line"># ===================================</span><br><span class="line"># 行写入</span><br><span class="line">start1 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in sheet.rows:</span><br><span class="line">    new_li = [c.value for c in list(row)]</span><br><span class="line">    # print(new_li)</span><br><span class="line">    new_sheet.append(new_li)</span><br><span class="line">new_wb.save(&apos;result/res2.xlsx&apos;)</span><br><span class="line">end1 = datetime.datetime.now()</span><br><span class="line">print((end1-start1).seconds)</span><br><span class="line"># ===================================</span><br><span class="line"># 单元格写入</span><br><span class="line">start2 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in range(1, sheet_row + 1, 1):</span><br><span class="line">    for col in range(1, sheet_col + 1, 1):</span><br><span class="line">        new_sheet.cell(row=row,</span><br><span class="line">                       column=col,</span><br><span class="line">                       value=sheet.cell(row=row, column=col).value</span><br><span class="line">                       )</span><br><span class="line">new_wb.save(&apos;result/res3.xlsx&apos;)</span><br><span class="line">end2 = datetime.datetime.now()</span><br><span class="line">print((end2-start2).seconds)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">import openpyxl</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 读取</span><br><span class="line">reader_workbook = openpyxl.load_workbook(&apos;data/LLBB_GRCKYE1.xlsx&apos;)</span><br><span class="line">sheet = reader_workbook.get_sheet_by_name(reader_workbook.sheetnames[0])</span><br><span class="line">sheet_row = sheet.max_row</span><br><span class="line">sheet_col = sheet.max_column</span><br><span class="line"># ===================================</span><br><span class="line"># 行写入</span><br><span class="line">start1 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in sheet.values:</span><br><span class="line">    new_sheet.append(row)</span><br><span class="line">new_wb.save(&apos;result/res2.xlsx&apos;)</span><br><span class="line">end1 = datetime.datetime.now()</span><br><span class="line">print((end1-start1).seconds)</span><br><span class="line"># ===================================</span><br><span class="line"># 单元格写入</span><br><span class="line">start2 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in range(1, sheet_row + 1, 1):</span><br><span class="line">    for col in range(1, sheet_col + 1, 1):</span><br><span class="line">        new_sheet.cell(row=row,</span><br><span class="line">                       column=col,</span><br><span class="line">                       value=sheet.cell(row=row, column=col).value</span><br><span class="line">                       )</span><br><span class="line">new_wb.save(&apos;result/res3.xlsx&apos;)</span><br><span class="line">end2 = datetime.datetime.now()</span><br><span class="line">print((end2-start2).seconds)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>比较结果</p>
 </blockquote>
@@ -702,14 +701,14 @@
 <td style="text-align:center">27</td>
 <td style="text-align:center">26</td>
 <td style="text-align:center">29</td>
-<td style="text-align:center">28</td>
+<td style="text-align:center">28.0</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>总结</p>
 </blockquote>
-<p>总体来说，大数据量可以看出行写入的速率较快，如果是数据量在几万行，性能都差不多，而且行写入代码比比较简单。</p>
+<p>总体来说，大数据量可以看出行写入的速率较快，如果是数据量在几万行，性能都差不多，而且行写入代码也比较简单。</p>
 
       
     </div>
@@ -723,7 +722,7 @@
           </li>
           <li class="post-copyright-link">
             <strong>本文链接：</strong>
-            <a href="http://pygo2.top/articles/24240/" title="Python-openpyxl写入性能的比较">http://pygo2.top/articles/24240/</a>
+            <a href="http://pygo2.top/articles/24240/" title="openpyxl写入性能的比较">http://pygo2.top/articles/24240/</a>
           </li>
           <li class="post-copyright-license">
             <strong>版权声明：</strong>
