@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-08-05T14:31:28.000Z</updated>
+  <updated>2021-08-08T03:47:56.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -17,21 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>解决Python处理Excel65535的问题</title>
-    <link href="http://pygo2.top/articles/26307/"/>
-    <id>http://pygo2.top/articles/26307/</id>
-    <published>2021-08-05T14:31:28.000Z</published>
-    <updated>2021-08-05T14:31:28.000Z</updated>
+    <title>Python-openpyxl写入性能的比较</title>
+    <link href="http://pygo2.top/articles/24240/"/>
+    <id>http://pygo2.top/articles/24240/</id>
+    <published>2021-08-08T03:47:56.000Z</published>
+    <updated>2021-08-08T03:47:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/article_python_excel.jpeg" alt></p><div class="note primary">            <blockquote><p>问题描述<br>使用Python去处理表格的时候，居然报错，提示为：<br>undefined</p></blockquote>          </div><span class="label info">Python实战</span><a id="more"></a><hr><p>基于xlrd、xlwt进行Excel的处理，其包中对单个Sheet限制最大行数为65535，当读写数据超出这个范围就会出现如上错误。</p><blockquote><p>解决方案</p></blockquote><p>可以使用openpyxl包，其最大行数为1048576，存储的文件类型为xlsx，但是弊端就是不能读取xls老的Excel格式文件。<br>对于这个，我在项目中想了一个解决方案，判断是xls格式就用xlrd、xlwt包的方法；xlsx就用openpyxl。<br>如果是xls并且行数超过65536，让用户上传xlsx格式的文件，网上有xls、xlsx格式的转换，有需要的可以找找。</p>]]></content>
+    <content type="html"><![CDATA[<font size="6.5" color="red">简单比较一下openpyxl在行写入与单元格写入性能上的对比。</font><span class="label info">Python</span> <span class="label primary">Excel</span><a id="more"></a><hr><blockquote><p>简述</p></blockquote><p>之前一直用xlrd、xlwt处理表格，但是发现限制台，超过了65535就不能读取了，改用openpyxl，了解了一下之后，发现openpyxl可以行写入，测试一下行写入与单元格写入二者的性能。</p><blockquote><p>样本</p></blockquote><p>表格元数据176233行、7列，数据包含字符串类型、数字、时间等常见类型。</p><blockquote><p>试验体</p></blockquote><p>PC：MacOS<br>openpyxl版本：3.0.7</p><blockquote><p>源代码</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">import openpyxl</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 读取</span><br><span class="line">reader_workbook = openpyxl.load_workbook(&apos;data/LLBB_GRCKYE1.xlsx&apos;)</span><br><span class="line">sheet = reader_workbook.get_sheet_by_name(reader_workbook.sheetnames[0])</span><br><span class="line">sheet_row = sheet.max_row</span><br><span class="line">sheet_col = sheet.max_column</span><br><span class="line"># ===================================</span><br><span class="line"># 行写入</span><br><span class="line">start1 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in sheet.rows:</span><br><span class="line">    new_li = [c.value for c in list(row)]</span><br><span class="line">    # print(new_li)</span><br><span class="line">    new_sheet.append(new_li)</span><br><span class="line">new_wb.save(&apos;result/res2.xlsx&apos;)</span><br><span class="line">end1 = datetime.datetime.now()</span><br><span class="line">print((end1-start1).seconds)</span><br><span class="line"># ===================================</span><br><span class="line"># 单元格写入</span><br><span class="line">start2 = datetime.datetime.now()</span><br><span class="line">new_wb = openpyxl.Workbook()</span><br><span class="line">new_sheet = new_wb.create_sheet(title=&apos;Sheet&apos;, index=0)</span><br><span class="line">for row in range(1, sheet_row + 1, 1):</span><br><span class="line">    for col in range(1, sheet_col + 1, 1):</span><br><span class="line">        new_sheet.cell(row=row,</span><br><span class="line">                       column=col,</span><br><span class="line">                       value=sheet.cell(row=row, column=col).value</span><br><span class="line">                       )</span><br><span class="line">new_wb.save(&apos;result/res3.xlsx&apos;)</span><br><span class="line">end2 = datetime.datetime.now()</span><br><span class="line">print((end2-start2).seconds)</span><br></pre></td></tr></table></figure><blockquote><p>比较结果</p></blockquote><p>单位：s</p><table><thead><tr><th style="text-align:center">类别</th><th style="text-align:center">第1次</th><th style="text-align:center">第2次</th><th style="text-align:center">第3次</th><th style="text-align:center">第4次</th><th style="text-align:center">第5次</th><th style="text-align:center">第6次</th><th style="text-align:center">第7次</th><th style="text-align:center">第8次</th><th style="text-align:center">第9次</th><th style="text-align:center">第10次</th><th style="text-align:center">平均值</th></tr></thead><tbody><tr><td style="text-align:center">行</td><td style="text-align:center">25</td><td style="text-align:center">26</td><td style="text-align:center">28</td><td style="text-align:center">29</td><td style="text-align:center">27</td><td style="text-align:center">28</td><td style="text-align:center">27</td><td style="text-align:center">26</td><td style="text-align:center">26</td><td style="text-align:center">26</td><td style="text-align:center">26.8</td></tr><tr><td style="text-align:center">单元格</td><td style="text-align:center">26</td><td style="text-align:center">28</td><td style="text-align:center">30</td><td style="text-align:center">28</td><td style="text-align:center">30</td><td style="text-align:center">29</td><td style="text-align:center">27</td><td style="text-align:center">27</td><td style="text-align:center">26</td><td style="text-align:center">29</td><td style="text-align:center">28</td></tr></tbody></table><blockquote><p>总结</p></blockquote><p>总体来说，大数据量可以看出行写入的速率较快，如果是数据量在几万行，性能都差不多，而且行写入代码比比较简单。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/article_python_excel.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;blockquote&gt;&lt;p&gt;问题描述&lt;br&gt;使用Python去处理表格的时候，居然报错，提示为：&lt;br&gt;undefined&lt;/p&gt;&lt;/blockquote&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;Python实战&lt;/span&gt;
+      &lt;font size=&quot;6.5&quot; color=&quot;red&quot;&gt;简单比较一下openpyxl在行写入与单元格写入性能上的对比。&lt;/font&gt;
+
+&lt;span class=&quot;label info&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Excel&lt;/span&gt;
     
     </summary>
     
@@ -39,6 +37,36 @@
     
     
       <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+      <category term="Excel" scheme="http://pygo2.top/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Python处理Excel65535的问题</title>
+    <link href="http://pygo2.top/articles/26307/"/>
+    <id>http://pygo2.top/articles/26307/</id>
+    <published>2021-08-05T14:31:28.000Z</published>
+    <updated>2021-08-05T14:31:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_python_excel.jpeg" alt></p><div class="note primary">            <blockquote><p>问题描述<br>使用Python去处理表格的时候，居然报错，提示为：<br>undefined</p></blockquote>          </div><span class="label info">Python</span><a id="more"></a><hr><p>基于xlrd、xlwt进行Excel的处理，其包中对单个Sheet限制最大行数为65535，当读写数据超出这个范围就会出现如上错误。</p><blockquote><p>解决方案</p></blockquote><p>可以使用openpyxl包，其最大行数为1048576，存储的文件类型为xlsx，但是弊端就是不能读取xls老的Excel格式文件。<br>对于这个，我在项目中想了一个解决方案，判断是xls格式就用xlrd、xlwt包的方法；xlsx就用openpyxl。<br>如果是xls并且行数超过65536，让用户上传xlsx格式的文件，网上有xls、xlsx格式的转换，有需要的可以找找。</p><p>如果使用openpyxl读取.xls文件，报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">raise InvalidFileException(msg)</span><br><span class="line">openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_python_excel.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;blockquote&gt;&lt;p&gt;问题描述&lt;br&gt;使用Python去处理表格的时候，居然报错，提示为：&lt;br&gt;undefined&lt;/p&gt;&lt;/blockquote&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;Python&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+      <category term="Excel" scheme="http://pygo2.top/tags/Excel/"/>
     
   </entry>
   
@@ -509,29 +537,6 @@
     
     
       <category term="域名" scheme="http://pygo2.top/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacOS配置svn免账号密码</title>
-    <link href="http://pygo2.top/articles/49218/"/>
-    <id>http://pygo2.top/articles/49218/</id>
-    <published>2021-02-01T06:08:55.000Z</published>
-    <updated>2021-02-01T06:08:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_svn.jpg" alt></p><span class="label primary">SVN</span><a id="more"></a><hr><blockquote><p>环境</p></blockquote><p>MacOS Big Sur 11.1</p><blockquote><p>版本</p></blockquote><p>version 1.11.1 (r1850623)</p><blockquote><p>配置</p></blockquote><ul><li><p>编辑配置文件</p><p>  vim ~/.subversion/config</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">store-passwords = yes</span><br><span class="line">store-auth-creds = yes</span><br></pre></td></tr></table></figure></li><li><p>权限配置</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 775 -R auth/</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_svn.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;span class=&quot;label primary&quot;&gt;SVN&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="工具集" scheme="http://pygo2.top/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
-    
-    
-      <category term="svn" scheme="http://pygo2.top/tags/svn/"/>
     
   </entry>
   
