@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-10-24T14:05:31.000Z</updated>
+  <updated>2021-11-02T15:08:09.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Server后端API返回JSON格式说明</title>
+    <link href="http://pygo2.top/articles/40461/"/>
+    <id>http://pygo2.top/articles/40461/</id>
+    <published>2021-11-02T15:08:09.000Z</published>
+    <updated>2021-11-02T15:08:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本人有5年的多的Python后端开发经验，经常与前端开发或者自己写的前端项目进行数据交换，总结一下自己常用的数据交换格式，以及状态码对应的内容。</p><span class="label danger">Linux</span> <span class="label info">Java</span><a id="more"></a><hr><blockquote><p>格式</p></blockquote><p><strong>*JSON**</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;status_id&quot;: 100,</span><br><span class="line">    &quot;status&quot;: &quot;成功&quot;,</span><br><span class="line">    &quot;message&quot;: &quot;请求内容&quot;,</span><br><span class="line">    &quot;data&quot;: [],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>status_id：状态码</li><li>status：状态内容</li><li>message：错误信息</li><li>data：请求的json数据内容</li></ul><blockquote><p>实例</p></blockquote><table><thead><tr><th style="text-align:center">Status_id</th><th style="text-align:left">Status</th><th style="text-align:left">Msg</th><th style="text-align:left">Data</th></tr></thead><tbody><tr><td style="text-align:center">100</td><td style="text-align:left">success</td><td style="text-align:left">请求成功</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">101</td><td style="text-align:left">success</td><td style="text-align:left">请求成功，查询数据为空</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">201</td><td style="text-align:left">failure</td><td style="text-align:left">请求方法错误</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">202</td><td style="text-align:left">failure</td><td style="text-align:left">缺少请求参数</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">203</td><td style="text-align:left">failure</td><td style="text-align:left">请求参数不合法</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">204</td><td style="text-align:left">failure</td><td style="text-align:left">请求参数为必须信息</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">205</td><td style="text-align:left">failure</td><td style="text-align:left">缺少rtx_id信息</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">206</td><td style="text-align:left">failure</td><td style="text-align:left">缺少上传文件</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">207</td><td style="text-align:left">failure</td><td style="text-align:left">文件格式不支持</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">208</td><td style="text-align:left">failure</td><td style="text-align:left">文件内容不符合要求</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">209</td><td style="text-align:left">failure</td><td style="text-align:left">文件行内容有问题</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">210</td><td style="text-align:left">failure</td><td style="text-align:left">文件存储失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">211</td><td style="text-align:left">failure</td><td style="text-align:left">参数特殊要求</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">212</td><td style="text-align:left">failure</td><td style="text-align:left">文件数据已存在</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">213</td><td style="text-align:left">failure</td><td style="text-align:left">文件导出数据为空</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">301</td><td style="text-align:left">failure</td><td style="text-align:left">数据已存在，无需重新建立</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">302</td><td style="text-align:left">failure</td><td style="text-align:left">数据不存在</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">303</td><td style="text-align:left">failure</td><td style="text-align:left">部分数据处理成功</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">304</td><td style="text-align:left">failure</td><td style="text-align:left">数据已删除，无需处理</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">305</td><td style="text-align:left">failure</td><td style="text-align:left">数据已处理，无须二次处理</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">306</td><td style="text-align:left">failure</td><td style="text-align:left">数据已删除，无须二次删除</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">307</td><td style="text-align:left">failure</td><td style="text-align:left">数据处理失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">308</td><td style="text-align:left">failure</td><td style="text-align:left">数据不可用</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">3081</td><td style="text-align:left">failure</td><td style="text-align:left">数据（地址）不可用</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">3082</td><td style="text-align:left">failure</td><td style="text-align:left">数据（姓名）不可用</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">3083</td><td style="text-align:left">failure</td><td style="text-align:left">数据（重量）不可用</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">3084</td><td style="text-align:left">failure</td><td style="text-align:left">数据（电话）不可用</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">309</td><td style="text-align:left">failure</td><td style="text-align:left">数据创建用户与当前更改用户不一致</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">310</td><td style="text-align:left">failure</td><td style="text-align:left">非数据相关人员，禁止更新数据</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">401</td><td style="text-align:left">failure</td><td style="text-align:left">图片格式不支持</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">402</td><td style="text-align:left">failure</td><td style="text-align:left">图片存储失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">403</td><td style="text-align:left">failure</td><td style="text-align:left">文章创建者与提交者不符合</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">450</td><td style="text-align:left">failure</td><td style="text-align:left">数据存储失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">501</td><td style="text-align:left">failure</td><td style="text-align:left">Server发生错误，获取数据失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">601</td><td style="text-align:left">failure</td><td style="text-align:left">HTTP请求接口失败</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">602</td><td style="text-align:left">failure</td><td style="text-align:left">HTTP请求数据为空</td><td style="text-align:left">{}</td></tr><tr><td style="text-align:center">603</td><td style="text-align:left">failure</td><td style="text-align:left">HTTP请求数据不可用</td><td style="text-align:left">{}</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本人有5年的多的Python后端开发经验，经常与前端开发或者自己写的前端项目进行数据交换，总结一下自己常用的数据交换格式，以及状态码对应的内容。&lt;/p&gt;
+&lt;span class=&quot;label danger&quot;&gt;Linux&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Java&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="API" scheme="http://pygo2.top/tags/API/"/>
+    
+      <category term="JSON" scheme="http://pygo2.top/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue第三方组件</title>
+    <link href="http://pygo2.top/articles/5638/"/>
+    <id>http://pygo2.top/articles/5638/</id>
+    <published>2021-11-02T14:43:52.000Z</published>
+    <updated>2021-11-02T14:43:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_vue.jpeg" alt></p><h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><div class="note primary">            <p>记录学习VUE过程中用到的第三方组件。</p>          </div><span class="label danger">VUE</span> <span class="label info">第三方组件</span><a id="more"></a><hr><p>前端框架出现之后，组件化成为了前端开发的趋势，对于开发者来说，尤其是初学者，直接引用别人封装好的组件，在开发成本、样式上会节省一把时间，记录一下VUE学习过程中使用过的第三方组件。<br>至于，优劣势分析会在日后进行分析。</p><table><thead><tr><th style="text-align:center">ID</th><th style="text-align:center">Name</th><th style="text-align:left">Url</th><th style="text-align:left">DevTeam</th><th style="text-align:left">VUE Support</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">vant</td><td style="text-align:left"><a href="https://vant-contrib.gitee.io/" target="_blank" rel="noopener">https://vant-contrib.gitee.io/</a></td><td style="text-align:left">有赞前端团队</td><td style="text-align:left">Vue2, Vue3</td></tr></tbody></table><font size="5.5" color="red"><strong><em>持续更新中。。。。。。</em></strong></font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_vue.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;h4 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h4&gt;&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;记录学习VUE过程中用到的第三方组件。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label danger&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;第三方组件&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
+    
+  </entry>
   
   <entry>
     <title>ATOM安装插件的方式</title>
@@ -221,9 +272,9 @@
       <category term="Java" scheme="http://pygo2.top/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
-    
       <category term="ERROR集" scheme="http://pygo2.top/tags/ERROR%E9%9B%86/"/>
+    
+      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
     
   </entry>
   
@@ -483,62 +534,6 @@
     
     
       <category term="FreeFileSync" scheme="http://pygo2.top/tags/FreeFileSync/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DB2存储过程异常处理</title>
-    <link href="http://pygo2.top/articles/40004/"/>
-    <id>http://pygo2.top/articles/40004/</id>
-    <published>2021-05-07T15:43:48.000Z</published>
-    <updated>2021-05-07T15:43:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_db2.jpg" alt></p><div class="note primary">            <p>记录下DB2数据库存储过程对异常的处理，DECLARE声明异常的方式。</p>          </div><span class="label info">DB2</span> <span class="label default">存储过程</span> <span class="label danger">SQLEXCEPTIOIN</span> <span class="label primary">DECLARE</span><a id="more"></a><hr><div class="post_cus_note">语法糖</div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DECLARE [handler-type] HANDLER FOR [condition] [handler-action]</span><br></pre></td></tr></table></figure><blockquote><p>handler-type</p></blockquote><p>异常处理器类型(handler-type)有以下几种：</p><ul><li>CONTINUE：处理器完成handler-action操作之后，继续执行产生这个异常语句的下一条语句，说白了就是执行一下handler-action。</li><li>EXIT：处理器完成handler-action操作之后，存储过程终止，并将handler-action操作结果控制返回给调用者。</li><li>UNDO：处理器操作handler-action执行之前，DB2会回滚存储过程中执行的SQL操作。在处理器操作完成之后，存储过程会终止，并将控制返回给调用者。</li></ul><blockquote><p>condition</p></blockquote><p>异常处理器可以处理基于特定SQLSTATE值的定制异常，或者处理预定义异常的类。预定义的3种异常如下所示：</p><ul><li>NOT FOUND：标识导致SQLCODE值为+100或者SQLSATE值为02000的异常。这个异常通常在SELECT没有返回行的时候出现。</li><li>SQLEXCEPTIOIN：标识导致SQLCODE值为负的异常。</li><li>SQLWARNING：标识导致警告异常或者导致+100以外的SQLCODE正值的异常。</li></ul><blockquote><p>handler-action</p></blockquote><p>handler-action为定义处理异常的sql语句，一般主要用来设定返回值、记录日志等操作。</p><div class="post_cus_note">实例</div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">declare exit handler for sqlexception</span><br><span class="line">begin</span><br><span class="line">    set i_code=sqlcode;</span><br><span class="line">    set i_err_no=1;</span><br><span class="line">    call SP_PASSYS_ERRHANDLE(v_proc_name,i_code);</span><br><span class="line">    commit;</span><br><span class="line">end;</span><br></pre></td></tr></table></figure><ul><li>i_code：sqlexception产生的错误代码sqlcode。</li><li>i_err_no：返回给调用者的返回值。</li><li>SP_PASSYS_ERRHANDLE：调用日志记录存储过程。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_db2.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;记录下DB2数据库存储过程对异常的处理，DECLARE声明异常的方式。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;DB2&lt;/span&gt; &lt;span class=&quot;label default&quot;&gt;存储过程&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;SQLEXCEPTIOIN&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;DECLARE&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="DB2" scheme="http://pygo2.top/tags/DB2/"/>
-    
-      <category term="存储过程" scheme="http://pygo2.top/tags/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cygwin工具简介</title>
-    <link href="http://pygo2.top/articles/28873/"/>
-    <id>http://pygo2.top/articles/28873/</id>
-    <published>2021-04-27T13:47:02.000Z</published>
-    <updated>2021-04-27T13:47:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note primary">            <p><font size="6.5" color="DeepPink">Get that Linux feeling - on Windows</font><br>运行于Windows系统上可以运行Linux命令的shell。</p>          </div><p><img src="/images/article_cygwin.png" alt></p><span class="label warning">Linux</span> <span class="label info">SHELL</span> <span class="label primary">Windows</span><a id="more"></a><hr><p>近5年依赖一直使用Macos系统，突然切换到WIN10多多少少还是有些不适应的，但是最不能忍受的是不能再电脑上使用命令去操作文件，很烦。。。。。。<br>所以上网找了下，可以在WIN上运行并且使用Linux的shell还是不少的，我看了知乎上的比较，对于cygwin的评价还是可以的，同类的还有cmder、powershell、git-for-windows等等。</p><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><p><a href="http://www.cygwin.com/" target="_blank" rel="noopener">http://www.cygwin.com/</a></p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>安装：官网下载安装，目录：D:\cygwin64。</p><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>D:\cygwin64\bin<br>D:\cygwin64\sbin<br>以上路径加入到系统path，让系统cmd也可以使用命令。</p><h4 id="apt-cyg"><a href="#apt-cyg" class="headerlink" title="apt-cyg"></a>apt-cyg</h4><blockquote><p>安装</p></blockquote><p>1.下载命令：<a href="https://github.com/transcode-open/apt-cyg" target="_blank" rel="noopener">https://github.com/transcode-open/apt-cyg</a><br>2.解压文件，把apt-cyg命令复制到D:\cygwin64\bin<br>3.重启cygwin，测试apt-cyg命令</p><blockquote><p>常用参数</p></blockquote><ul><li>install 安装</li><li>remove 卸载</li><li>update 更新</li><li>download 下载软件但不安装</li><li>show 展示安装包的信息</li><li>list 列举已安装的软件</li><li>search/searchall 查询软件</li></ul><p>感觉跟pip、yum、brew很像啊，可能这些玩意都大概类似把。。。</p><h4 id="学习参考"><a href="#学习参考" class="headerlink" title="学习参考"></a>学习参考</h4><p>cygwin详解：<a href="https://www.cnblogs.com/feipeng8848/p/8555648.html" target="_blank" rel="noopener">https://www.cnblogs.com/feipeng8848/p/8555648.html</a><br>apt-cyg命令详解：<a href="https://zhuanlan.zhihu.com/p/66930502" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/66930502</a><br>cmder神器：<a href="https://zhuanlan.zhihu.com/p/28400466" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28400466</a><br>Windows命令工具大对比：<a href="https://www.zhihu.com/question/19739424" target="_blank" rel="noopener">https://www.zhihu.com/question/19739424</a></p><font size="6.5" color="red">成功没有偶然，继续努力前行</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;&lt;font size=&quot;6.5&quot; color=&quot;DeepPink&quot;&gt;Get that Linux feeling - on Windows&lt;/font&gt;&lt;br&gt;运行于Windows系统上可以运行Linux命令的shell。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/article_cygwin.png&quot; alt&gt;&lt;/p&gt;
-&lt;span class=&quot;label warning&quot;&gt;Linux&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;SHELL&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Windows&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="工具集" scheme="http://pygo2.top/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
-    
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-      <category term="Shell" scheme="http://pygo2.top/tags/Shell/"/>
     
   </entry>
   
