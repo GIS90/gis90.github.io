@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-12-15T12:15:25.000Z</updated>
+  <updated>2021-12-20T13:30:51.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6学习</title>
+    <link href="http://pygo2.top/articles/56016/"/>
+    <id>http://pygo2.top/articles/56016/</id>
+    <published>2021-12-20T13:30:51.000Z</published>
+    <updated>2021-12-20T13:30:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_es6.jpeg" alt></p><span class="label primary">VUE</span> <span class="label info">ES6</span><a id="more"></a><hr><p>最近学习了VUE3，所有的语法是以ECMAScript6为基础的，参考学习了廖雪峰的ES6教程，<strong><em>URL</em></strong>如下：</p><p><a href="https://es6.ruanyifeng.com/#docs/intro" target="_blank" rel="noopener">https://es6.ruanyifeng.com/#docs/intro</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_es6.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label primary&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;ES6&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="转载文章" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/%E8%BD%AC%E8%BD%BD%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
+    
+  </entry>
   
   <entry>
     <title>GIT删除tag</title>
@@ -221,9 +246,9 @@
       <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
     
     
-      <category term="Atom" scheme="http://pygo2.top/tags/Atom/"/>
-    
       <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
+    
+      <category term="Atom" scheme="http://pygo2.top/tags/Atom/"/>
     
   </entry>
   
@@ -511,32 +536,6 @@
       <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
     
       <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pip升级之后No module named &#39;pip._internal&#39;问题解决</title>
-    <link href="http://pygo2.top/articles/19559/"/>
-    <id>http://pygo2.top/articles/19559/</id>
-    <published>2021-06-21T14:56:58.000Z</published>
-    <updated>2021-06-21T14:56:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_pip.jpeg" alt></p><h4 id="问题起源"><a href="#问题起源" class="headerlink" title="问题起源"></a>问题起源</h4><p>项目使用virtualenv创建虚拟环境，用来做项目的运行环境，发现创建新环境之后，使用pip install 包的时候出现一下错误: <font color="red" size="5">ModuleNotFoundError: No module named ‘pip._internal’</font>。<br>网上查找了很久，记录一下解决的方案。</p><span class="label primary">PIP</span><a id="more"></a><hr><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>使用python对pip进行升级。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source .venv/bin/activate</span><br><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></p><h4 id="参考学习"><a href="#参考学习" class="headerlink" title="参考学习"></a>参考学习</h4><p>gitub解决讨论：<a href="https://github.com/pypa/pip/issues/5373" target="_blank" rel="noopener">https://github.com/pypa/pip/issues/5373</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_pip.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;h4 id=&quot;问题起源&quot;&gt;&lt;a href=&quot;#问题起源&quot; class=&quot;headerlink&quot; title=&quot;问题起源&quot;&gt;&lt;/a&gt;问题起源&lt;/h4&gt;&lt;p&gt;项目使用virtualenv创建虚拟环境，用来做项目的运行环境，发现创建新环境之后，使用pip install 包的时候出现一下错误: &lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;ModuleNotFoundError: No module named ‘pip._internal’&lt;/font&gt;。&lt;br&gt;网上查找了很久，记录一下解决的方案。&lt;/p&gt;
-&lt;span class=&quot;label primary&quot;&gt;PIP&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
-    
-      <category term="PIP" scheme="http://pygo2.top/tags/PIP/"/>
     
   </entry>
   
