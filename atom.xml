@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-12-20T13:30:51.000Z</updated>
+  <updated>2021-12-26T11:47:04.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github个人Overview展示</title>
+    <link href="http://pygo2.top/articles/61451/"/>
+    <id>http://pygo2.top/articles/61451/</id>
+    <published>2021-12-26T11:47:04.000Z</published>
+    <updated>2021-12-26T11:47:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note primary">            <p>前几天看到一个项目，在README.md上有彩色标签、Github个人统计信息，挺有趣的，然后在Github上查到有一个专门的项目用来做这个，学习记录一下。</p>          </div><p><img src="/images/article_github_1.webp" alt></p><span class="label info">git</span><a id="more"></a><hr><p>先来看下原本的Github Overview试图：<br><img src="overview_src.png" alt></p><p>接下来，对其进行优化。</p><blockquote><p>创建新的Repository</p></blockquote><p>首先，在Github中创建一个新的repository，Owner与Repository name保持一致。比如你的Owner为ABC，那么就创建一个ABC仓库。<br>选择Public、Add a README file选项。</p><blockquote><p>编辑README.md文件</p></blockquote><p>创建好了之后，直接对仓库README.md文件进行编辑，这里简单对标签、GitHub Readme Stats进行举例，详情请查阅官网，本人也是探索阶段。</p><blockquote><p>README.md标签</p></blockquote><p>打开标签牌官网：<a href="https://shields.io/" target="_blank" rel="noopener">https://shields.io/</a></p><p><img src="shields.io.png" alt></p><p>最简单标签：</p><ul><li>label：标签体的前半部分，比如：Development Language</li><li>message：标签体的后半部分，比如：Python</li><li>color：选择一个颜色，也可以输入十六进制代码</li></ul><p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https://img.shields.io/badge/Development%20Language-Python-FF0000)</span><br></pre></td></tr></table></figure></p><p><img src="https://img.shields.io/badge/Development%20Language-Python-FF0000" alt="标签牌"></p><blockquote><p>GitHub统计</p></blockquote><p>官网：<a href="https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md" target="_blank" rel="noopener">https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md</a><br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![GitHub stats](https://github-readme-stats.vercel.app/api?username=GIS90&amp;theme=highcontrast&amp;show_icons=true&amp;hide=contribs,prs&amp;count_private=true)</span><br></pre></td></tr></table></figure></p><p><img src="https://github-readme-stats.vercel.app/api?username=GIS90&amp;theme=highcontrast&amp;show_icons=true&amp;hide=contribs,prs&amp;count_private=true" alt="GitHub stats"></p><p>官网介绍的很明白，请自行查阅。</p><p>看下最终效果：<br><img src="overview_tar.png" alt></p><blockquote><p>学习参考</p></blockquote><p>README标签：<a href="https://shields.io/" target="_blank" rel="noopener">https://shields.io/</a><br>GitHub统计：<a href="https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md" target="_blank" rel="noopener">https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md</a></p><font color="red" size="6.5">Enjoy the good life everyday！</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;前几天看到一个项目，在README.md上有彩色标签、Github个人统计信息，挺有趣的，然后在Github上查到有一个专门的项目用来做这个，学习记录一下。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_github_1.webp&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label info&quot;&gt;git&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="工具集" scheme="http://pygo2.top/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+    
+    
+      <category term="git" scheme="http://pygo2.top/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6学习</title>
@@ -48,14 +74,14 @@
     <published>2021-12-15T12:15:25.000Z</published>
     <updated>2021-12-15T12:15:25.000Z</updated>
     
-    <content type="html"><![CDATA[<div class="note info">            <font color="red" size="4.5">总结一下GIT删除本地tag以及远程tag的操作！！！。</font>          </div><span class="label info">git实战</span> <span class="label success">tag</span><a id="more"></a><hr><p>示例中以v-2021-12-15-01为tag示例。</p><h4 id="删除本地tag"><a href="#删除本地tag" class="headerlink" title="删除本地tag"></a>删除本地tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v-2021-12-15-01</span><br></pre></td></tr></table></figure><p><img src="loca_del.png" alt></p><h4 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :refs/tags/v-2021-12-15-01</span><br></pre></td></tr></table></figure><p><img src="remote_show.png" alt></p><h4 id="显示本地tag"><a href="#显示本地tag" class="headerlink" title="显示本地tag"></a>显示本地tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -l</span><br></pre></td></tr></table></figure><p><img src="local_show.png" alt></p><h4 id="显示远程tag"><a href="#显示远程tag" class="headerlink" title="显示远程tag"></a>显示远程tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show-ref --tag</span><br></pre></td></tr></table></figure><p><img src="remote_del.png" alt></p><h4 id="删除多个"><a href="#删除多个" class="headerlink" title="删除多个"></a>删除多个</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 本地</span><br><span class="line">git tag -l | grep &quot;关键字&quot; ｜ grep -v grep | awk -F &quot;&quot; &apos;print $1&apos; | xargs git tag -d</span><br><span class="line"></span><br><span class="line"># 远程</span><br><span class="line">git show-ref --tag | grep &quot;关键字&quot; ｜ grep -v grep | awk -F &quot;&quot; &apos;print $1&apos; | xargs git push origin :refs/tags/</span><br></pre></td></tr></table></figure><p>还没尝试，只是觉得这么可以实现，待测试。</p>]]></content>
+    <content type="html"><![CDATA[<div class="note info">            <font color="red" size="4.5">总结一下GIT删除本地tag以及远程tag的操作！！！。</font>          </div><span class="label info">git</span> <span class="label success">tag</span><a id="more"></a><hr><p>示例中以v-2021-12-15-01为tag示例。</p><h4 id="删除本地tag"><a href="#删除本地tag" class="headerlink" title="删除本地tag"></a>删除本地tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v-2021-12-15-01</span><br></pre></td></tr></table></figure><p><img src="loca_del.png" alt></p><h4 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :refs/tags/v-2021-12-15-01</span><br></pre></td></tr></table></figure><p><img src="remote_show.png" alt></p><h4 id="显示本地tag"><a href="#显示本地tag" class="headerlink" title="显示本地tag"></a>显示本地tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -l</span><br></pre></td></tr></table></figure><p><img src="local_show.png" alt></p><h4 id="显示远程tag"><a href="#显示远程tag" class="headerlink" title="显示远程tag"></a>显示远程tag</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show-ref --tag</span><br></pre></td></tr></table></figure><p><img src="remote_del.png" alt></p><h4 id="删除多个"><a href="#删除多个" class="headerlink" title="删除多个"></a>删除多个</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 本地</span><br><span class="line">git tag -l | grep &quot;关键字&quot; ｜ grep -v grep | awk -F &quot;&quot; &apos;print $1&apos; | xargs git tag -d</span><br><span class="line"></span><br><span class="line"># 远程</span><br><span class="line">git show-ref --tag | grep &quot;关键字&quot; ｜ grep -v grep | awk -F &quot;&quot; &apos;print $1&apos; | xargs git push origin :refs/tags/</span><br></pre></td></tr></table></figure><p>还没尝试，只是觉得这么可以实现，待测试。</p>]]></content>
     
     <summary type="html">
     
       &lt;div class=&quot;note info&quot;&gt;
             &lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;总结一下GIT删除本地tag以及远程tag的操作！！！。&lt;/font&gt;
           &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;git实战&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;tag&lt;/span&gt;
+&lt;span class=&quot;label info&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;tag&lt;/span&gt;
     
     </summary>
     
@@ -73,7 +99,7 @@
     <published>2021-12-08T13:03:57.000Z</published>
     <updated>2021-12-08T13:03:57.000Z</updated>
     
-    <content type="html"><![CDATA[<div class="note info">            <p>最近git初始化项目，本地都是默认master分支，毕竟发生了“黑人维权”，不管怎么说，github官网发布了消息：GitHub 官方发布信息称，从2020年10月1日起，在 Github平台上创建的所有新的源代码仓库将默认命名为 “main” ，不再是原先的 “master”。<br>我的本地居然还没改，于是，找了下解决办法，配置一下就ok了。</p>          </div><p><img src="/images/article_git.jpg" alt></p><span class="label info">git实战</span> <span class="label success">tag</span><a id="more"></a><hr><blockquote><p>配置</p></blockquote><p>执行一下的命令，就可以设置默认初始化仓库的时候为main仓库，把这个配置到全局的配置文件中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init.defaultBranch main</span><br></pre></td></tr></table></figure></p><blockquote><p>查看</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br><span class="line"></span><br><span class="line">init.defaultbranch=main</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<div class="note info">            <p>最近git初始化项目，本地都是默认master分支，毕竟发生了“黑人维权”，不管怎么说，github官网发布了消息：GitHub 官方发布信息称，从2020年10月1日起，在 Github平台上创建的所有新的源代码仓库将默认命名为 “main” ，不再是原先的 “master”。<br>我的本地居然还没改，于是，找了下解决办法，配置一下就ok了。</p>          </div><p><img src="/images/article_git.jpg" alt></p><span class="label info">git</span> <span class="label success">tag</span><a id="more"></a><hr><blockquote><p>配置</p></blockquote><p>执行一下的命令，就可以设置默认初始化仓库的时候为main仓库，把这个配置到全局的配置文件中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init.defaultBranch main</span><br></pre></td></tr></table></figure></p><blockquote><p>查看</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br><span class="line"></span><br><span class="line">init.defaultbranch=main</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -81,7 +107,7 @@
             &lt;p&gt;最近git初始化项目，本地都是默认master分支，毕竟发生了“黑人维权”，不管怎么说，github官网发布了消息：GitHub 官方发布信息称，从2020年10月1日起，在 Github平台上创建的所有新的源代码仓库将默认命名为 “main” ，不再是原先的 “master”。&lt;br&gt;我的本地居然还没改，于是，找了下解决办法，配置一下就ok了。&lt;/p&gt;
           &lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/images/article_git.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;span class=&quot;label info&quot;&gt;git实战&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;tag&lt;/span&gt;
+&lt;span class=&quot;label info&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;tag&lt;/span&gt;
     
     </summary>
     
@@ -509,33 +535,6 @@
       <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
     
       <category term="Python程序篇" scheme="http://pygo2.top/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7安装python3</title>
-    <link href="http://pygo2.top/articles/64746/"/>
-    <id>http://pygo2.top/articles/64746/</id>
-    <published>2021-06-26T14:00:33.000Z</published>
-    <updated>2021-06-26T14:00:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_python3.jpeg" alt></p><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note primary">            <p>python2已经不维护更新了，不管是DEV开发、还是服务器运行环境，python3推广是迟早的事，学习一下在Centos7系统上安装python3。</p>          </div><a id="more"></a><hr><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Centos</td><td style="text-align:center">CentOS Linux release 7.5.1804 (Core)</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">Python</td><td style="text-align:center">3.7</td></tr></tbody></table><h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><blockquote><p>检查</p></blockquote><p>查看目前服务器上的现有版本。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">which python</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></p><blockquote><p>下载</p></blockquote><p>没有wget的命令的，可以装一下，很有用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># wget安装</span><br><span class="line">yum install wget</span><br><span class="line"></span><br><span class="line"># 下载python3版本</span><br><span class="line">wget https://www.python.org/ftp/python/3.7.11/Python-3.7.11.tgz</span><br></pre></td></tr></table></figure></p><p>可以自由选择python3的版本</p><blockquote><p>解压</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf  Python-3.7.11.tgz</span><br></pre></td></tr></table></figure><blockquote><p>创建编译安装目录</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/python3</span><br></pre></td></tr></table></figure><blockquote><p>编译</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.7.11</span><br><span class="line">./configure --prefix=/usr/local/python3</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure><blockquote><p>创建软连</p></blockquote><p>因为服务器已经存在一个python的版本了，所以命名为python3进行区分。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/local/bin/python3</span><br><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/local/bin/pip3</span><br></pre></td></tr></table></figure></p><blockquote><p>测试</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -V</span><br><span class="line">pip3 -V</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_python3.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;python2已经不维护更新了，不管是DEV开发、还是服务器运行环境，python3推广是迟早的事，学习一下在Centos7系统上安装python3。&lt;/p&gt;
-          &lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
     
   </entry>
   
