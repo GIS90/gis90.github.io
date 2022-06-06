@@ -23,15 +23,15 @@
     <published>2022-06-04T00:32:21.000Z</published>
     <updated>2022-06-04T00:32:21.000Z</updated>
     
-    <content type="html"><![CDATA[<span class="label primary">Python实战</span><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><div class="note primary">            <p>网上的PDF转WORD都是收费的，写了好几年的Python了，打算想搞一个开源工具网站，其中的一个常用功能之一就是PDF转WORD，所以想探索一下所有的转换方式，<font color="red" size="4.5">持续更新中。。。。。。</font></p>          </div><p><img src="/images/article_youzan.jpeg" alt></p><a id="more"></a><hr><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Python</td><td style="text-align:center">3.7</td></tr></tbody></table><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>记录一下所有的包，有需要的可以进行参考。</p><h4 id="pdf2docx"><a href="#pdf2docx" class="headerlink" title="pdf2docx"></a>pdf2docx</h4><h4 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h4><h4 id="PyPDF2"><a href="#PyPDF2" class="headerlink" title="PyPDF2"></a>PyPDF2</h4><h4 id="PDFMiner"><a href="#PDFMiner" class="headerlink" title="PDFMiner"></a>PDFMiner</h4>]]></content>
+    <content type="html"><![CDATA[<span class="label primary">Python</span> <span class="label info">Python实战</span><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><div class="note primary">            <p>网上的PDF转WORD都是收费的，写了好几年的Python了，打算想搞一个开源工具网站，其中的一个常用功能之一就是PDF转WORD，所以想探索一下所有的转换方式，<font color="red" size="4.5">持续更新中。。。。。。</font></p>          </div><p><img src="/images/article_python.jpg" alt></p><a id="more"></a><hr><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Python</td><td style="text-align:center">3.7</td></tr></tbody></table><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>记录一下所有的包，有需要的可以进行参考。</p><h4 id="pdf2docx"><a href="#pdf2docx" class="headerlink" title="pdf2docx"></a>pdf2docx</h4><h4 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h4><h4 id="PyPDF2"><a href="#PyPDF2" class="headerlink" title="PyPDF2"></a>PyPDF2</h4><h4 id="PDFMiner"><a href="#PDFMiner" class="headerlink" title="PDFMiner"></a>PDFMiner</h4>]]></content>
     
     <summary type="html">
     
-      &lt;span class=&quot;label primary&quot;&gt;Python实战&lt;/span&gt;
+      &lt;span class=&quot;label primary&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Python实战&lt;/span&gt;
 &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;div class=&quot;note primary&quot;&gt;
             &lt;p&gt;网上的PDF转WORD都是收费的，写了好几年的Python了，打算想搞一个开源工具网站，其中的一个常用功能之一就是PDF转WORD，所以想探索一下所有的转换方式，&lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;持续更新中。。。。。。&lt;/font&gt;&lt;/p&gt;
           &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/article_youzan.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_python.jpg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
@@ -45,16 +45,30 @@
   </entry>
   
   <entry>
-    <title>Python-collections包</title>
+    <title>Python学习之Collections</title>
     <link href="http://pygo2.top/articles/51993/"/>
     <id>http://pygo2.top/articles/51993/</id>
     <published>2022-05-30T12:08:24.000Z</published>
     <updated>2022-05-30T12:08:24.000Z</updated>
     
+    <content type="html"><![CDATA[<span class="label default">Python实战</span> <span class="label danger">Collections</span><div class="note primary">            <p>写代码的时候，Collections包算是常用的一个，里面的有一些数据结构还是非常好用的，本篇总结一下Collections包的常用内容，包含OrderedDict、deque、ChainMap、defaultdict、Counter等内容。</p>          </div><p><img src="/images/article_python_socket.jpeg" alt></p><a id="more"></a><hr><ul><li>OrderedDict：有序dict</li><li>deque：队列</li><li>ChainMap：</li><li>defaultdict：自带默认值的dict</li><li>Counter：计数器</li></ul><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Python</td><td style="text-align:center">3.7</td></tr></tbody></table><h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><h4 id="OrderedDict"><a href="#OrderedDict" class="headerlink" title="OrderedDict"></a>OrderedDict</h4><h4 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h4><h4 id="ChainMap"><a href="#ChainMap" class="headerlink" title="ChainMap"></a>ChainMap</h4><h4 id="defaultdict"><a href="#defaultdict" class="headerlink" title="defaultdict"></a>defaultdict</h4><h4 id="Counter"><a href="#Counter" class="headerlink" title="Counter"></a>Counter</h4>]]></content>
+    
     <summary type="html">
+    
+      &lt;span class=&quot;label default&quot;&gt;Python实战&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;Collections&lt;/span&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;写代码的时候，Collections包算是常用的一个，里面的有一些数据结构还是非常好用的，本篇总结一下Collections包的常用内容，包含OrderedDict、deque、ChainMap、defaultdict、Counter等内容。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_python_socket.jpeg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
+      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+      <category term="Python包" scheme="http://pygo2.top/tags/Python%E5%8C%85/"/>
     
   </entry>
   
@@ -113,7 +127,7 @@
   </entry>
   
   <entry>
-    <title>Element-UI的tree组件子选父不选提交数据问题</title>
+    <title>ElementUI的tree组件子选父不选提交数据问题</title>
     <link href="http://pygo2.top/articles/35413/"/>
     <id>http://pygo2.top/articles/35413/</id>
     <published>2022-05-15T00:51:55.000Z</published>
